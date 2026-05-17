@@ -72,18 +72,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Sawe Website Connect synchronizes website content between a local development environment and a GitHub repository." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Sawe Website Connect synchronizes website content between a local development environment and a GitHub repository." },
+      { title: "SAWE — South Asian Women Entrepreneurs Community" },
+      { name: "description", content: "SAWE is a Greater Seattle community helping South Asian women entrepreneurs connect, collaborate, learn, and grow through coffee meets, trainings, and real business opportunities." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Sawe Website Connect synchronizes website content between a local development environment and a GitHub repository." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/030ad0fb-48d8-422e-8c98-ebe43d72a7dc/id-preview-bfa25819--cf9fd901-cc5a-42ec-a73e-f0bb44463a60.lovable.app-1779055903705.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/030ad0fb-48d8-422e-8c98-ebe43d72a7dc/id-preview-bfa25819--cf9fd901-cc5a-42ec-a73e-f0bb44463a60.lovable.app-1779055903705.png" },
+      { property: "og:site_name", content: "SAWE" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {

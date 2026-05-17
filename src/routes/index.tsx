@@ -14,8 +14,15 @@ import {
 } from "lucide-react";
 import { Button, CheckList, FeatureCard, SectionHeading } from "@/components/ui";
 import CTASection from "@/components/CTASection";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
+  head: () =>
+    seo({
+      title: "SAWE — South Asian Women Entrepreneurs Community (Seattle)",
+      description:
+        "Join 300+ South Asian women entrepreneurs across Greater Seattle. Coffee meets, trainings, collaborations, and referrals — a true business ecosystem.",
+    }),
   component: HomePage,
 });
 

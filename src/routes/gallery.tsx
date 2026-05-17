@@ -2,8 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Camera } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/gallery")({
+  head: () =>
+    seo({
+      title: "Gallery — SAWE Events & Coffee Meets",
+      description:
+        "Moments from SAWE coffee meets, trainings, and community events across the Greater Seattle area.",
+    }),
   component: GalleryPage,
 });
 

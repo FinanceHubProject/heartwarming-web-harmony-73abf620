@@ -21,8 +21,15 @@ import {
   TextInput,
 } from "@/components/FormControls";
 import { siteConfig, socialLinks } from "@/data/site";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
+  head: () =>
+    seo({
+      title: "Contact SAWE — Get in Touch",
+      description:
+        "Questions, partnerships, or press? Reach the SAWE team — we'd love to hear from South Asian women entrepreneurs and supporters across the US.",
+    }),
   component: ContactPage,
 });
 

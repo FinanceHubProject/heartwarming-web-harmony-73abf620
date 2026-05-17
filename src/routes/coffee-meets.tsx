@@ -11,8 +11,15 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { Button, SectionHeading } from "@/components/ui";
 import { siteConfig } from "@/data/site";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/coffee-meets")({
+  head: () =>
+    seo({
+      title: "Coffee Meets — Monthly Networking | SAWE",
+      description:
+        "Join SAWE's monthly coffee meets across Seattle, Bellevue, Redmond, Kirkland, and Bothell. Structured networking for South Asian women entrepreneurs.",
+    }),
   component: CoffeeMeetsPage,
 });
 

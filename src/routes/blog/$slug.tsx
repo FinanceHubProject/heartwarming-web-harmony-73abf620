@@ -5,8 +5,18 @@ import CTASection from "@/components/CTASection";
 import { AppLink } from "@/components/AppLink";
 import { CheckList } from "@/components/ui";
 import { blogPosts } from "@/data/blog";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
+  head: ({ params }) => {
+    const post = blogPosts.find((p) => p.slug === params.slug);
+    return seo({
+      title: post ? `${post.title} | SAWE Blog` : "Article not found | SAWE Blog",
+      description:
+        post?.excerpt ??
+        "Read insights and stories from SAWE — the community for South Asian women entrepreneurs.",
+    });
+  },
   component: BlogPostPage,
 });
 

@@ -3,8 +3,15 @@ import { Quote } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { SectionHeading } from "@/components/ui";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
+  head: () =>
+    seo({
+      title: "About SAWE — Our Story & Founder Lopamudra Banerjee",
+      description:
+        "Meet the team behind SAWE and learn how we're building a business ecosystem for South Asian women entrepreneurs across the Greater Seattle area.",
+    }),
   component: AboutPage,
 });
 

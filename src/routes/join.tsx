@@ -21,8 +21,15 @@ import {
   TextArea,
   TextInput,
 } from "@/components/FormControls";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/join")({
+  head: () =>
+    seo({
+      title: "Join SAWE — Become a Member",
+      description:
+        "Apply to join SAWE and access coffee meets, trainings, collaborations, referrals, and a supportive community of South Asian women entrepreneurs.",
+    }),
   component: MembershipPage,
 });
 
