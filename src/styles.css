@@ -61,6 +61,54 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/*
+ * SAWE brand theme.
+ * Custom plum + gold palette, fonts, shadows, and animation registered
+ * as Tailwind utilities (e.g. bg-plum-700, text-gold-400, font-serif).
+ */
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  --color-plum-50: #faf1f6;
+  --color-plum-100: #f3e0ec;
+  --color-plum-200: #e6c2d9;
+  --color-plum-300: #d199ba;
+  --color-plum-400: #b86895;
+  --color-plum-500: #9c4374;
+  --color-plum-600: #7e2f5b;
+  --color-plum-700: #682549;
+  --color-plum-800: #561f3d;
+  --color-plum-900: #3f1530;
+
+  --color-gold-50: #fbf4e4;
+  --color-gold-100: #f6e7c6;
+  --color-gold-200: #edcf8d;
+  --color-gold-300: #e0b259;
+  --color-gold-400: #d29a3b;
+  --color-gold-500: #c8943f;
+  --color-gold-600: #a87a2f;
+
+  --color-cream: #fdf8f1;
+  --color-ink: #2b2521;
+
+  --shadow-soft: 0 10px 40px -12px rgba(63, 21, 48, 0.18);
+  --shadow-card: 0 6px 24px -8px rgba(63, 21, 48, 0.16);
+
+  --animate-fade-up: fade-up 0.6s ease-out both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -137,8 +185,94 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-plum-200);
+    color: var(--color-plum-900);
+  }
+}
+
+@layer components {
+  /* Page-width container */
+  .container-x {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1180px;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-x {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* Small uppercase label above headings */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-plum-600);
+  }
+
+  /* Section vertical rhythm */
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 640px) {
+    .section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  /* Readable long-form content (blog) */
+  .prose-sawe p {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: color-mix(in srgb, var(--color-ink) 80%, transparent);
+  }
+
+  .prose-sawe h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-plum-800);
+  }
+
+  .prose-sawe ul {
+    margin-bottom: 1.5rem;
   }
 }
