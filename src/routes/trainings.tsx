@@ -20,8 +20,15 @@ import {
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { Button, SectionHeading } from "@/components/ui";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/trainings")({
+  head: () =>
+    seo({
+      title: "Trainings & Workshops — Build Skills With SAWE",
+      description:
+        "Practical business workshops on AI, marketing, branding, finance, content, and growth — designed for South Asian women entrepreneurs.",
+    }),
   component: TrainingsPage,
 });
 
