@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
+  Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -8,32 +9,26 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui";
 
 function NotFoundComponent() {
   return (
-    <section className="flex min-h-[60vh] items-center bg-white">
-      <div className="container-x text-center">
-        <p className="font-serif text-7xl font-bold text-plum-200">404</p>
-        <h1 className="mt-4 text-3xl font-semibold text-plum-900">
-          This page took a different path
-        </h1>
-        <p className="mx-auto mt-3 max-w-md text-ink/70">
-          The page you're looking for doesn't exist or has moved. Let's get you
-          back to the community.
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="max-w-md text-center">
+        <h1 className="text-7xl font-bold text-foreground">404</h1>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          The page you're looking for doesn't exist or has been moved.
         </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button to="/" variant="primary">
-            Back to Home
-          </Button>
-          <Button to="/contact" variant="outline">
-            Contact SAWE
-          </Button>
+        <div className="mt-6">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Go home
+          </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
@@ -42,14 +37,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
 
   return (
-    <section className="flex min-h-[60vh] items-center justify-center bg-cream px-4">
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-plum-900">
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">
           This page didn't load
         </h1>
-        <p className="mt-2 text-sm text-ink/70">
-          Something went wrong on our end. You can try refreshing or head back
-          home.
+        <p className="mt-2 text-sm text-muted-foreground">
+          Something went wrong on our end. You can try refreshing or head back home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -57,68 +51,52 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-full bg-plum-700 px-5 py-2.5 text-sm font-medium text-cream transition-colors hover:bg-plum-800"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-full border border-plum-200 bg-white px-5 py-2.5 text-sm font-medium text-plum-800 transition-colors hover:bg-plum-50"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
             Go home
           </a>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
-  {
-    head: () => ({
-      meta: [
-        { charSet: "utf-8" },
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "SAWE — South Asian Women Entrepreneurs" },
-        {
-          name: "description",
-          content:
-            "SAWE is a high-intent community for South Asian women entrepreneurs in the Greater Seattle area — networking, coffee meets, trainings, collaborations, and business growth.",
-        },
-        { name: "theme-color", content: "#682549" },
-        {
-          property: "og:title",
-          content: "SAWE — South Asian Women Entrepreneurs",
-        },
-        {
-          property: "og:description",
-          content:
-            "The community for South Asian women entrepreneurs in the Greater Seattle area. Connect, collaborate, learn, and grow.",
-        },
-        { property: "og:type", content: "website" },
-        { name: "twitter:card", content: "summary" },
-      ],
-      links: [
-        { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossOrigin: "anonymous",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap",
-        },
-        { rel: "stylesheet", href: appCss },
-      ],
-    }),
-    shellComponent: RootShell,
-    component: RootComponent,
-    notFoundComponent: NotFoundComponent,
-    errorComponent: ErrorComponent,
-  },
-);
+export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  head: () => ({
+    meta: [
+      { charSet: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Lovable App" },
+      { name: "description", content: "Sawe Website Connect synchronizes website content between a local development environment and a GitHub repository." },
+      { name: "author", content: "Lovable" },
+      { property: "og:title", content: "Lovable App" },
+      { property: "og:description", content: "Sawe Website Connect synchronizes website content between a local development environment and a GitHub repository." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:description", content: "Sawe Website Connect synchronizes website content between a local development environment and a GitHub repository." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/030ad0fb-48d8-422e-8c98-ebe43d72a7dc/id-preview-bfa25819--cf9fd901-cc5a-42ec-a73e-f0bb44463a60.lovable.app-1779055903705.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/030ad0fb-48d8-422e-8c98-ebe43d72a7dc/id-preview-bfa25819--cf9fd901-cc5a-42ec-a73e-f0bb44463a60.lovable.app-1779055903705.png" },
+    ],
+    links: [
+      {
+        rel: "stylesheet",
+        href: appCss,
+      },
+    ],
+  }),
+  shellComponent: RootShell,
+  component: RootComponent,
+  notFoundComponent: NotFoundComponent,
+  errorComponent: ErrorComponent,
+});
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
@@ -139,13 +117,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+      <Outlet />
     </QueryClientProvider>
   );
 }
