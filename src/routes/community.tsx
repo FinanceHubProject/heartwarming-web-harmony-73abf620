@@ -23,8 +23,15 @@ import {
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { FeatureCard, SectionHeading } from "@/components/ui";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/community")({
+  head: () =>
+    seo({
+      title: "Our Community — Who Belongs at SAWE",
+      description:
+        "Discover the industries, founders, creators, and consultants inside SAWE — a trusted ecosystem of South Asian women entrepreneurs growing together.",
+    }),
   component: CommunityPage,
 });
 
