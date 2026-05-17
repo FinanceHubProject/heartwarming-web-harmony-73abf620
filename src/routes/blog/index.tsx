@@ -4,8 +4,15 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { AppLink } from "@/components/AppLink";
 import { blogPosts } from "@/data/blog";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/")({
+  head: () =>
+    seo({
+      title: "Blog — Insights for Women Entrepreneurs | SAWE",
+      description:
+        "Articles, lessons, and stories on building, marketing, and scaling a business as a South Asian woman entrepreneur.",
+    }),
   component: BlogIndexPage,
 });
 
