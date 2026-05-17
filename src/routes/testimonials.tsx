@@ -3,8 +3,15 @@ import { Quote } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { SectionHeading } from "@/components/ui";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/testimonials")({
+  head: () =>
+    seo({
+      title: "Testimonials — Member Stories | SAWE",
+      description:
+        "Hear from South Asian women entrepreneurs about how SAWE turned coffee meets into collaborations, referrals, and real business growth.",
+    }),
   component: TestimonialsPage,
 });
 
