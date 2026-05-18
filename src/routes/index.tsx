@@ -80,9 +80,9 @@ const audience = [
 ];
 
 const testimonials = [
-  "SAWE helped me find my first collaborations in Seattle.",
-  "I walked into one coffee meet alone and walked out with a community.",
-  "This is one of the few communities where networking actually turns into business.",
+  { quote: "SAWE helped me find my first collaborations in Seattle.", name: "Priya Sharma", role: "Marketing Consultant" },
+  { quote: "I walked into one coffee meet alone and walked out with a community.", name: "Anjali Gupta", role: "Creative Director" },
+  { quote: "This is one of the few communities where networking actually turns into business.", name: "Neha Patel", role: "Founder & CEO" },
 ];
 
 const heroAvatars = [
@@ -108,13 +108,10 @@ function HomePage() {
               Greater Seattle Area
             </span>
             <h1 className="mt-5 text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
-              The Community for South Asian Women Entrepreneurs of USA
+              Build Your Business with Seattle's Premier South Asian Sisterhood
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
-              SAWE is a high-intent community helping immigrant and South Asian
-              women entrepreneurs connect, collaborate, learn, and grow through
-              networking, trainings, coffee meets, accountability, and real
-              business opportunities.
+              Join a high-intent community of founders and creators building genuine connections, generating referrals, and accelerating growth together.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button to="/join" variant="secondary" withArrow>
@@ -127,8 +124,11 @@ function HomePage() {
           </div>
 
           {/* Decorative community panel */}
-          <div className="animate-fade-up lg:justify-self-end">
-            <div className="w-full max-w-md rounded-3xl bg-linear-to-br from-plum-600/60 to-plum-900/60 p-5 ring-1 ring-cream/10 backdrop-blur-sm">
+          <div className="animate-fade-up relative lg:justify-self-end w-full max-w-md">
+            <div className="relative z-0 overflow-hidden rounded-3xl ring-1 ring-cream/20 shadow-2xl aspect-[4/3] bg-plum-800">
+              <img src="/hero_image.png" alt="SAWE Community" className="w-full h-full object-cover opacity-90 transition duration-700 hover:opacity-100 hover:scale-105" />
+            </div>
+            <div className="relative z-10 -mt-16 sm:-mt-24 sm:-ml-12 rounded-3xl bg-linear-to-br from-plum-600/95 to-plum-900/95 p-5 ring-1 ring-cream/10 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
               <div className="rounded-2xl bg-white p-5 text-ink shadow-soft">
                 <div className="flex items-center -space-x-3">
                   {heroAvatars.map((a) => (
@@ -192,30 +192,47 @@ function HomePage() {
             eyebrow="About SAWE"
             title="More Than Networking. This Is Your Business Ecosystem."
           />
-          <div className="space-y-5 text-ink/75">
+          <div className="space-y-5 text-ink/75 lg:hidden">
             <p className="leading-relaxed">
-              Starting or rebuilding a business in a new country can feel
-              lonely — especially when you don't have the right network,
-              visibility, or guidance.
-            </p>
-            <p className="font-semibold text-plum-700">
-              SAWE was created to change that.
-            </p>
-            <p className="leading-relaxed">
-              We bring together South Asian women entrepreneurs, solopreneurs,
-              creators, consultants, and small business owners across the
-              Greater Seattle area to help them grow through meaningful
-              connections, collaborations, trainings, referrals, and community
-              support.
-            </p>
-            <p className="leading-relaxed">
-              Whether you are just starting out, pivoting careers, or scaling
-              your business, SAWE gives you a space where business
-              conversations turn into real opportunities.
+              Starting or rebuilding a business in a new country can feel lonely. SAWE gives you a space where business conversations turn into real opportunities.
             </p>
             <Button to="/about" variant="outline" withArrow className="mt-2">
               Meet the Team
             </Button>
+          </div>
+          <div className="hidden lg:grid gap-8 sm:grid-cols-3 text-ink/75">
+            <div className="space-y-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-plum-50 text-plum-700">
+                <Users className="h-6 w-6" />
+              </div>
+              <p className="font-semibold text-plum-900">Immigrant Support</p>
+              <p className="text-sm leading-relaxed">
+                Starting a business in a new country is tough. Find women who understand your exact journey.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100 text-gold-600">
+                <Handshake className="h-6 w-6" />
+              </div>
+              <p className="font-semibold text-plum-900">Real Collaboration</p>
+              <p className="text-sm leading-relaxed">
+                Move past superficial networking. Our members actively refer, hire, and collaborate.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-plum-50 text-plum-700">
+                <TrendingUp className="h-6 w-6" />
+              </div>
+              <p className="font-semibold text-plum-900">Skill Building</p>
+              <p className="text-sm leading-relaxed">
+                Practical workshops on marketing, finance, and growth to help you scale confidently.
+              </p>
+            </div>
+            <div className="col-span-3 mt-4">
+              <Button to="/about" variant="outline" withArrow>
+                Meet the Team
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -232,10 +249,10 @@ function HomePage() {
                 <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-cream/10 text-gold-300">
                   <s.icon className="h-6 w-6" />
                 </span>
-                <p className="mt-3 font-serif text-2xl font-bold text-cream">
+                <p className="mt-3 font-serif text-4xl sm:text-5xl font-bold text-cream">
                   {s.lead}
                 </p>
-                <p className="mt-1 text-sm text-cream/70">{s.label}</p>
+                <p className="mt-2 text-sm font-medium uppercase tracking-wider text-cream/70">{s.label}</p>
               </div>
             ))}
           </div>
@@ -320,18 +337,24 @@ function HomePage() {
             align="center"
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {testimonials.map((quote) => (
+            {testimonials.map((t) => (
               <figure
-                key={quote}
-                className="rounded-2xl bg-cream p-6 shadow-card ring-1 ring-plum-100"
+                key={t.name}
+                className="rounded-2xl bg-cream p-6 shadow-card ring-1 ring-plum-100 flex flex-col"
               >
                 <Quote className="h-8 w-8 text-gold-400" />
-                <blockquote className="mt-4 font-serif text-lg leading-relaxed text-plum-900">
-                  “{quote}”
+                <blockquote className="mt-4 flex-1 font-serif text-lg leading-relaxed text-plum-900">
+                  “{t.quote}”
                 </blockquote>
-                <figcaption className="mt-4 text-sm font-medium text-ink/55">
-                  SAWE Member
-                </figcaption>
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-plum-100 font-bold text-plum-700">
+                    {t.name.charAt(0)}
+                  </div>
+                  <figcaption className="flex flex-col">
+                    <span className="text-sm font-bold text-plum-900">{t.name}</span>
+                    <span className="text-xs font-medium text-ink/55">{t.role}</span>
+                  </figcaption>
+                </div>
               </figure>
             ))}
           </div>

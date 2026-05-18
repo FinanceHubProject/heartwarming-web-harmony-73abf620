@@ -34,14 +34,10 @@ export const Route = createFileRoute("/join")({
 });
 
 const eligibility = [
-  "You are a South Asian woman entrepreneur",
-  "You own or run a business",
-  "You have a registered business or are building one",
-  "You are a solopreneur, freelancer, consultant, coach, creator, or small business owner",
-  "You recently moved to the US and are rebuilding your network or business",
-  "You are exploring entrepreneurship and want to start a business",
-  "You want to learn business tools, systems, and growth skills through the SAWE Academy and trainings",
-  "You believe in collaboration, community, and growth",
+  "South Asian women entrepreneurs, founders, and creators.",
+  "You own a business, or are actively building one.",
+  "You value collaboration, referrals, and community growth.",
+  "You are rebuilding your network in the US.",
 ];
 
 const access = [
@@ -82,19 +78,10 @@ function MembershipPage() {
       />
 
       {/* ============================ INTRO =========================== */}
-      <section className="section bg-white">
-        <div className="container-x max-w-3xl space-y-5 text-lg text-ink/75">
-          <p className="leading-relaxed">
-            SAWE is a growth-focused community for South Asian women
-            entrepreneurs, founders, creators, consultants, and aspiring
-            business owners who want to learn, connect, collaborate, and grow
-            together.
-          </p>
-          <p className="leading-relaxed">
-            Whether you already run a business or are just starting your
-            entrepreneurial journey, SAWE gives you access to networking
-            opportunities, trainings, collaborations, visibility, and a
-            supportive ecosystem of like-minded women.
+      <section className="section bg-white pb-0">
+        <div className="container-x max-w-3xl text-center text-lg font-medium text-ink/75">
+          <p>
+            Whether you already run an established business or are just starting out, SAWE gives you the network, visibility, and tools to scale.
           </p>
         </div>
       </section>
@@ -144,10 +131,6 @@ function MembershipPage() {
             <h3 className="font-serif text-2xl font-semibold text-plum-900">
               Community Values
             </h3>
-            <p className="mt-2 text-sm text-ink/70">
-              We are building a respectful, collaborative, and growth-oriented
-              ecosystem. SAWE members are expected to:
-            </p>
             <CheckList items={values} className="mt-5" />
           </div>
           <div className="rounded-3xl bg-white p-8 shadow-card ring-1 ring-plum-100">
@@ -155,13 +138,10 @@ function MembershipPage() {
               <AlertCircle className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-serif text-2xl font-semibold text-plum-900">
-              Who This Community May Not Be Suitable For
+              Not a Fit If...
             </h3>
             <p className="mt-3 leading-relaxed text-ink/70">
-              SAWE may not be the right fit if you are only looking for casual
-              social networking without business involvement, or if you are
-              unwilling to participate respectfully within a community-driven
-              ecosystem.
+              You are strictly looking for casual socializing. This is a high-intent, business-focused ecosystem that thrives on active, respectful participation.
             </p>
           </div>
         </div>

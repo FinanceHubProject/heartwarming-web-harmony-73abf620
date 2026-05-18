@@ -16,9 +16,9 @@ export const Route = createFileRoute("/about")({
 });
 
 const founderBio = [
-  "Lopamudra Banerjee, popularly known as Lopa, is the founder of SAWE, a growing ecosystem built to support South Asian women entrepreneurs across the Greater Seattle area.",
-  "After moving to the United States as an entrepreneur herself, Lopa experienced firsthand how difficult it can be to rebuild networks, visibility, and business momentum in a new country. SAWE was born from that journey — to create a space where women entrepreneurs could find genuine connections, practical support, collaborations, visibility, and growth opportunities.",
-  "With a background in entrepreneurship, wellness consulting, community building, marketing, and women-focused initiatives, Lopa has spent years building communities that create both emotional support and real business impact. Under her leadership, SAWE has grown into a thriving network of women founders, creators, consultants, coaches, and small business owners.",
+  "Lopamudra Banerjee (Lopa) founded SAWE to support South Asian women entrepreneurs across Greater Seattle.",
+  "After moving to the US, she experienced the challenge of rebuilding networks and visibility firsthand. SAWE was born to provide genuine connections, practical support, and growth opportunities.",
+  "With her background in community building and marketing, she has grown SAWE into a thriving network of founders, creators, and consultants.",
 ];
 
 const team = [
@@ -27,21 +27,21 @@ const team = [
     role: "Chief Operations Officer (COO)",
     initials: "AP",
     tone: "from-plum-500 to-plum-800",
-    bio: "Aparna leads operations and community systems at SAWE, ensuring smooth execution across events, member experience, backend coordination, and organizational processes. She plays a key role in helping the community scale with structure, consistency, and operational excellence.",
+    bio: "Aparna leads operations and community systems, ensuring smooth execution across events, member experience, and organizational processes.",
   },
   {
     name: "Sameera Goteti",
     role: "Chief Product Officer (CPO)",
     initials: "SG",
     tone: "from-gold-400 to-gold-600",
-    bio: "Sameera oversees product thinking, member experience, and growth-focused initiatives within SAWE. She contributes toward building meaningful programs, offerings, and experiences that support the evolving needs of women entrepreneurs inside the community.",
+    bio: "Sameera oversees product thinking and member experience, building meaningful programs that support the evolving needs of women entrepreneurs.",
   },
   {
     name: "Chetna Mahajan",
     role: "Chief Technology Officer (CTO)",
     initials: "CM",
     tone: "from-plum-400 to-plum-700",
-    bio: "Chetna leads the technology vision of SAWE and supports the community with innovation, digital systems, AI integration, and scalable technical solutions. With deep expertise in technology and artificial intelligence, she plays an important role in helping SAWE build future-ready platforms and learning opportunities for entrepreneurs.",
+    bio: "Chetna leads the technology vision, driving innovation and AI integration to build future-ready platforms for the community.",
   },
 ];
 

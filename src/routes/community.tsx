@@ -39,27 +39,27 @@ const different = [
   {
     icon: Network,
     title: "Structured Networking",
-    text: "Our coffee meets and events are intentionally designed to encourage real conversations, collaborations, referrals, and visibility — not just casual introductions.",
+    text: "Events designed for real conversations, collaborations, and referrals — not just casual introductions.",
   },
   {
     icon: Handshake,
     title: "Collaboration Over Competition",
-    text: "Inside SAWE, members actively support each other through referrals, partnerships, collaborations, and business opportunities. We call this our “Earning Loop” culture.",
+    text: "Members actively support each other through our “Earning Loop” culture.",
   },
   {
     icon: GraduationCap,
-    title: "Skill Building & Growth",
-    text: "From AI and marketing workshops to branding, finance, wellness, and business growth sessions, we create opportunities for women entrepreneurs to continuously learn and evolve.",
+    title: "Skill Building",
+    text: "Workshops on AI, marketing, branding, and finance to help you continuously evolve.",
   },
   {
     icon: Megaphone,
-    title: "Visibility for Your Business",
-    text: "Members receive opportunities to showcase their businesses through events, social media spotlights, collaborations, member features, and community promotions.",
+    title: "Business Visibility",
+    text: "Showcase your business through social spotlights and community promotions.",
   },
   {
     icon: ShieldCheck,
-    title: "A Safe & Supportive Ecosystem",
-    text: "Whether you are starting from scratch, pivoting careers, or scaling your business, SAWE gives you a space where you are understood, encouraged, and supported by women walking similar journeys.",
+    title: "A Safe Ecosystem",
+    text: "A space where you are understood, encouraged, and supported by women walking similar journeys.",
   },
 ];
 
@@ -117,24 +117,11 @@ function CommunityPage() {
       />
 
       {/* =========================== INTRO ============================ */}
-      <section className="section bg-white">
-        <div className="container-x max-w-3xl space-y-5 text-lg text-ink/75">
-          <p className="leading-relaxed">
-            <span className="font-semibold text-plum-700">
-              SAWE is not just another networking group.
-            </span>{" "}
-            It is a high-intent ecosystem for South Asian women entrepreneurs
-            who want meaningful connections, collaboration opportunities,
-            business visibility, and long-term growth.
-          </p>
-          <p className="leading-relaxed">
-            We understand the unique journey of immigrant women entrepreneurs —
-            rebuilding networks, starting over in a new country, balancing
-            personal responsibilities, and growing a business without the right
-            ecosystem around them.
-          </p>
-          <p className="font-serif text-2xl font-semibold text-plum-900">
-            That is exactly why SAWE exists.
+      <section className="section bg-white pb-0">
+        <div className="container-x max-w-3xl text-lg text-ink/75">
+          <p className="text-xl leading-relaxed text-center">
+            <span className="font-semibold text-plum-700">Not just another networking group.</span>{" "}
+            SAWE is a high-intent ecosystem for South Asian women founders building real connections, collaborations, and visibility. We understand the unique journey of immigrant entrepreneurs rebuilding their networks from scratch.
           </p>
         </div>
       </section>

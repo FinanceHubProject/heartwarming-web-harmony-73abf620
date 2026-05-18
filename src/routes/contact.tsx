@@ -96,7 +96,7 @@ function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Contact SAWE"
-        subtitle="Let's connect, collaborate & grow together. Whether you want to join the community, attend a coffee meet, collaborate, volunteer, sponsor an event, or simply learn more about SAWE — we would love to hear from you."
+        subtitle="Let's connect, collaborate & grow together. Reach out for memberships, partnerships, or general inquiries."
       />
 
       {/* ===================== FORM + DETAILS ========================= */}

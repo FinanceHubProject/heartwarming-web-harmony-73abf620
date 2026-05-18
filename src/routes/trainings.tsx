@@ -36,13 +36,13 @@ const formats = [
   {
     icon: Clock,
     title: "60-Minute Trainings",
-    text: "Short, focused sessions designed to introduce practical concepts, tools, and strategies that entrepreneurs can immediately apply to their businesses.",
+    text: "Short, focused sessions to introduce practical concepts you can immediately apply.",
     tag: "Quick & practical",
   },
   {
     icon: Layers,
     title: "Long-Format Trainings",
-    text: "Deep-dive workshops and implementation-based programs designed for serious learning, execution, and business growth.",
+    text: "Deep-dive workshops designed for serious learning, execution, and growth.",
     tag: "May be paid",
   },
 ];
@@ -73,21 +73,10 @@ function TrainingsPage() {
       />
 
       {/* ============================ INTRO =========================== */}
-      <section className="section bg-white">
-        <div className="container-x max-w-3xl space-y-5 text-lg text-ink/75">
-          <p className="leading-relaxed">
-            At SAWE, we believe women entrepreneurs grow faster when they have
-            access to the right knowledge, guidance, community, and practical
-            business skills.
-          </p>
-          <p className="leading-relaxed">
-            Our trainings are designed to help South Asian women entrepreneurs
-            become more confident, visible, skilled, and business-ready in
-            today's fast-changing world.
-          </p>
-          <p className="leading-relaxed">
-            We conduct both short-format and long-format trainings across
-            multiple business and personal growth topics.
+      <section className="section bg-white pb-0">
+        <div className="container-x max-w-3xl text-lg text-ink/75">
+          <p className="text-xl leading-relaxed text-center">
+            Grow faster with the right knowledge and practical skills. We provide targeted business workshops designed to make you more confident, visible, and scale-ready.
           </p>
         </div>
       </section>

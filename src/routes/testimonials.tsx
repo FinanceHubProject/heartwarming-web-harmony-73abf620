@@ -21,16 +21,22 @@ const testimonials = [
   {
     quote: "SAWE helped me find my first collaborations in Seattle.",
     tone: "from-plum-500 to-plum-800",
+    name: "Priya Sharma",
+    role: "Marketing Consultant",
   },
   {
     quote:
       "I walked into one coffee meet alone and walked out with a community.",
     tone: "from-gold-400 to-gold-600",
+    name: "Anjali Gupta",
+    role: "Creative Director",
   },
   {
     quote:
       "This is one of the few communities where networking actually turns into business.",
     tone: "from-plum-600 to-plum-900",
+    name: "Neha Patel",
+    role: "Founder & CEO",
   },
 ];
 
@@ -57,11 +63,16 @@ function TestimonialsPage() {
                 </blockquote>
                 <figcaption className="mt-5 flex items-center gap-3">
                   <span
-                    className={`h-11 w-11 rounded-full bg-linear-to-br ${t.tone}`}
-                  />
-                  <span className="text-sm font-semibold text-ink/60">
-                    SAWE Member
+                    className={`flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br ${t.tone} font-bold text-cream`}
+                  >
+                    {t.name.charAt(0)}
                   </span>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-bold text-plum-900">{t.name}</span>
+                    <span className="text-xs font-semibold text-ink/60">
+                      {t.role}
+                    </span>
+                  </div>
                 </figcaption>
               </figure>
             ))}

@@ -27,17 +27,17 @@ const expect = [
   {
     icon: Users,
     title: "Meaningful Introductions",
-    text: "Every meet is structured so you connect with the right women — not just collect business cards.",
+    text: "Structured to connect you with the right women, not just collect business cards.",
   },
   {
     icon: Handshake,
     title: "Real Collaborations",
-    text: "Conversations are designed to spark referrals, partnerships, and genuine working relationships.",
+    text: "Conversations designed to spark referrals and genuine working relationships.",
   },
   {
     icon: Megaphone,
     title: "Business Visibility",
-    text: "Share what you do, get on other founders' radars, and grow your presence in the community.",
+    text: "Share what you do and grow your presence in the community.",
   },
 ];
 
@@ -57,7 +57,7 @@ function CoffeeMeetsPage() {
             <SectionHeading
               eyebrow="Networking, Reimagined"
               title="Come build alongside women who get it"
-              intro="Come meet ambitious, supportive, growth-focused South Asian women entrepreneurs who are building together."
+              intro="Meet ambitious South Asian women entrepreneurs building together."
             />
             <div className="mt-7 flex flex-wrap gap-4">
               <Button to="/contact" variant="primary" withArrow>
@@ -68,17 +68,19 @@ function CoffeeMeetsPage() {
               </Button>
             </div>
           </div>
-          <div className="rounded-3xl bg-plum-50 p-8 text-center ring-1 ring-plum-100">
-            <span className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-plum-700 text-cream">
-              <Coffee className="h-9 w-9" />
-            </span>
-            <p className="mt-5 font-serif text-xl font-semibold text-plum-900">
-              Monthly Coffee Meets
-            </p>
-            <p className="mt-2 text-sm text-ink/65">
-              Hosted across multiple Greater Seattle chapters, every single
-              month.
-            </p>
+          <div className="relative">
+            <img src="/coffee_meet_image.png" alt="Coffee Meet" className="rounded-3xl shadow-2xl ring-1 ring-plum-100 object-cover w-full aspect-[4/3] transition duration-700 hover:scale-105" />
+            <div className="absolute -bottom-6 -left-6 rounded-3xl bg-plum-50 p-6 text-center ring-1 ring-plum-100 shadow-xl max-w-[200px]">
+              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-plum-700 text-cream">
+                <Coffee className="h-6 w-6" />
+              </span>
+              <p className="mt-4 font-serif text-sm font-semibold text-plum-900">
+                Monthly Meets
+              </p>
+              <p className="mt-1 text-xs text-ink/65">
+                Across Greater Seattle
+              </p>
+            </div>
           </div>
         </div>
       </section>
