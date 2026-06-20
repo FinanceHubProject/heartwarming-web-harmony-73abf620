@@ -1,8 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Camera } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { seo } from "@/lib/seo";
+import img1 from "@/assets/IMG_4426.jpeg.asset.json";
+import img2 from "@/assets/IMG_3379.jpeg.asset.json";
+import img3 from "@/assets/IMG_3600.jpeg.asset.json";
+import img4 from "@/assets/IMG_3718.jpeg.asset.json";
+import img5 from "@/assets/IMG_4010.jpeg.asset.json";
+import img6 from "@/assets/IMG_3695.jpeg.asset.json";
+import img7 from "@/assets/IMG_4413.jpeg.asset.json";
 
 export const Route = createFileRoute("/gallery")({
   head: () =>
@@ -14,16 +20,14 @@ export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
 });
 
-// Placeholder tiles until real event photography is added.
-// TODO: replace with real images from SAWE coffee meets, workshops,
-// and community events (drop files in /public and map them here).
-const tiles = [
-  { label: "Coffee Meets", tone: "from-plum-500 to-plum-800" },
-  { label: "Workshops", tone: "from-gold-400 to-gold-600" },
-  { label: "Founder Mixers", tone: "from-plum-600 to-plum-900" },
-  { label: "Trainings", tone: "from-plum-400 to-plum-700" },
-  { label: "Social Events", tone: "from-gold-300 to-gold-500" },
-  { label: "Community", tone: "from-plum-700 to-plum-900" },
+const coffeeMeets = [
+  { src: img1.url, alt: "SAWE coffee meet group photo at a local cafe" },
+  { src: img2.url, alt: "SAWE community gathering with floral centerpieces" },
+  { src: img3.url, alt: "SAWE speaker session with members" },
+  { src: img4.url, alt: "SAWE evening meet on a covered patio" },
+  { src: img5.url, alt: "SAWE coffee meet audience listening to a talk" },
+  { src: img6.url, alt: "SAWE group photo after a presentation" },
+  { src: img7.url, alt: "SAWE members chatting at Top Pot coffee meet" },
 ];
 
 function GalleryPage() {
@@ -37,31 +41,46 @@ function GalleryPage() {
 
       <section className="section bg-white">
         <div className="container-x">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {tiles.map((t) => (
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-coral-600">
+                Coffee Meets
+              </p>
+              <h2 className="mt-2 font-serif text-3xl font-semibold text-plum-900 sm:text-4xl">
+                Where conversations begin
+              </h2>
+            </div>
+            <p className="hidden max-w-sm text-sm text-ink/70 sm:block">
+              Snapshots from recent SAWE coffee meets across the Greater Seattle area.
+            </p>
+          </div>
+
+          <div className="grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-4">
+            {coffeeMeets.map((img, i) => (
               <div
-                key={t.label}
-                className={`flex aspect-[4/3] flex-col items-center justify-center rounded-2xl bg-linear-to-br ${t.tone} text-cream`}
+                key={img.src}
+                className={`group overflow-hidden rounded-2xl ring-1 ring-plum-100 ${
+                  i === 0 ? "col-span-2 row-span-2" : i === 4 ? "md:col-span-2" : ""
+                }`}
               >
-                <Camera className="h-9 w-9 opacity-80" />
-                <p className="mt-3 font-serif text-lg font-semibold">
-                  {t.label}
-                </p>
-                <p className="text-xs uppercase tracking-wider text-cream/70">
-                  Photos coming soon
-                </p>
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
             ))}
           </div>
 
           <div className="mx-auto mt-12 max-w-xl rounded-2xl bg-plum-50 p-8 text-center ring-1 ring-plum-100">
             <h3 className="font-serif text-xl font-semibold text-plum-900">
-              Our gallery is growing
+              More moments coming soon
             </h3>
             <p className="mt-2 text-sm text-ink/70">
-              Photos from our coffee meets, trainings, and community events will
-              be added here soon. Come to an event and be part of the next set
-              of memories.
+              Photos from upcoming trainings, founder mixers, and community
+              celebrations will be added here. Come to an event and be part of
+              the next set of memories.
             </p>
           </div>
         </div>
