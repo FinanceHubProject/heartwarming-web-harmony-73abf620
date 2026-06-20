@@ -68,32 +68,43 @@
  */
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-serif: "Cormorant Garamond", "Cormorant", Georgia, serif;
 
-  --color-plum-50: #faf1f6;
-  --color-plum-100: #f3e0ec;
-  --color-plum-200: #e6c2d9;
-  --color-plum-300: #d199ba;
-  --color-plum-400: #b86895;
-  --color-plum-500: #9c4374;
-  --color-plum-600: #7e2f5b;
-  --color-plum-700: #682549;
-  --color-plum-800: #561f3d;
-  --color-plum-900: #3f1530;
+  /* SAWE Brand Colors
+   * Primary Purple #8666FA, Deep Blue #254FA6, Coral/Salmon #E5786A.
+   * "plum" tokens map to the purple ramp, "gold" tokens map to coral
+   * so existing components stay on-brand without renaming everywhere. */
+  --color-plum-50: #f3efff;
+  --color-plum-100: #e6dcff;
+  --color-plum-200: #cdb9ff;
+  --color-plum-300: #b094ff;
+  --color-plum-400: #9a7dfd;
+  --color-plum-500: #8666fa;
+  --color-plum-600: #6f4ee0;
+  --color-plum-700: #5a3cc0;
+  --color-plum-800: #432d92;
+  --color-plum-900: #2c1d63;
 
-  --color-gold-50: #fbf4e4;
-  --color-gold-100: #f6e7c6;
-  --color-gold-200: #edcf8d;
-  --color-gold-300: #e0b259;
-  --color-gold-400: #d29a3b;
-  --color-gold-500: #c8943f;
-  --color-gold-600: #a87a2f;
+  --color-blue-deep: #254fa6;
+  --color-blue-deep-700: #1d3f85;
+  --color-blue-deep-100: #dde6f5;
 
-  --color-cream: #fdf8f1;
-  --color-ink: #2b2521;
+  --color-gold-50: #fef1ee;
+  --color-gold-100: #fcdcd4;
+  --color-gold-200: #f7b8a9;
+  --color-gold-300: #f0937e;
+  --color-gold-400: #e5786a;
+  --color-gold-500: #d65f50;
+  --color-gold-600: #b14a3d;
 
-  --shadow-soft: 0 10px 40px -12px rgba(63, 21, 48, 0.18);
-  --shadow-card: 0 6px 24px -8px rgba(63, 21, 48, 0.16);
+  --color-coral: #e5786a;
+  --color-purple: #8666fa;
+
+  --color-cream: #fbf8ff;
+  --color-ink: #1c1830;
+
+  --shadow-soft: 0 10px 40px -12px rgba(134, 102, 250, 0.22);
+  --shadow-card: 0 6px 24px -8px rgba(37, 79, 166, 0.18);
 
   --animate-fade-up: fade-up 0.6s ease-out both;
 }
