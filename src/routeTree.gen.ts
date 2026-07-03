@@ -13,6 +13,7 @@ import { Route as TrainingsRouteImport } from './routes/trainings'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as JoinRouteImport } from './routes/join'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CommunityRouteImport } from './routes/community'
 import { Route as CoffeeMeetsRouteImport } from './routes/coffee-meets'
@@ -39,6 +40,11 @@ const JoinRoute = JoinRouteImport.update({
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -83,6 +89,7 @@ export interface FileRoutesByFullPath {
   '/coffee-meets': typeof CoffeeMeetsRoute
   '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
   '/join': typeof JoinRoute
   '/testimonials': typeof TestimonialsRoute
@@ -96,6 +103,7 @@ export interface FileRoutesByTo {
   '/coffee-meets': typeof CoffeeMeetsRoute
   '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
   '/join': typeof JoinRoute
   '/testimonials': typeof TestimonialsRoute
@@ -110,6 +118,7 @@ export interface FileRoutesById {
   '/coffee-meets': typeof CoffeeMeetsRoute
   '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
   '/join': typeof JoinRoute
   '/testimonials': typeof TestimonialsRoute
@@ -125,6 +134,7 @@ export interface FileRouteTypes {
     | '/coffee-meets'
     | '/community'
     | '/contact'
+    | '/faq'
     | '/gallery'
     | '/join'
     | '/testimonials'
@@ -138,6 +148,7 @@ export interface FileRouteTypes {
     | '/coffee-meets'
     | '/community'
     | '/contact'
+    | '/faq'
     | '/gallery'
     | '/join'
     | '/testimonials'
@@ -151,6 +162,7 @@ export interface FileRouteTypes {
     | '/coffee-meets'
     | '/community'
     | '/contact'
+    | '/faq'
     | '/gallery'
     | '/join'
     | '/testimonials'
@@ -165,6 +177,7 @@ export interface RootRouteChildren {
   CoffeeMeetsRoute: typeof CoffeeMeetsRoute
   CommunityRoute: typeof CommunityRoute
   ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
   GalleryRoute: typeof GalleryRoute
   JoinRoute: typeof JoinRoute
   TestimonialsRoute: typeof TestimonialsRoute
@@ -201,6 +214,13 @@ declare module '@tanstack/react-router' {
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -261,6 +281,7 @@ const rootRouteChildren: RootRouteChildren = {
   CoffeeMeetsRoute: CoffeeMeetsRoute,
   CommunityRoute: CommunityRoute,
   ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
   GalleryRoute: GalleryRoute,
   JoinRoute: JoinRoute,
   TestimonialsRoute: TestimonialsRoute,
