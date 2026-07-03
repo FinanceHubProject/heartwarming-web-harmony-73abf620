@@ -8,7 +8,6 @@ import {
   Megaphone,
   Quote,
   Sparkles,
-  TrendingUp,
   Users,
 } from "lucide-react";
 import { Button, CheckList, FeatureCard, SectionHeading } from "@/components/ui";
