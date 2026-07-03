@@ -9,13 +9,13 @@ type ButtonVariant = "primary" | "secondary" | "outline" | "light";
 
 interface ButtonProps {
   children: ReactNode;
-  /** Internal route (renders a router Link). */
   to?: string;
-  /** External / mailto link (renders an anchor). */
   href?: string;
   variant?: ButtonVariant;
   withArrow?: boolean;
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
 const buttonBase =
@@ -36,6 +36,8 @@ export function Button({
   variant = "primary",
   withArrow = false,
   className = "",
+  target,
+  rel,
 }: ButtonProps) {
   const classes = `${buttonBase} ${buttonVariants[variant]} ${className}`;
   const inner = (
@@ -52,8 +54,14 @@ export function Button({
       </AppLink>
     );
   }
+  const isExternal = href && /^https?:/i.test(href);
   return (
-    <a href={href ?? "#"} className={classes}>
+    <a
+      href={href ?? "#"}
+      className={classes}
+      target={target ?? (isExternal ? "_blank" : undefined)}
+      rel={rel ?? (isExternal ? "noopener noreferrer" : undefined)}
+    >
       {inner}
     </a>
   );
