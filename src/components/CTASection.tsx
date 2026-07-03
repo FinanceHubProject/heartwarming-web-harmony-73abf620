@@ -2,7 +2,8 @@ import { Button } from "./ui";
 
 interface CTAAction {
   label: string;
-  to: string;
+  to?: string;
+  href?: string;
 }
 
 interface CTASectionProps {
@@ -12,7 +13,6 @@ interface CTASectionProps {
   secondary?: CTAAction;
 }
 
-/** Final call-to-action band used at the bottom of most pages. */
 export default function CTASection({
   title,
   text,
@@ -31,11 +31,11 @@ export default function CTASection({
             </h2>
             <p className="mt-4 leading-relaxed text-cream/80">{text}</p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button to={primary.to} variant="secondary" withArrow>
+              <Button to={primary.to} href={primary.href} variant="secondary" withArrow>
                 {primary.label}
               </Button>
               {secondary && (
-                <Button to={secondary.to} variant="light">
+                <Button to={secondary.to} href={secondary.href} variant="light">
                   {secondary.label}
                 </Button>
               )}

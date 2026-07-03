@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/site";
 import { AppLink } from "./AppLink";
 import { Button } from "./ui";
+import { siteConfig } from "@/data/site";
 
 function Brand() {
   return (
@@ -62,8 +63,8 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <Button to="/join" variant="primary">
-            Become a Member
+          <Button href={siteConfig.joinFormUrl} variant="primary">
+            Join the Community
           </Button>
         </div>
 
@@ -92,8 +93,8 @@ export default function Navbar() {
                 {link.label}
               </AppLink>
             ))}
-            <Button to="/join" variant="primary" className="mt-3 w-full">
-              Become a Member
+            <Button href={siteConfig.joinFormUrl} variant="primary" className="mt-3 w-full">
+              Join the Community
             </Button>
           </div>
         </div>
