@@ -227,8 +227,6 @@ function HomePage() {
         secondary={{ label: "Attend a Coffee Meet", to: "/coffee-meets" }}
       />
 
-      {/* silence unused imports on some paths */}
-      <span className="hidden"><TrendingUp /></span>
     </>
   );
 }
