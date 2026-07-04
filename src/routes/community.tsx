@@ -121,7 +121,9 @@ function CommunityPage() {
         <div className="container-x max-w-3xl text-lg text-ink/75">
           <p className="text-xl leading-relaxed text-center">
             <span className="font-semibold text-plum-700">Not just another networking group.</span>{" "}
-            SAWE is a high-intent ecosystem for South Asian women founders building real connections, collaborations, and visibility. We understand the unique journey of immigrant entrepreneurs rebuilding their networks from scratch.
+            SAWE is a high-intent ecosystem for South Asian women founders building real
+            connections, collaborations, and visibility. We understand the unique journey of
+            immigrant entrepreneurs rebuilding their networks from scratch.
           </p>
         </div>
       </section>
@@ -154,19 +156,12 @@ function CommunityPage() {
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {inside.map((i) => (
-              <div
-                key={i.title}
-                className="rounded-2xl bg-cream p-6 ring-1 ring-plum-100"
-              >
+              <div key={i.title} className="rounded-2xl bg-cream p-6 ring-1 ring-plum-100">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-plum-700 text-cream">
                   <i.icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-plum-900">
-                  {i.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink/70">
-                  {i.text}
-                </p>
+                <h3 className="mt-4 text-lg font-semibold text-plum-900">{i.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink/70">{i.text}</p>
               </div>
             ))}
           </div>
@@ -191,9 +186,7 @@ function CommunityPage() {
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold-100 text-gold-600">
                   <w.icon className="h-5 w-5" />
                 </span>
-                <span className="text-sm font-medium text-plum-900">
-                  {w.label}
-                </span>
+                <span className="text-sm font-medium text-plum-900">{w.label}</span>
               </div>
             ))}
           </div>
@@ -206,10 +199,9 @@ function CommunityPage() {
           <div className="rounded-3xl bg-linear-to-br from-plum-700 to-plum-900 px-6 py-14 text-center text-cream sm:px-12">
             <span className="eyebrow text-gold-300">Our Vision</span>
             <p className="mx-auto mt-4 max-w-3xl font-serif text-2xl font-semibold leading-snug sm:text-3xl">
-              To build one of the most trusted ecosystems for South Asian women
-              entrepreneurs where women can grow their businesses, confidence,
-              visibility, and support systems together — without feeling alone
-              in the journey.
+              To build one of the most trusted ecosystems for South Asian women entrepreneurs where
+              women can grow their businesses, confidence, visibility, and support systems together
+              — without feeling alone in the journey.
             </p>
           </div>
         </div>

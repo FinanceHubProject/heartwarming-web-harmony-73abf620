@@ -50,18 +50,16 @@ function AboutPage() {
         <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <div className="overflow-hidden rounded-3xl bg-linear-to-br from-plum-600 to-plum-900 p-8 text-center shadow-soft">
-              <span className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-cream/10 font-serif text-4xl font-bold text-gold-300 ring-2 ring-cream/20">
-                LB
-              </span>
-              <p className="mt-5 font-serif text-2xl font-bold text-cream">
-                Lopamudra Banerjee
-              </p>
+              <img
+                src="/founder_pic.jpg"
+                alt="Lopamudra Banerjee"
+                className="mx-auto h-36 w-36 rounded-full object-cover ring-4 ring-cream/20 shadow-md transition duration-500 hover:scale-105"
+              />
+              <p className="mt-5 font-serif text-2xl font-bold text-cream">Lopamudra Banerjee</p>
               <p className="mt-1 text-sm font-medium uppercase tracking-wider text-gold-300">
                 Founder, SAWE
               </p>
-              <p className="mt-3 text-sm text-cream/70">
-                South Asian Women Entrepreneurs
-              </p>
+              <p className="mt-3 text-sm text-cream/70">South Asian Women Entrepreneurs</p>
             </div>
           </div>
 
@@ -113,9 +111,7 @@ function AboutPage() {
                 <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
                   {m.role}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                  {m.bio}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-ink/70">{m.bio}</p>
               </article>
             ))}
           </div>

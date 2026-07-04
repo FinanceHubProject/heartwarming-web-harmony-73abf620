@@ -94,15 +94,11 @@ export function SectionHeading({
   return (
     <div className={`${alignCls} max-w-2xl ${className}`}>
       {eyebrow && <span className={`eyebrow ${eyebrowColor}`}>{eyebrow}</span>}
-      <h2
-        className={`mt-3 text-3xl font-semibold leading-tight sm:text-4xl ${titleColor}`}
-      >
+      <h2 className={`mt-3 text-3xl font-semibold leading-tight sm:text-4xl ${titleColor}`}>
         {title}
       </h2>
       {intro && (
-        <p className={`mt-4 text-base leading-relaxed sm:text-lg ${introColor}`}>
-          {intro}
-        </p>
+        <p className={`mt-4 text-base leading-relaxed sm:text-lg ${introColor}`}>{intro}</p>
       )}
     </div>
   );
@@ -136,15 +132,9 @@ interface CheckListProps {
   className?: string;
 }
 
-export function CheckList({
-  items,
-  columns = 1,
-  className = "",
-}: CheckListProps) {
+export function CheckList({ items, columns = 1, className = "" }: CheckListProps) {
   return (
-    <ul
-      className={`grid gap-3 ${columns === 2 ? "sm:grid-cols-2" : ""} ${className}`}
-    >
+    <ul className={`grid gap-3 ${columns === 2 ? "sm:grid-cols-2" : ""} ${className}`}>
       {items.map((item) => (
         <li key={item} className="flex gap-3">
           <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-600">

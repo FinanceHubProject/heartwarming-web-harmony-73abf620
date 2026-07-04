@@ -19,10 +19,7 @@ interface FieldShellProps {
 function FieldShell({ label, htmlFor, required, children }: FieldShellProps) {
   return (
     <div>
-      <label
-        htmlFor={htmlFor}
-        className="block text-sm font-semibold text-plum-900"
-      >
+      <label htmlFor={htmlFor} className="block text-sm font-semibold text-plum-900">
         {label}
         {required && <span className="text-plum-500"> *</span>}
       </label>
@@ -39,13 +36,7 @@ interface TextInputProps {
   placeholder?: string;
 }
 
-export function TextInput({
-  label,
-  name,
-  type = "text",
-  required,
-  placeholder,
-}: TextInputProps) {
+export function TextInput({ label, name, type = "text", required, placeholder }: TextInputProps) {
   return (
     <FieldShell label={label} htmlFor={name} required={required}>
       <input
@@ -68,13 +59,7 @@ interface TextAreaProps {
   rows?: number;
 }
 
-export function TextArea({
-  label,
-  name,
-  required,
-  placeholder,
-  rows = 4,
-}: TextAreaProps) {
+export function TextArea({ label, name, required, placeholder, rows = 4 }: TextAreaProps) {
   return (
     <FieldShell label={label} htmlFor={name} required={required}>
       <textarea
@@ -96,21 +81,10 @@ interface SelectInputProps {
   required?: boolean;
 }
 
-export function SelectInput({
-  label,
-  name,
-  options,
-  required,
-}: SelectInputProps) {
+export function SelectInput({ label, name, options, required }: SelectInputProps) {
   return (
     <FieldShell label={label} htmlFor={name} required={required}>
-      <select
-        id={name}
-        name={name}
-        required={required}
-        defaultValue=""
-        className={baseControl}
-      >
+      <select id={name} name={name} required={required} defaultValue="" className={baseControl}>
         <option value="" disabled>
           Select an option…
         </option>

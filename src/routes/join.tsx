@@ -15,12 +15,7 @@ import {
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { CheckList, SectionHeading } from "@/components/ui";
-import {
-  FormSuccess,
-  SelectInput,
-  TextArea,
-  TextInput,
-} from "@/components/FormControls";
+import { FormSuccess, SelectInput, TextArea, TextInput } from "@/components/FormControls";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/join")({
@@ -81,7 +76,8 @@ function MembershipPage() {
       <section className="section bg-white pb-0">
         <div className="container-x max-w-3xl text-center text-lg font-medium text-ink/75">
           <p>
-            Whether you already run an established business or are just starting out, SAWE gives you the network, visibility, and tools to scale.
+            Whether you already run an established business or are just starting out, SAWE gives you
+            the network, visibility, and tools to scale.
           </p>
         </div>
       </section>
@@ -108,16 +104,11 @@ function MembershipPage() {
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {access.map((a) => (
-              <div
-                key={a.label}
-                className="rounded-2xl bg-cream p-6 ring-1 ring-plum-100"
-              >
+              <div key={a.label} className="rounded-2xl bg-cream p-6 ring-1 ring-plum-100">
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-plum-700 text-cream">
                   <a.icon className="h-5 w-5" />
                 </span>
-                <p className="mt-4 text-sm font-semibold text-plum-900">
-                  {a.label}
-                </p>
+                <p className="mt-4 text-sm font-semibold text-plum-900">{a.label}</p>
               </div>
             ))}
           </div>
@@ -128,9 +119,7 @@ function MembershipPage() {
       <section className="section">
         <div className="container-x grid gap-8 lg:grid-cols-2">
           <div className="rounded-3xl bg-plum-50 p-8 ring-1 ring-plum-100">
-            <h3 className="font-serif text-2xl font-semibold text-plum-900">
-              Community Values
-            </h3>
+            <h3 className="font-serif text-2xl font-semibold text-plum-900">Community Values</h3>
             <CheckList items={values} className="mt-5" />
           </div>
           <div className="rounded-3xl bg-white p-8 shadow-card ring-1 ring-plum-100">
@@ -141,7 +130,8 @@ function MembershipPage() {
               Not a Fit If...
             </h3>
             <p className="mt-3 leading-relaxed text-ink/70">
-              You are strictly looking for casual socializing. This is a high-intent, business-focused ecosystem that thrives on active, respectful participation.
+              You are strictly looking for casual socializing. This is a high-intent,
+              business-focused ecosystem that thrives on active, respectful participation.
             </p>
           </div>
         </div>
@@ -167,12 +157,7 @@ function MembershipPage() {
               >
                 <div className="grid gap-5 sm:grid-cols-2">
                   <TextInput label="Full Name" name="fullName" required />
-                  <TextInput
-                    label="Email Address"
-                    name="email"
-                    type="email"
-                    required
-                  />
+                  <TextInput label="Email Address" name="email" type="email" required />
                   <TextInput label="Phone Number" name="phone" type="tel" />
                   <TextInput label="City" name="city" required />
                   <TextInput label="Business Name" name="business" />

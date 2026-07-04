@@ -1,19 +1,6 @@
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Youtube,
-} from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Youtube } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import {
-  footerEngage,
-  footerExplore,
-  siteConfig,
-  socialLinks,
-} from "@/data/site";
+import { footerEngage, footerExplore, siteConfig, socialLinks } from "@/data/site";
 import { AppLink } from "./AppLink";
 
 const socialIcons: Record<string, LucideIcon> = {
@@ -31,16 +18,16 @@ export default function Footer() {
         {/* Brand */}
         <div className="sm:col-span-2 lg:col-span-1">
           <div className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-plum-500 to-plum-800 font-serif text-2xl font-bold text-gold-300">
-              S
-            </span>
-            <span className="font-serif text-xl font-bold text-cream">
-              SAWE
-            </span>
+            <img
+              src="/logo.jpg"
+              alt="SAWE Logo"
+              className="h-11 w-11 rounded-xl object-cover shadow-sm ring-1 ring-plum-800"
+            />
+            <span className="font-serif text-xl font-bold text-cream">SAWE</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
-            A high-intent community for South Asian women entrepreneurs in the
-            Greater Seattle area — connect, collaborate, learn, and grow.
+            A high-intent community for South Asian women entrepreneurs in the Greater Seattle area
+            — connect, collaborate, learn, and grow.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {socialLinks.map((s) => {
@@ -61,16 +48,11 @@ export default function Footer() {
 
         {/* Explore */}
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-cream">
-            Explore
-          </h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-cream">Explore</h3>
           <ul className="mt-4 space-y-2.5 text-sm">
             {footerExplore.map((link) => (
               <li key={link.to}>
-                <AppLink
-                  to={link.to}
-                  className="transition-colors hover:text-gold-300"
-                >
+                <AppLink to={link.to} className="transition-colors hover:text-gold-300">
                   {link.label}
                 </AppLink>
               </li>
@@ -86,10 +68,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm">
             {footerEngage.map((link) => (
               <li key={link.to}>
-                <AppLink
-                  to={link.to}
-                  className="transition-colors hover:text-gold-300"
-                >
+                <AppLink to={link.to} className="transition-colors hover:text-gold-300">
                   {link.label}
                 </AppLink>
               </li>
@@ -117,9 +96,7 @@ export default function Footer() {
               <span>{siteConfig.location}</span>
             </li>
           </ul>
-          <p className="mt-4 text-xs uppercase tracking-wider text-cream/55">
-            Community Presence
-          </p>
+          <p className="mt-4 text-xs uppercase tracking-wider text-cream/55">Community Presence</p>
           <p className="mt-1 text-sm">{siteConfig.cities.join(" • ")}</p>
         </div>
       </div>
@@ -127,8 +104,8 @@ export default function Footer() {
       <div className="border-t border-plum-800">
         <div className="container-x flex flex-col gap-2 py-6 text-xs text-cream/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} SAWE — South Asian Women
-            Entrepreneurs. All rights reserved.
+            © {new Date().getFullYear()} SAWE — South Asian Women Entrepreneurs. All rights
+            reserved.
           </p>
           <p>Businesses grow faster when women grow together.</p>
         </div>

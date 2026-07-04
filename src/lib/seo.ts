@@ -14,10 +14,7 @@ export function seo({ title, description, image }: SeoInput) {
     { name: "twitter:description", content: description },
   ];
   if (image) {
-    meta.push(
-      { property: "og:image", content: image },
-      { name: "twitter:image", content: image },
-    );
+    meta.push({ property: "og:image", content: image }, { name: "twitter:image", content: image });
   }
   return { meta };
 }

@@ -76,7 +76,8 @@ function TrainingsPage() {
       <section className="section bg-white pb-0">
         <div className="container-x max-w-3xl text-lg text-ink/75">
           <p className="text-xl leading-relaxed text-center">
-            Grow faster with the right knowledge and practical skills. We provide targeted business workshops designed to make you more confident, visible, and scale-ready.
+            Grow faster with the right knowledge and practical skills. We provide targeted business
+            workshops designed to make you more confident, visible, and scale-ready.
           </p>
         </div>
       </section>
@@ -103,9 +104,7 @@ function TrainingsPage() {
                     {f.tag}
                   </span>
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-plum-900">
-                  {f.title}
-                </h3>
+                <h3 className="mt-5 text-xl font-semibold text-plum-900">{f.title}</h3>
                 <p className="mt-2 leading-relaxed text-ink/70">{f.text}</p>
               </div>
             ))}
@@ -130,20 +129,18 @@ function TrainingsPage() {
                 Internal Community Experts
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink/70">
-                Experienced members who share practical, lived knowledge from
-                their own entrepreneurial journeys.
+                Experienced members who share practical, lived knowledge from their own
+                entrepreneurial journeys.
               </p>
             </div>
             <div className="rounded-2xl bg-cream p-6 ring-1 ring-plum-100">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-100 text-gold-600">
                 <GraduationCap className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-plum-900">
-                External Professionals
-              </h3>
+              <h3 className="mt-4 text-lg font-semibold text-plum-900">External Professionals</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink/70">
-                Industry professionals, founders, mentors, and specialists
-                invited to share deep, current expertise.
+                Industry professionals, founders, mentors, and specialists invited to share deep,
+                current expertise.
               </p>
             </div>
           </div>
@@ -168,9 +165,7 @@ function TrainingsPage() {
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-plum-50 text-plum-700">
                   <t.icon className="h-5 w-5" />
                 </span>
-                <span className="text-sm font-medium text-plum-900">
-                  {t.label}
-                </span>
+                <span className="text-sm font-medium text-plum-900">{t.label}</span>
               </div>
             ))}
           </div>
@@ -183,9 +178,8 @@ function TrainingsPage() {
           <div className="rounded-3xl bg-linear-to-br from-plum-700 to-plum-900 px-6 py-14 text-center text-cream sm:px-12">
             <span className="eyebrow text-gold-300">Our Goal</span>
             <p className="mx-auto mt-4 max-w-3xl font-serif text-2xl font-semibold leading-snug sm:text-3xl">
-              To create a learning ecosystem where South Asian women
-              entrepreneurs can continuously upskill, adapt, collaborate, and
-              grow together — both personally and professionally.
+              To create a learning ecosystem where South Asian women entrepreneurs can continuously
+              upskill, adapt, collaborate, and grow together — both personally and professionally.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button to="/contact" variant="secondary" withArrow>

@@ -1,25 +1,12 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Youtube,
-} from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Youtube } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { CheckList, SectionHeading } from "@/components/ui";
-import {
-  FormSuccess,
-  SelectInput,
-  TextArea,
-  TextInput,
-} from "@/components/FormControls";
+import { FormSuccess, SelectInput, TextArea, TextInput } from "@/components/FormControls";
 import { siteConfig, socialLinks } from "@/data/site";
 import { seo } from "@/lib/seo";
 
@@ -104,11 +91,7 @@ function ContactPage() {
         <div className="container-x grid gap-10 lg:grid-cols-[1.3fr_0.7fr]">
           {/* Form */}
           <div>
-            <SectionHeading
-              eyebrow="Get in Touch"
-              title="Send us a message"
-              className="mb-8"
-            />
+            <SectionHeading eyebrow="Get in Touch" title="Send us a message" className="mb-8" />
             {submitted ? (
               <FormSuccess message="Your message has been received. The SAWE team will get back to you soon." />
             ) : (
@@ -118,12 +101,7 @@ function ContactPage() {
               >
                 <div className="grid gap-5 sm:grid-cols-2">
                   <TextInput label="Full Name" name="fullName" required />
-                  <TextInput
-                    label="Email Address"
-                    name="email"
-                    type="email"
-                    required
-                  />
+                  <TextInput label="Email Address" name="email" type="email" required />
                   <TextInput label="Phone Number" name="phone" type="tel" />
                   <TextInput label="City" name="city" />
                   <TextInput label="Business Name" name="business" />
@@ -142,12 +120,7 @@ function ContactPage() {
                   />
                 </div>
                 <div className="mt-5">
-                  <TextArea
-                    label="How can we help you?"
-                    name="message"
-                    required
-                    rows={5}
-                  />
+                  <TextArea label="How can we help you?" name="message" required rows={5} />
                 </div>
                 <button
                   type="submit"
@@ -162,9 +135,7 @@ function ContactPage() {
           {/* Quick contact + social */}
           <aside className="space-y-6">
             <div className="rounded-3xl bg-plum-800 p-7 text-cream">
-              <h3 className="font-serif text-xl font-semibold">
-                Connect With SAWE
-              </h3>
+              <h3 className="font-serif text-xl font-semibold">Connect With SAWE</h3>
               <ul className="mt-5 space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-5 w-5 shrink-0 text-gold-300" />
@@ -187,22 +158,16 @@ function ContactPage() {
                 </li>
               </ul>
               <div className="mt-5 border-t border-plum-700 pt-5">
-                <p className="text-xs uppercase tracking-wider text-cream/55">
-                  Community Presence
-                </p>
-                <p className="mt-1 text-sm text-cream/85">
-                  {siteConfig.cities.join(" • ")}
-                </p>
+                <p className="text-xs uppercase tracking-wider text-cream/55">Community Presence</p>
+                <p className="mt-1 text-sm text-cream/85">{siteConfig.cities.join(" • ")}</p>
               </div>
             </div>
 
             <div className="rounded-3xl bg-cream p-7 ring-1 ring-plum-100">
-              <h3 className="font-serif text-xl font-semibold text-plum-900">
-                Stay Connected
-              </h3>
+              <h3 className="font-serif text-xl font-semibold text-plum-900">Stay Connected</h3>
               <p className="mt-2 text-sm text-ink/65">
-                Follow SAWE for entrepreneur events, trainings, networking
-                opportunities, member spotlights, and community updates.
+                Follow SAWE for entrepreneur events, trainings, networking opportunities, member
+                spotlights, and community updates.
               </p>
               <div className="mt-4 space-y-2">
                 {socialLinks.map((s) => {
@@ -237,8 +202,8 @@ function ContactPage() {
                   Want to Collaborate With SAWE?
                 </h2>
                 <p className="mt-3 text-ink/70">
-                  We welcome collaborations with partners who share our mission
-                  of helping South Asian women entrepreneurs grow.
+                  We welcome collaborations with partners who share our mission of helping South
+                  Asian women entrepreneurs grow.
                 </p>
                 <a
                   href="#contact-form"
@@ -274,9 +239,7 @@ function ContactPage() {
                     +
                   </span>
                 </summary>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                  {f.a}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-ink/70">{f.a}</p>
               </details>
             ))}
           </div>

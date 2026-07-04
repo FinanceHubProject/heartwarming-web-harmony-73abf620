@@ -5,11 +5,7 @@ interface PageHeaderProps {
 }
 
 /** Reusable banner for the top of inner pages. */
-export default function PageHeader({
-  eyebrow,
-  title,
-  subtitle,
-}: PageHeaderProps) {
+export default function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps) {
   return (
     <section className="relative overflow-hidden bg-plum-800 text-cream">
       {/* Decorative glow accents */}
@@ -18,13 +14,9 @@ export default function PageHeader({
 
       <div className="container-x relative py-16 sm:py-20 lg:py-24">
         {eyebrow && <span className="eyebrow text-gold-300">{eyebrow}</span>}
-        <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">
-          {title}
-        </h1>
+        <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">{title}</h1>
         {subtitle && (
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cream/80">
-            {subtitle}
-          </p>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cream/80">{subtitle}</p>
         )}
       </div>
     </section>

@@ -36,9 +36,7 @@ function BlogPostPage() {
     return (
       <section className="section">
         <div className="container-x text-center">
-          <h1 className="text-3xl font-semibold text-plum-900">
-            Article not found
-          </h1>
+          <h1 className="text-3xl font-semibold text-plum-900">Article not found</h1>
           <p className="mt-3 text-ink/70">
             The article you're looking for doesn't exist or has moved.
           </p>

@@ -9,13 +9,13 @@ import { siteConfig } from "@/data/site";
 function Brand() {
   return (
     <AppLink to="/" className="flex items-center gap-3" aria-label="SAWE home">
-      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-plum-600 to-plum-900 font-serif text-2xl font-bold text-gold-300 shadow-sm">
-        S
-      </span>
+      <img
+        src="/logo.jpg"
+        alt="SAWE Logo"
+        className="h-11 w-11 rounded-xl object-cover shadow-sm ring-1 ring-plum-100"
+      />
       <span className="leading-none">
-        <span className="block font-serif text-xl font-bold text-plum-900">
-          SAWE
-        </span>
+        <span className="block font-serif text-xl font-bold text-plum-900">SAWE</span>
         <span className="mt-0.5 block text-[10px] font-semibold uppercase tracking-[0.13em] text-plum-500">
           South Asian Women Entrepreneurs
         </span>

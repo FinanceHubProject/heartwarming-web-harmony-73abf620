@@ -42,9 +42,7 @@ function BlogIndexPage() {
                 className="flex flex-col overflow-hidden rounded-2xl bg-cream shadow-card ring-1 ring-plum-100"
               >
                 <div className="flex h-40 items-center justify-center bg-linear-to-br from-plum-600 to-plum-900">
-                  <span className="font-serif text-2xl font-bold text-gold-300">
-                    SAWE
-                  </span>
+                  <span className="font-serif text-2xl font-bold text-gold-300">SAWE</span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <span className="inline-flex w-fit items-center rounded-full bg-plum-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-plum-600">
@@ -53,9 +51,7 @@ function BlogIndexPage() {
                   <h2 className="mt-3 text-lg font-semibold leading-snug text-plum-900">
                     {post.title}
                   </h2>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">
-                    {post.excerpt}
-                  </p>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/70">{post.excerpt}</p>
                   <div className="mt-4 flex items-center gap-4 text-xs text-ink/55">
                     <span className="flex items-center gap-1.5">
                       <CalendarDays className="h-3.5 w-3.5" />

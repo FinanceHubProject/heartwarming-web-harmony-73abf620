@@ -21,8 +21,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "south-asian-women-entrepreneurs-seattle",
-    title:
-      "South Asian Women Entrepreneurs in Seattle: Building Businesses Through Community",
+    title: "South Asian Women Entrepreneurs in Seattle: Building Businesses Through Community",
     excerpt:
       "Across Seattle, Bellevue, Redmond, Kirkland, and Bothell, more South Asian women are starting businesses — and looking for the right community to grow with.",
     date: "2026-05-17",

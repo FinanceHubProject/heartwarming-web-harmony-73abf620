@@ -75,7 +75,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "SAWE — South Asian Women Entrepreneurs Community" },
-      { name: "description", content: "SAWE is a Greater Seattle community helping South Asian women entrepreneurs connect, collaborate, learn, and grow through coffee meets, trainings, and real business opportunities." },
+      {
+        name: "description",
+        content:
+          "SAWE is a Greater Seattle community helping South Asian women entrepreneurs connect, collaborate, learn, and grow through coffee meets, trainings, and real business opportunities.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "SAWE" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -88,6 +92,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap",
       },
       { rel: "stylesheet", href: appCss },
+      {
+        rel: "icon",
+        type: "image/jpeg",
+        href: "/logo.jpg",
+      },
     ],
   }),
   shellComponent: RootShell,

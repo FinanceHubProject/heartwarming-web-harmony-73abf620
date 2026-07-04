@@ -25,15 +25,13 @@ const testimonials = [
     role: "Marketing Consultant",
   },
   {
-    quote:
-      "I walked into one coffee meet alone and walked out with a community.",
+    quote: "I walked into one coffee meet alone and walked out with a community.",
     tone: "from-gold-400 to-gold-600",
     name: "Anjali Gupta",
     role: "Creative Director",
   },
   {
-    quote:
-      "This is one of the few communities where networking actually turns into business.",
+    quote: "This is one of the few communities where networking actually turns into business.",
     tone: "from-plum-600 to-plum-900",
     name: "Neha Patel",
     role: "Founder & CEO",
@@ -69,9 +67,7 @@ function TestimonialsPage() {
                   </span>
                   <div className="flex flex-col">
                     <span className="text-sm font-bold text-plum-900">{t.name}</span>
-                    <span className="text-xs font-semibold text-ink/60">
-                      {t.role}
-                    </span>
+                    <span className="text-xs font-semibold text-ink/60">{t.role}</span>
                   </div>
                 </figcaption>
               </figure>
