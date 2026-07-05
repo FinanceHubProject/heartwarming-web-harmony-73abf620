@@ -211,8 +211,8 @@ function CommunityPage() {
       <CTASection
         title="Join the Community"
         text="Whether you are in your idea stage or already running an established business, SAWE welcomes women who believe in growth, collaboration, and community."
-        primary={{ label: "Join SAWE", to: "/join" }}
-        secondary={{ label: "Attend a Coffee Meet", to: "/coffee-meets" }}
+        primary={{ label: "Join SAWE", href: siteConfig.joinFormUrl }}
+        secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
       />
     </>
   );
