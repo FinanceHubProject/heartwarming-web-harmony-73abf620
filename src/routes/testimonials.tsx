@@ -95,8 +95,8 @@ function TestimonialsPage() {
       <CTASection
         title="Write Your Own SAWE Story"
         text="Join a community where networking turns into real businesses, collaborations, and lifelong connections."
-        primary={{ label: "Become a Member", to: "/join" }}
-        secondary={{ label: "Share Your Story", to: "/contact" }}
+        primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
+        secondary={{ label: "Share Your Story", href: siteConfig.lumaUrl }}
       />
     </>
   );
