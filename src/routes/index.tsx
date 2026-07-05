@@ -323,7 +323,7 @@ function HomePage() {
                   creates consistent opportunities for women entrepreneurs to connect and grow
                   together.
                 </p>
-                <Button to="/coffee-meets" variant="primary" withArrow className="mt-6">
+                <Button href={siteConfig.lumaUrl} variant="primary" withArrow className="mt-6">
                   View Upcoming Events
                 </Button>
               </div>
