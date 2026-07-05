@@ -197,8 +197,8 @@ function TrainingsPage() {
       <CTASection
         title="Grow Your Skills With the SAWE Academy"
         text="Become a member to access trainings, workshops, and a learning ecosystem built for South Asian women entrepreneurs."
-        primary={{ label: "Become a Member", to: "/join" }}
-        secondary={{ label: "Talk to Us", to: "/contact" }}
+        primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
+        secondary={{ label: "Talk to Us", href: siteConfig.lumaUrl }}
       />
     </>
   );
