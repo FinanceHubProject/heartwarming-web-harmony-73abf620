@@ -85,7 +85,7 @@ function FaqPage() {
         title="Still have a question?"
         text="Come meet us in person at a Coffee Meet — the best way to get a feel for the community."
         primary={{ label: "Join the Community", href: siteConfig.joinFormUrl }}
-        secondary={{ label: "Attend a Coffee Meet", to: "/coffee-meets" }}
+        secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
       />
     </>
   );

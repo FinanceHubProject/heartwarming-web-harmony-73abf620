@@ -16,6 +16,7 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { CheckList, SectionHeading } from "@/components/ui";
 import { FormSuccess, SelectInput, TextArea, TextInput } from "@/components/FormControls";
+import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/join")({
@@ -202,8 +203,8 @@ function MembershipPage() {
       <CTASection
         title="Become Part of a Growing Ecosystem"
         text="Join South Asian women entrepreneurs building visibility, confidence, collaborations, and businesses together."
-        primary={{ label: "Attend a Coffee Meet", to: "/coffee-meets" }}
-        secondary={{ label: "Explore the Community", to: "/community" }}
+        primary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
+        secondary={{ label: "Join the Community", href: siteConfig.joinFormUrl }}
       />
     </>
   );

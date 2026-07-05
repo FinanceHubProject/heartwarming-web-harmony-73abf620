@@ -4,6 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { AppLink } from "@/components/AppLink";
 import { blogPosts } from "@/data/blog";
+import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/")({
@@ -79,8 +80,8 @@ function BlogIndexPage() {
       <CTASection
         title="Want to Be Featured in the SAWE Story?"
         text="Join the community and get opportunities to share your journey through member spotlights, blogs, and social features."
-        primary={{ label: "Become a Member", to: "/join" }}
-        secondary={{ label: "Get in Touch", to: "/contact" }}
+        primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
+        secondary={{ label: "Get in Touch", href: siteConfig.lumaUrl }}
       />
     </>
   );

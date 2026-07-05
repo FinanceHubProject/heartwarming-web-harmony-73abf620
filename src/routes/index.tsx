@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button, CheckList, FeatureCard, SectionHeading } from "@/components/ui";
 import CTASection from "@/components/CTASection";
+import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -127,10 +128,10 @@ function HomePage() {
               generating referrals, and accelerating growth together.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button to="/join" variant="secondary" withArrow>
+              <Button href={siteConfig.joinFormUrl} variant="secondary" withArrow>
                 Join the Community
               </Button>
-              <Button to="/coffee-meets" variant="light">
+              <Button href={siteConfig.lumaUrl} variant="light">
                 Explore Upcoming Events
               </Button>
             </div>
@@ -322,7 +323,7 @@ function HomePage() {
                   creates consistent opportunities for women entrepreneurs to connect and grow
                   together.
                 </p>
-                <Button to="/coffee-meets" variant="primary" withArrow className="mt-6">
+                <Button href={siteConfig.lumaUrl} variant="primary" withArrow className="mt-6">
                   View Upcoming Events
                 </Button>
               </div>
@@ -380,8 +381,8 @@ function HomePage() {
       <CTASection
         title="Ready to Grow With a Community That Truly Understands Your Journey?"
         text="Join a growing ecosystem of South Asian women entrepreneurs building businesses, visibility, confidence, and meaningful collaborations together."
-        primary={{ label: "Become a Member", to: "/join" }}
-        secondary={{ label: "Attend a Coffee Meet", to: "/coffee-meets" }}
+        primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
+        secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
       />
     </>
   );

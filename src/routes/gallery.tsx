@@ -3,6 +3,7 @@ import { Camera } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { seo } from "@/lib/seo";
+import { siteConfig } from "@/data/site";
 
 export const Route = createFileRoute("/gallery")({
   head: () =>
@@ -65,8 +66,8 @@ function GalleryPage() {
       <CTASection
         title="Be Part of the Next SAWE Moment"
         text="Join the community and attend a coffee meet — the best memories are made in the room."
-        primary={{ label: "Attend a Coffee Meet", to: "/coffee-meets" }}
-        secondary={{ label: "Become a Member", to: "/join" }}
+        primary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
+        secondary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
       />
     </>
   );

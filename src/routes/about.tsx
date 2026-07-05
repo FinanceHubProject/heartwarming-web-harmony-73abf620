@@ -121,8 +121,8 @@ function AboutPage() {
       <CTASection
         title="Want to Build This Ecosystem With Us?"
         text="Join a growing community of South Asian women entrepreneurs — or come to a Coffee Meet to see the community in action."
-        primary={{ label: "Become a Member", href: siteConfig.memberFormUrl }}
-        secondary={{ label: "Attend a Coffee Meet", to: "/coffee-meets" }}
+        primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
+        secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
       />
     </>
   );

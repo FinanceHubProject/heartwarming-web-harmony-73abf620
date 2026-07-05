@@ -249,8 +249,8 @@ function ContactPage() {
       <CTASection
         title="Ready to Join a Growing Community of South Asian Women Entrepreneurs?"
         text="Build meaningful connections, learn practical business skills, and grow alongside ambitious women entrepreneurs in the Greater Seattle area."
-        primary={{ label: "Become a Member", to: "/join" }}
-        secondary={{ label: "Attend a Coffee Meet", to: "/coffee-meets" }}
+        primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
+        secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
       />
     </>
   );

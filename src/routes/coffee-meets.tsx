@@ -53,10 +53,10 @@ function CoffeeMeetsPage() {
               intro="Meet ambitious South Asian women entrepreneurs building together."
             />
             <div className="mt-7 flex flex-wrap gap-4">
-              <Button to="/contact" variant="primary" withArrow>
+              <Button href={siteConfig.lumaUrl} variant="primary" withArrow>
                 RSVP for the Next Meet
               </Button>
-              <Button to="/join" variant="outline">
+              <Button href={siteConfig.joinFormUrl} variant="outline">
                 Become a Member
               </Button>
             </div>
@@ -141,10 +141,10 @@ function CoffeeMeetsPage() {
               below and we'll make sure you don't miss the next one.
             </p>
             <div className="mt-7 flex flex-wrap justify-center gap-4">
-              <Button to="/contact" variant="primary" withArrow>
+              <Button href={siteConfig.lumaUrl} variant="primary" withArrow>
                 RSVP for the Next Meet
               </Button>
-              <Button to="/join" variant="outline">
+              <Button href={siteConfig.joinFormUrl} variant="outline">
                 Join to Get Updates
               </Button>
             </div>
@@ -157,8 +157,8 @@ function CoffeeMeetsPage() {
       <CTASection
         title="Ready to Walk Into a Room of Women Building Together?"
         text="Come to a coffee meet, make real connections, and see why SAWE networking turns into genuine business opportunities."
-        primary={{ label: "RSVP for the Next Meet", to: "/contact" }}
-        secondary={{ label: "Explore the Community", to: "/community" }}
+        primary={{ label: "RSVP for the Next Meet", href: siteConfig.lumaUrl }}
+        secondary={{ label: "Join the Community", href: siteConfig.joinFormUrl }}
       />
     </>
   );

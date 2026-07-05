@@ -10,7 +10,7 @@ export const siteConfig = {
   location: "Greater Seattle Area, Washington",
   cities: ["Kirkland", "Bellevue", "Redmond", "Bothell", "Downtown Seattle"],
   joinFormUrl: "https://forms.gle/MLVxwQuRQZhPbs7G6",
-  memberFormUrl: "https://forms.gle/i76RwH3g2Y7Uhhgt5",
+  memberFormUrl: "https://forms.gle/MLVxwQuRQZhPbs7G6",
   lumaUrl: "https://luma.com/saweglobal",
 };
 
