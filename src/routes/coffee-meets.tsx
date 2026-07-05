@@ -141,10 +141,10 @@ function CoffeeMeetsPage() {
               below and we'll make sure you don't miss the next one.
             </p>
             <div className="mt-7 flex flex-wrap justify-center gap-4">
-              <Button to="/contact" variant="primary" withArrow>
+              <Button href={siteConfig.lumaUrl} variant="primary" withArrow>
                 RSVP for the Next Meet
               </Button>
-              <Button to="/join" variant="outline">
+              <Button href={siteConfig.joinFormUrl} variant="outline">
                 Join to Get Updates
               </Button>
             </div>
