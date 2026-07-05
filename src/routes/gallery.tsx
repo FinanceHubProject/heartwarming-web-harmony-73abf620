@@ -3,6 +3,7 @@ import { Camera } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { seo } from "@/lib/seo";
+import { siteConfig } from "@/data/site";
 
 export const Route = createFileRoute("/gallery")({
   head: () =>

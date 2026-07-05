@@ -4,6 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { AppLink } from "@/components/AppLink";
 import { blogPosts } from "@/data/blog";
+import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/")({

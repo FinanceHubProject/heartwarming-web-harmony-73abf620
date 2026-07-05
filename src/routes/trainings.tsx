@@ -20,6 +20,7 @@ import {
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { Button, SectionHeading } from "@/components/ui";
+import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/trainings")({

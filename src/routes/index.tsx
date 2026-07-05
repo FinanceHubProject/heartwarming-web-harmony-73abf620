@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button, CheckList, FeatureCard, SectionHeading } from "@/components/ui";
 import CTASection from "@/components/CTASection";
+import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({

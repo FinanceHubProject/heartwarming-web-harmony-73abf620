@@ -16,6 +16,7 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { CheckList, SectionHeading } from "@/components/ui";
 import { FormSuccess, SelectInput, TextArea, TextInput } from "@/components/FormControls";
+import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/join")({
