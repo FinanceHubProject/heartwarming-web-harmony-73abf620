@@ -97,8 +97,8 @@ function BlogPostPage() {
       <CTASection
         title="Building a Business in Seattle? You Don't Have to Do It Alone."
         text="Join SAWE and grow alongside South Asian women entrepreneurs through networking, trainings, and real collaborations."
-        primary={{ label: "Become a Member", to: "/join" }}
-        secondary={{ label: "Attend a Coffee Meet", to: "/coffee-meets" }}
+        primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
+        secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
       />
     </>
   );
