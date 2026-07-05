@@ -183,10 +183,10 @@ function TrainingsPage() {
               upskill, adapt, collaborate, and grow together — both personally and professionally.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button to="/contact" variant="secondary" withArrow>
+              <Button href={siteConfig.lumaUrl} variant="secondary" withArrow>
                 View Upcoming Trainings
               </Button>
-              <Button to="/contact" variant="light">
+              <Button href={siteConfig.lumaUrl} variant="light">
                 Register for a Workshop
               </Button>
             </div>
