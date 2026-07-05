@@ -128,10 +128,10 @@ function HomePage() {
               generating referrals, and accelerating growth together.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button to="/join" variant="secondary" withArrow>
+              <Button href={siteConfig.joinFormUrl} variant="secondary" withArrow>
                 Join the Community
               </Button>
-              <Button to="/coffee-meets" variant="light">
+              <Button href={siteConfig.lumaUrl} variant="light">
                 Explore Upcoming Events
               </Button>
             </div>
