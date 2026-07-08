@@ -44,6 +44,6 @@ export interface SocialLink {
 }
 
 export const socialLinks: SocialLink[] = [
-  { label: "Instagram", icon: "instagram", href: "#" },
-  { label: "LinkedIn", icon: "linkedin", href: "#" },
+  { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/sawe_womenentrepreneurs/" },
+  { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/company/sawe-south-asian-women-entrepreneurs/" },
 ];
