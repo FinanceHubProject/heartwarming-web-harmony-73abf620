@@ -5,6 +5,8 @@ import CTASection from "@/components/CTASection";
 import { SectionHeading } from "@/components/ui";
 import { seo } from "@/lib/seo";
 import { siteConfig } from "@/data/site";
+import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () =>
