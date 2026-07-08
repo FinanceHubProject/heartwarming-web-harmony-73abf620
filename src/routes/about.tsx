@@ -5,6 +5,8 @@ import CTASection from "@/components/CTASection";
 import { SectionHeading } from "@/components/ui";
 import { seo } from "@/lib/seo";
 import { siteConfig } from "@/data/site";
+import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () =>
@@ -30,8 +32,7 @@ const team = [
   {
     name: "Aparna Prabhakar",
     role: "Chief Operations Officer (COO)",
-    initials: "AP",
-    tone: "from-plum-500 to-plum-800",
+    image: aparnaAsset.url,
     bio: "Aparna leads operations and community systems at SAWE, ensuring smooth execution across events, member experience, backend coordination, and organizational processes. She plays a key role in helping the community scale with structure, consistency, and operational excellence.",
   },
 ];
@@ -100,11 +101,11 @@ function AboutPage() {
                 key={m.name}
                 className="rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100"
               >
-                <span
-                  className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br ${m.tone} font-serif text-xl font-bold text-cream`}
-                >
-                  {m.initials}
-                </span>
+                <img
+                  src={m.image}
+                  alt={m.name}
+                  className="h-16 w-16 rounded-2xl object-cover ring-1 ring-plum-100"
+                />
                 <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
                   {m.name}
                 </h3>
