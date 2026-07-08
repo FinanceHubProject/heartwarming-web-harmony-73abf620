@@ -101,11 +101,11 @@ function AboutPage() {
                 key={m.name}
                 className="rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100"
               >
-                <span
-                  className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br ${m.tone} font-serif text-xl font-bold text-cream`}
-                >
-                  {m.initials}
-                </span>
+                <img
+                  src={m.image}
+                  alt={m.name}
+                  className="h-16 w-16 rounded-2xl object-cover ring-1 ring-plum-100"
+                />
                 <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
                   {m.name}
                 </h3>
