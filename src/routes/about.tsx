@@ -32,8 +32,7 @@ const team = [
   {
     name: "Aparna Prabhakar",
     role: "Chief Operations Officer (COO)",
-    initials: "AP",
-    tone: "from-plum-500 to-plum-800",
+    image: aparnaAsset.url,
     bio: "Aparna leads operations and community systems at SAWE, ensuring smooth execution across events, member experience, backend coordination, and organizational processes. She plays a key role in helping the community scale with structure, consistency, and operational excellence.",
   },
 ];
