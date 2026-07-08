@@ -5,6 +5,23 @@ import CTASection from "@/components/CTASection";
 import { Button, SectionHeading } from "@/components/ui";
 import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
+import img4426 from "@/assets/IMG_4426.jpeg.asset.json";
+import img3379 from "@/assets/IMG_3379.jpeg.asset.json";
+import img3600 from "@/assets/IMG_3600.jpeg.asset.json";
+import img3718 from "@/assets/IMG_3718.jpeg.asset.json";
+import img4010 from "@/assets/IMG_4010.jpeg.asset.json";
+import img3695 from "@/assets/IMG_3695.jpeg.asset.json";
+import img4413 from "@/assets/IMG_4413.jpeg.asset.json";
+
+const coffeeMeetPhotos = [
+  { src: img4426.url, alt: "SAWE coffee meet gathering" },
+  { src: img3379.url, alt: "Women networking at SAWE coffee meet" },
+  { src: img3600.url, alt: "SAWE members connecting" },
+  { src: img3718.url, alt: "South Asian women entrepreneurs meeting" },
+  { src: img4010.url, alt: "SAWE community coffee meet" },
+  { src: img3695.url, alt: "SAWE members in conversation" },
+  { src: img4413.url, alt: "SAWE coffee meet moment" },
+];
 
 export const Route = createFileRoute("/coffee-meets")({
   head: () =>
@@ -63,8 +80,8 @@ function CoffeeMeetsPage() {
           </div>
           <div className="relative">
             <img
-              src="/coffee_meet_image.png"
-              alt="Coffee Meet"
+              src={img4426.url}
+              alt="SAWE coffee meet — women entrepreneurs gathering"
               className="rounded-3xl shadow-2xl ring-1 ring-plum-100 object-cover w-full aspect-[4/3] transition duration-700 hover:scale-105"
             />
             <div className="absolute -bottom-6 -left-6 rounded-3xl bg-plum-50 p-6 text-center ring-1 ring-plum-100 shadow-xl max-w-[200px]">
@@ -74,6 +91,35 @@ function CoffeeMeetsPage() {
               <p className="mt-4 font-serif text-sm font-semibold text-plum-900">Monthly Meets</p>
               <p className="mt-1 text-xs text-ink/65">Across Greater Seattle</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================= PHOTO GALLERY ====================== */}
+      <section className="section bg-white">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Moments from Our Coffee Meets"
+            title="A look inside the room"
+            intro="Real coffee meets, real conversations, real women building together."
+            align="center"
+          />
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            {coffeeMeetPhotos.map((photo, i) => (
+              <div
+                key={i}
+                className={`overflow-hidden rounded-2xl ring-1 ring-plum-100 shadow-card ${
+                  i === 0 || i === 4 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"
+                }`}
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
