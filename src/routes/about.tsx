@@ -78,7 +78,7 @@ function AboutPage() {
               <img
                 src="/founder_pic.jpg"
                 alt="Lopamudra Banerjee"
-                className="mx-auto h-36 w-36 rounded-full object-cover ring-4 ring-cream/20 shadow-md transition duration-500 hover:scale-105"
+                className="mx-auto h-60 w-60 rounded-full object-cover ring-4 ring-cream/20 shadow-md transition duration-500 hover:scale-105"
               />
               <p className="mt-5 font-serif text-2xl font-bold text-cream">Lopamudra Banerjee</p>
               <p className="mt-1 text-sm font-medium uppercase tracking-wider text-gold-300">
@@ -128,7 +128,7 @@ function AboutPage() {
                 <img
                   src={m.image}
                   alt={m.name}
-                  className="h-48 w-full sm:h-56 sm:w-44 rounded-2xl object-cover object-top ring-1 ring-plum-100"
+                  className="h-48 w-full sm:h-52 sm:w-40 rounded-2xl object-cover object-top ring-1 ring-plum-100"
                 />
                 <div>
                   <h3 className="font-serif text-xl font-semibold text-plum-900">
@@ -165,7 +165,7 @@ function AboutPage() {
                 <img
                   src={v.image}
                   alt={v.name}
-                  className="h-72 w-full rounded-xl object-cover object-center ring-1 ring-plum-100"
+                  className="h-44 w-full rounded-xl object-cover object-center ring-1 ring-plum-100"
                 />
                 <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
                   {v.name}
