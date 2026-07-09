@@ -145,6 +145,41 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* VOLUNTEERS */}
+      <section className="section bg-white">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Our Volunteers"
+            title="The Hands That Make It Happen"
+            align="center"
+          />
+          <p className="mt-4 text-center text-ink/70 max-w-2xl mx-auto">
+            SAWE thrives because of the women who give their time, creativity, and expertise to nurture this community.
+          </p>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {volunteers.map((v) => (
+              <article
+                key={v.name}
+                className="flex flex-col rounded-2xl bg-cream/40 p-6 shadow-card ring-1 ring-plum-100"
+              >
+                <img
+                  src={v.image}
+                  alt={v.name}
+                  className="h-64 w-full rounded-xl object-cover object-top ring-1 ring-plum-100"
+                />
+                <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
+                  {v.name}
+                </h3>
+                <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
+                  {v.role}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-ink/70">{v.bio}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <CTASection
         title="Want to Build This Ecosystem With Us?"
         text="Join a growing community of South Asian women entrepreneurs — or come to a Coffee Meet to see the community in action."
