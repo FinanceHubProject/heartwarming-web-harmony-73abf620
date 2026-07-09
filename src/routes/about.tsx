@@ -6,6 +6,9 @@ import { SectionHeading } from "@/components/ui";
 import { seo } from "@/lib/seo";
 import { siteConfig } from "@/data/site";
 import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
+import meghanaAsset from "@/assets/meghana-rao-rapelli.jpg.asset.json";
+import praveenaAsset from "@/assets/praveena-ramani.jpg.asset.json";
+import agrajaAsset from "@/assets/agraja-mokashi.jpg.asset.json";
 
 
 export const Route = createFileRoute("/about")({
@@ -34,6 +37,27 @@ const team = [
     role: "Chief Operations Officer (COO)",
     image: aparnaAsset.url,
     bio: "Aparna leads operations and community systems at SAWE, ensuring smooth execution across events, member experience, backend coordination, and organizational processes. She plays a key role in helping the community scale with structure, consistency, and operational excellence.",
+  },
+];
+
+const volunteers = [
+  {
+    name: "Meghana Rao Rapelli",
+    role: "Social Media Manager — Instagram",
+    image: meghanaAsset.url,
+    bio: "Meghana is SAWE's Social Media Manager for Instagram, where she creates content, develops marketing campaigns, coordinates events and workshops, and engages with members online and offline to grow a supportive, business-focused community. Outside of SAWE, she shares creative content on her Instagram page @Grande_desisoul, experimenting with formats, hooks, and storytelling styles to explore what helps content connect with audiences.",
+  },
+  {
+    name: "Praveena Ramani",
+    role: "Community Volunteer & Artist",
+    image: praveenaAsset.url,
+    bio: "Praveena is a self-taught artist whose creative practice is driven by the rhythmic, meditative process of hand-drawn patterns. Working from her home studio, INKspirations By PR, she specializes in intricate mandalas and zentangle art across paper and natural wood. Her work blends structured geometry with organic movement, inspired by cultural motifs and the beauty of human interconnectedness. Follow her on Instagram @inkspirations.by.pr.",
+  },
+  {
+    name: "Agraja Mokashi",
+    role: "Community Volunteer & Founder, Warmhouse Creative",
+    image: agrajaAsset.url,
+    bio: "Agraja is the founder of Warmhouse Creative, offering presentation design, virtual assistant support, content creation, and SOP/documentation writing for small businesses, nonprofits, and early-stage founders. Warmhouse Creative was born out of a SAWE coffee meetup. She stays closely involved with the SAWE community, supporting internal process work and helping fellow women entrepreneurs share their stories on LinkedIn. She is also a published children's book author (My Wonderful Words) and a certified Project Manager.",
   },
 ];
 
@@ -115,6 +139,41 @@ function AboutPage() {
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-ink/70">{m.bio}</p>
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VOLUNTEERS */}
+      <section className="section bg-white">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Our Volunteers"
+            title="The Hands That Make It Happen"
+            align="center"
+          />
+          <p className="mt-4 text-center text-ink/70 max-w-2xl mx-auto">
+            SAWE thrives because of the women who give their time, creativity, and expertise to nurture this community.
+          </p>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {volunteers.map((v) => (
+              <article
+                key={v.name}
+                className="flex flex-col rounded-2xl bg-cream/40 p-6 shadow-card ring-1 ring-plum-100"
+              >
+                <img
+                  src={v.image}
+                  alt={v.name}
+                  className="h-64 w-full rounded-xl object-cover object-top ring-1 ring-plum-100"
+                />
+                <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
+                  {v.name}
+                </h3>
+                <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
+                  {v.role}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-ink/70">{v.bio}</p>
               </article>
             ))}
           </div>
