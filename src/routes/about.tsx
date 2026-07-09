@@ -165,7 +165,7 @@ function AboutPage() {
                 <img
                   src={v.image}
                   alt={v.name}
-                  className="h-64 w-full rounded-xl object-cover object-top ring-1 ring-plum-100"
+                  className="h-72 w-full rounded-xl object-cover object-center ring-1 ring-plum-100"
                 />
                 <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
                   {v.name}
