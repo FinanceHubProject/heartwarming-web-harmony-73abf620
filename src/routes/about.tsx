@@ -95,24 +95,26 @@ function AboutPage() {
             title="The Leadership Circle"
             align="center"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-1 max-w-2xl mx-auto">
+          <div className="mt-12 grid gap-6 max-w-3xl mx-auto">
             {team.map((m) => (
               <article
                 key={m.name}
-                className="rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100"
+                className="flex flex-col sm:flex-row items-start gap-6 rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100"
               >
                 <img
                   src={m.image}
                   alt={m.name}
-                  className="h-16 w-16 rounded-2xl object-cover ring-1 ring-plum-100"
+                  className="h-48 w-full sm:h-56 sm:w-44 rounded-2xl object-cover object-top ring-1 ring-plum-100"
                 />
-                <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
-                  {m.name}
-                </h3>
-                <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
-                  {m.role}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">{m.bio}</p>
+                <div>
+                  <h3 className="font-serif text-xl font-semibold text-plum-900">
+                    {m.name}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
+                    {m.role}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{m.bio}</p>
+                </div>
               </article>
             ))}
           </div>
