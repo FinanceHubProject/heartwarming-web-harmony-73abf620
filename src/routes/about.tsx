@@ -6,6 +6,9 @@ import { SectionHeading } from "@/components/ui";
 import { seo } from "@/lib/seo";
 import { siteConfig } from "@/data/site";
 import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
+import meghanaAsset from "@/assets/meghana-rao-rapelli.jpg.asset.json";
+import praveenaAsset from "@/assets/praveena-ramani.jpg.asset.json";
+import agrajaAsset from "@/assets/agraja-mokashi.jpg.asset.json";
 
 
 export const Route = createFileRoute("/about")({
@@ -34,6 +37,27 @@ const team = [
     role: "Chief Operations Officer (COO)",
     image: aparnaAsset.url,
     bio: "Aparna leads operations and community systems at SAWE, ensuring smooth execution across events, member experience, backend coordination, and organizational processes. She plays a key role in helping the community scale with structure, consistency, and operational excellence.",
+  },
+];
+
+const volunteers = [
+  {
+    name: "Meghana Rao Rapelli",
+    role: "Social Media Manager — Instagram",
+    image: meghanaAsset.url,
+    bio: "Meghana is SAWE's Social Media Manager for Instagram, where she creates content, develops marketing campaigns, coordinates events and workshops, and engages with members online and offline to grow a supportive, business-focused community. Outside of SAWE, she shares creative content on her Instagram page @Grande_desisoul, experimenting with formats, hooks, and storytelling styles to explore what helps content connect with audiences.",
+  },
+  {
+    name: "Praveena Ramani",
+    role: "Community Volunteer & Artist",
+    image: praveenaAsset.url,
+    bio: "Praveena is a self-taught artist whose creative practice is driven by the rhythmic, meditative process of hand-drawn patterns. Working from her home studio, INKspirations By PR, she specializes in intricate mandalas and zentangle art across paper and natural wood. Her work blends structured geometry with organic movement, inspired by cultural motifs and the beauty of human interconnectedness. Follow her on Instagram @inkspirations.by.pr.",
+  },
+  {
+    name: "Agraja Mokashi",
+    role: "Community Volunteer & Founder, Warmhouse Creative",
+    image: agrajaAsset.url,
+    bio: "Agraja is the founder of Warmhouse Creative, offering presentation design, virtual assistant support, content creation, and SOP/documentation writing for small businesses, nonprofits, and early-stage founders. Warmhouse Creative was born out of a SAWE coffee meetup. She stays closely involved with the SAWE community, supporting internal process work and helping fellow women entrepreneurs share their stories on LinkedIn. She is also a published children's book author (My Wonderful Words) and a certified Project Manager.",
   },
 ];
 
