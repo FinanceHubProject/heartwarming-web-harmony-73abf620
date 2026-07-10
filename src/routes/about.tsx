@@ -66,13 +66,15 @@ const volunteers = [
     name: "Deepti (GetFitWithDeepti)",
     role: "Community Volunteer — Fitness-Based Dance, Wedding Choreography & Corporate Workshops",
     image: deeptiAsset.url,
+    imagePosition: "object-top",
     bio: "Deepti is a Bollywood dancer at heart, guided by grace and deeply rooted in movement. Her sessions blend joy, rhythm, and strength — a love that evolved into fitness-based dance, where rhythm meets strength and joy meets results. Alongside fitness-based dancing, she offers personalized dance training as her side hustle for fitness, celebrations, workshops, and pure feel-good movement. Whether you want to dance for fitness, prepare for a celebration, energize your workplace, or simply move with more freedom and happiness, this space is for you. Come move, sweat, smile, and shine.",
   },
   {
-    name: "Shipra",
-    role: "Community Volunteer",
+    name: "Shipra Chandak",
+    role: "Community Volunteer & Founder, Optimatrix Investments",
     image: shipraAsset.url,
-    bio: "Shipra is part of the SAWE volunteer circle, contributing her time and energy to help the community thrive. A fuller bio is coming soon.",
+    imagePosition: "object-center",
+    bio: "Shipra Chandak is the founder of Optimatrix Investments, a practice built on the belief that sound financial knowledge shouldn't be reserved for Wall Street insiders. Working directly with individuals—from first-time investors to experienced traders—she works on demystifying equity and options markets, translating complex strategies into practical, accessible actions tailored to client's goals and experience level. Her approach spans a broad range of financial disciplines—moving fluidly from foundational financial literacy to advanced options trading strategies, blending rigorous analysis with genuine, individualized mentorship. Deeply committed to clarity over complexity, she transforms market signals and risk assessments into clear, actionable, long-term understanding grounded in her client's real financial picture. Through Optimatrix Investments, her practice serves as both an educational foundation and a launchpad for long-term financial confidence. Learn more at www.optimatrixinvestments.com.",
   },
 ];
 
