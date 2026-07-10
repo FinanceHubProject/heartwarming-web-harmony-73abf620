@@ -186,7 +186,7 @@ function AboutPage() {
                 <img
                   src={v.image}
                   alt={v.name}
-                  className="mx-auto h-40 w-32 rounded-xl object-cover object-top ring-1 ring-plum-100"
+                  className={`mx-auto h-40 w-32 rounded-xl object-cover ring-1 ring-plum-100 ${v.imagePosition}`}
                 />
 
                 <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
