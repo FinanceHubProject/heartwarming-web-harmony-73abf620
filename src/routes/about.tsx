@@ -9,6 +9,9 @@ import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
 import meghanaAsset from "@/assets/meghana-rao-rapelli.jpg.asset.json";
 import praveenaAsset from "@/assets/praveena-ramani.jpg.asset.json";
 import agrajaAsset from "@/assets/agraja-mokashi.jpg.asset.json";
+import deeptiAsset from "@/assets/deepti.png.asset.json";
+import shipraAsset from "@/assets/shipra.png.asset.json";
+
 
 
 export const Route = createFileRoute("/about")({
