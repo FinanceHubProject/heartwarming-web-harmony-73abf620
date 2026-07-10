@@ -48,31 +48,36 @@ const volunteers = [
     name: "Meghana Rao Rapelli",
     role: "Social Media Manager — Instagram",
     image: meghanaAsset.url,
+    imagePosition: "object-top",
     bio: "Meghana is SAWE's Social Media Manager for Instagram, where she creates content, develops marketing campaigns, coordinates events and workshops, and engages with members online and offline to grow a supportive, business-focused community. Outside of SAWE, she shares creative content on her Instagram page @Grande_desisoul, experimenting with formats, hooks, and storytelling styles to explore what helps content connect with audiences.",
   },
   {
     name: "Praveena Ramani",
     role: "Community Volunteer & Artist",
     image: praveenaAsset.url,
+    imagePosition: "object-top",
     bio: "Praveena is a self-taught artist whose creative practice is driven by the rhythmic, meditative process of hand-drawn patterns. Working from her home studio, INKspirations By PR, she specializes in intricate mandalas and zentangle art across paper and natural wood. Her work blends structured geometry with organic movement, inspired by cultural motifs and the beauty of human interconnectedness. Follow her on Instagram @inkspirations.by.pr.",
   },
   {
     name: "Agraja Mokashi",
     role: "Community Volunteer & Founder, Warmhouse Creative",
     image: agrajaAsset.url,
+    imagePosition: "object-top",
     bio: "Agraja is the founder of Warmhouse Creative, offering presentation design, virtual assistant support, content creation, and SOP/documentation writing for small businesses, nonprofits, and early-stage founders. Warmhouse Creative was born out of a SAWE coffee meetup. She stays closely involved with the SAWE community, supporting internal process work and helping fellow women entrepreneurs share their stories on LinkedIn. She is also a published children's book author (My Wonderful Words) and a certified Project Manager.",
   },
   {
     name: "Deepti (GetFitWithDeepti)",
     role: "Community Volunteer — Fitness-Based Dance, Wedding Choreography & Corporate Workshops",
     image: deeptiAsset.url,
+    imagePosition: "object-top",
     bio: "Deepti is a Bollywood dancer at heart, guided by grace and deeply rooted in movement. Her sessions blend joy, rhythm, and strength — a love that evolved into fitness-based dance, where rhythm meets strength and joy meets results. Alongside fitness-based dancing, she offers personalized dance training as her side hustle for fitness, celebrations, workshops, and pure feel-good movement. Whether you want to dance for fitness, prepare for a celebration, energize your workplace, or simply move with more freedom and happiness, this space is for you. Come move, sweat, smile, and shine.",
   },
   {
-    name: "Shipra",
-    role: "Community Volunteer",
+    name: "Shipra Chandak",
+    role: "Community Volunteer & Founder, Optimatrix Investments",
     image: shipraAsset.url,
-    bio: "Shipra is part of the SAWE volunteer circle, contributing her time and energy to help the community thrive. A fuller bio is coming soon.",
+    imagePosition: "object-center",
+    bio: "Shipra Chandak is the founder of Optimatrix Investments, a practice built on the belief that sound financial knowledge shouldn't be reserved for Wall Street insiders. Working directly with individuals—from first-time investors to experienced traders—she works on demystifying equity and options markets, translating complex strategies into practical, accessible actions tailored to client's goals and experience level. Her approach spans a broad range of financial disciplines—moving fluidly from foundational financial literacy to advanced options trading strategies, blending rigorous analysis with genuine, individualized mentorship. Deeply committed to clarity over complexity, she transforms market signals and risk assessments into clear, actionable, long-term understanding grounded in her client's real financial picture. Through Optimatrix Investments, her practice serves as both an educational foundation and a launchpad for long-term financial confidence. Learn more at www.optimatrixinvestments.com.",
   },
 ];
 
@@ -181,7 +186,7 @@ function AboutPage() {
                 <img
                   src={v.image}
                   alt={v.name}
-                  className="mx-auto h-40 w-32 rounded-xl object-cover object-top ring-1 ring-plum-100"
+                  className={`mx-auto h-40 w-32 rounded-xl object-cover ring-1 ring-plum-100 ${v.imagePosition}`}
                 />
 
                 <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
