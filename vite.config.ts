@@ -12,4 +12,18 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
+  vite: {
+    ssr: {
+      // Keep React client packages out of Nitro's production server bundle.
+      // `noExternal` does the opposite: it forces dependencies to be bundled.
+      external: [
+        "@tanstack/react-router",
+        "@tanstack/react-query",
+        "@radix-ui/react-accordion",
+        "@radix-ui/react-collection",
+        "@radix-ui/react-collapsible",
+        "@radix-ui/react-presence",
+      ],
+    },
+  },
 });

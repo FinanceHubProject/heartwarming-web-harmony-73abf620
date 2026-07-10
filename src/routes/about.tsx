@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { Quote } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
@@ -81,6 +82,35 @@ const volunteers = [
   },
 ];
 
+interface PortraitProps {
+  src: string;
+  name: string;
+  className: string;
+}
+
+function Portrait({ src, name, className }: PortraitProps) {
+  const [failed, setFailed] = useState(false);
+  const initials = name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2);
+
+  if (failed) {
+    return (
+      <div
+        className={`${className} flex items-center justify-center bg-linear-to-br from-plum-100 via-cream to-gold-100 text-3xl font-semibold text-plum-700`}
+        role="img"
+        aria-label={name}
+      >
+        {initials}
+      </div>
+    );
+  }
+
+  return <img src={src} alt={name} className={className} onError={() => setFailed(true)} />;
+}
+
 
 function AboutPage() {
   return (
@@ -146,9 +176,9 @@ function AboutPage() {
                 key={m.name}
                 className="flex flex-col sm:flex-row items-start gap-6 rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100"
               >
-                <img
+                <Portrait
                   src={m.image}
-                  alt={m.name}
+                  name={m.name}
                   className="h-48 w-full sm:h-52 sm:w-40 rounded-2xl object-cover object-top ring-1 ring-plum-100"
                 />
                 <div>
@@ -183,9 +213,9 @@ function AboutPage() {
                 key={v.name}
                 className="flex flex-col rounded-2xl bg-cream/40 p-6 shadow-card ring-1 ring-plum-100"
               >
-                <img
+                <Portrait
                   src={v.image}
-                  alt={v.name}
+                  name={v.name}
                   className={`mx-auto h-40 w-32 rounded-xl object-cover ring-1 ring-plum-100 ${v.imagePosition}`}
                 />
 
