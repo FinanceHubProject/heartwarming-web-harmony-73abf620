@@ -48,18 +48,21 @@ const volunteers = [
     name: "Meghana Rao Rapelli",
     role: "Social Media Manager — Instagram",
     image: meghanaAsset.url,
+    imagePosition: "object-top",
     bio: "Meghana is SAWE's Social Media Manager for Instagram, where she creates content, develops marketing campaigns, coordinates events and workshops, and engages with members online and offline to grow a supportive, business-focused community. Outside of SAWE, she shares creative content on her Instagram page @Grande_desisoul, experimenting with formats, hooks, and storytelling styles to explore what helps content connect with audiences.",
   },
   {
     name: "Praveena Ramani",
     role: "Community Volunteer & Artist",
     image: praveenaAsset.url,
+    imagePosition: "object-top",
     bio: "Praveena is a self-taught artist whose creative practice is driven by the rhythmic, meditative process of hand-drawn patterns. Working from her home studio, INKspirations By PR, she specializes in intricate mandalas and zentangle art across paper and natural wood. Her work blends structured geometry with organic movement, inspired by cultural motifs and the beauty of human interconnectedness. Follow her on Instagram @inkspirations.by.pr.",
   },
   {
     name: "Agraja Mokashi",
     role: "Community Volunteer & Founder, Warmhouse Creative",
     image: agrajaAsset.url,
+    imagePosition: "object-top",
     bio: "Agraja is the founder of Warmhouse Creative, offering presentation design, virtual assistant support, content creation, and SOP/documentation writing for small businesses, nonprofits, and early-stage founders. Warmhouse Creative was born out of a SAWE coffee meetup. She stays closely involved with the SAWE community, supporting internal process work and helping fellow women entrepreneurs share their stories on LinkedIn. She is also a published children's book author (My Wonderful Words) and a certified Project Manager.",
   },
   {
