@@ -9,6 +9,9 @@ import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
 import meghanaAsset from "@/assets/meghana-rao-rapelli.jpg.asset.json";
 import praveenaAsset from "@/assets/praveena-ramani.jpg.asset.json";
 import agrajaAsset from "@/assets/agraja-mokashi.jpg.asset.json";
+import deeptiAsset from "@/assets/deepti.png.asset.json";
+import shipraAsset from "@/assets/shipra.png.asset.json";
+
 
 
 export const Route = createFileRoute("/about")({
@@ -59,7 +62,20 @@ const volunteers = [
     image: agrajaAsset.url,
     bio: "Agraja is the founder of Warmhouse Creative, offering presentation design, virtual assistant support, content creation, and SOP/documentation writing for small businesses, nonprofits, and early-stage founders. Warmhouse Creative was born out of a SAWE coffee meetup. She stays closely involved with the SAWE community, supporting internal process work and helping fellow women entrepreneurs share their stories on LinkedIn. She is also a published children's book author (My Wonderful Words) and a certified Project Manager.",
   },
+  {
+    name: "Deepti (GetFitWithDeepti)",
+    role: "Community Volunteer — Fitness-Based Dance, Wedding Choreography & Corporate Workshops",
+    image: deeptiAsset.url,
+    bio: "Deepti is a Bollywood dancer at heart, guided by grace and deeply rooted in movement. Her sessions blend joy, rhythm, and strength — a love that evolved into fitness-based dance, where rhythm meets strength and joy meets results. Alongside fitness-based dancing, she offers personalized dance training as her side hustle for fitness, celebrations, workshops, and pure feel-good movement. Whether you want to dance for fitness, prepare for a celebration, energize your workplace, or simply move with more freedom and happiness, this space is for you. Come move, sweat, smile, and shine.",
+  },
+  {
+    name: "Shipra",
+    role: "Community Volunteer",
+    image: shipraAsset.url,
+    bio: "Shipra is part of the SAWE volunteer circle, contributing her time and energy to help the community thrive. A fuller bio is coming soon.",
+  },
 ];
+
 
 function AboutPage() {
   return (
@@ -165,8 +181,9 @@ function AboutPage() {
                 <img
                   src={v.image}
                   alt={v.name}
-                  className="h-44 w-full rounded-xl object-cover object-center ring-1 ring-plum-100"
+                  className="mx-auto h-40 w-32 rounded-xl object-cover object-top ring-1 ring-plum-100"
                 />
+
                 <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
                   {v.name}
                 </h3>
