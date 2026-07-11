@@ -137,8 +137,9 @@ function HomePage() {
     <>
       {/* ============================ HERO ============================ */}
       <section className="relative overflow-hidden bg-linear-to-br from-plum-700 via-plum-800 to-plum-900 text-cream">
-        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-plum-500/40 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-gold-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-coral-400/30 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-coral-500/25 blur-3xl" />
+        <div className="pointer-events-none absolute top-1/3 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-plum-500/25 blur-3xl" />
 
         <div className="container-x relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
           <div className="animate-fade-up">
