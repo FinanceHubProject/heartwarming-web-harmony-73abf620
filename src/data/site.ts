@@ -9,8 +9,8 @@ export const siteConfig = {
   email: "southasianwomenentrepreneurs@gmail.com",
   location: "Greater Seattle Area, Washington",
   cities: ["Kirkland", "Bellevue", "Redmond", "Bothell", "Downtown Seattle"],
-  joinFormUrl: "https://forms.gle/MLVxwQuRQZhPbs7G6",
-  memberFormUrl: "https://forms.gle/MLVxwQuRQZhPbs7G6",
+  joinFormUrl: "https://forms.gle/4EEGGKCftFKA5np78",
+  memberFormUrl: "https://forms.gle/4EEGGKCftFKA5np78",
   lumaUrl: "https://luma.com/saweglobal",
 };
 
