@@ -41,8 +41,8 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { icon: Users, lead: "300+", label: "Women Entrepreneurs" },
-  { icon: MapPin, lead: "Multiple", label: "Seattle Area Chapters" },
+  { icon: Users, lead: 465, isCount: true, label: "Women Entrepreneurs" },
+  { icon: MapPin, lead: "5", label: "Seattle Area Chapters" },
   { icon: CalendarDays, lead: "Monthly", label: "Coffee Meets & Trainings" },
   {
     icon: Repeat2,
@@ -54,6 +54,24 @@ const stats = [
     lead: "Hands-on",
     label: "Skill Building + Business Visibility",
   },
+];
+
+const memberAvatars = [
+  { src: aparnaAsset.url, name: "Aparna" },
+  { src: meghanaAsset.url, name: "Meghana" },
+  { src: agrajaAsset.url, name: "Agraja" },
+  { src: praveenaAsset.url, name: "Praveena" },
+  { src: deeptiAsset.url, name: "Deepti" },
+  { src: shipraAsset.url, name: "Shipra" },
+];
+
+const collage = [
+  { src: img3600.url, span: "row-span-2" },
+  { src: img4010.url, span: "" },
+  { src: img4413.url, span: "" },
+  { src: img3718.url, span: "row-span-2" },
+  { src: img3695.url, span: "" },
+  { src: img4426.url, span: "" },
 ];
 
 const offerings = [
