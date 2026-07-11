@@ -280,22 +280,55 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ======================= COMMUNITY STATS ====================== */}
-      <section className="bg-plum-800 py-14 text-cream">
+      {/* ======================= PHOTO COLLAGE ======================== */}
+      <section className="bg-white pt-16 sm:pt-20">
         <div className="container-x">
-          <p className="text-center font-serif text-2xl font-semibold sm:text-3xl">
+          <div className="grid auto-rows-[110px] grid-cols-3 gap-3 sm:auto-rows-[150px] sm:grid-cols-6 sm:gap-4">
+            {collage.map((c, i) => (
+              <div
+                key={i}
+                className={`group relative overflow-hidden rounded-2xl ring-1 ring-plum-100 shadow-card ${c.span}`}
+              >
+                <img
+                  src={c.src}
+                  alt="SAWE community moment"
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ======================= COMMUNITY STATS ====================== */}
+      <section className="relative overflow-hidden bg-linear-to-br from-cream via-coral-50 to-plum-50 py-16">
+        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-coral-200/50 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-plum-200/50 blur-3xl" />
+        <div className="container-x relative">
+          <p className="text-center font-serif text-3xl font-semibold text-plum-900 sm:text-4xl">
             Growing Together
           </p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <p className="mt-2 text-center text-sm text-ink/60">
+            A thriving ecosystem of South Asian women entrepreneurs across Greater Seattle.
+          </p>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {stats.map((s) => (
-              <div key={s.label} className="text-center">
-                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-cream/10 text-gold-300">
+              <div
+                key={s.label}
+                className="rounded-2xl bg-white/80 p-5 text-center shadow-card ring-1 ring-plum-100 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-soft"
+              >
+                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-coral-100 to-coral-200 text-coral-600">
                   <s.icon className="h-6 w-6" />
                 </span>
-                <p className="mt-3 font-serif text-4xl sm:text-5xl font-bold text-cream">
-                  {s.lead}
+                <p className="mt-3 font-serif text-4xl sm:text-5xl font-bold bg-linear-to-br from-plum-700 to-coral-500 bg-clip-text text-transparent">
+                  {s.isCount && typeof s.lead === "number" ? (
+                    <CountUp end={s.lead} suffix="+" />
+                  ) : (
+                    s.lead
+                  )}
                 </p>
-                <p className="mt-2 text-sm font-medium uppercase tracking-wider text-cream/70">
+                <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-plum-800/70">
                   {s.label}
                 </p>
               </div>
