@@ -129,13 +129,8 @@ const testimonials = [
   },
 ];
 
-const heroAvatars = [
-  { initials: "AP", tone: "bg-plum-600" },
-  { initials: "SG", tone: "bg-gold-500" },
-  { initials: "LB", tone: "bg-plum-800" },
-  { initials: "CM", tone: "bg-plum-400" },
-  { initials: "RK", tone: "bg-gold-400" },
-];
+// Real member headshots that appear as the hero avatar stack.
+
 
 function HomePage() {
   return (
