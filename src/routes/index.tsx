@@ -13,6 +13,19 @@ import {
   Users,
 } from "lucide-react";
 import { Button, CheckList, FeatureCard, SectionHeading } from "@/components/ui";
+import CountUp from "@/components/CountUp";
+import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
+import agrajaAsset from "@/assets/agraja-mokashi.jpg.asset.json";
+import meghanaAsset from "@/assets/meghana-rao-rapelli.jpg.asset.json";
+import praveenaAsset from "@/assets/praveena-ramani.jpg.asset.json";
+import deeptiAsset from "@/assets/deepti.png.asset.json";
+import shipraAsset from "@/assets/shipra.png.asset.json";
+import img3600 from "@/assets/IMG_3600.jpeg.asset.json";
+import img3695 from "@/assets/IMG_3695.jpeg.asset.json";
+import img3718 from "@/assets/IMG_3718.jpeg.asset.json";
+import img4010 from "@/assets/IMG_4010.jpeg.asset.json";
+import img4413 from "@/assets/IMG_4413.jpeg.asset.json";
+import img4426 from "@/assets/IMG_4426.jpeg.asset.json";
 import CTASection from "@/components/CTASection";
 import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
