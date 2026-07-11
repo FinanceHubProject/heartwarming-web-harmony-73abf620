@@ -175,16 +175,16 @@ function HomePage() {
             <div className="relative z-10 -mt-16 sm:-mt-24 sm:-ml-12 rounded-3xl bg-linear-to-br from-plum-600/95 to-plum-900/95 p-5 ring-1 ring-cream/10 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
               <div className="rounded-2xl bg-white p-5 text-ink shadow-soft">
                 <div className="flex items-center -space-x-3">
-                  {heroAvatars.map((a) => (
-                    <span
-                      key={a.initials}
-                      className={`flex h-11 w-11 items-center justify-center rounded-full ${a.tone} text-sm font-semibold text-cream ring-2 ring-white`}
-                    >
-                      {a.initials}
-                    </span>
+                  {memberAvatars.map((a) => (
+                    <img
+                      key={a.name}
+                      src={a.src}
+                      alt={a.name}
+                      className="h-11 w-11 rounded-full object-cover ring-2 ring-white shadow-sm"
+                    />
                   ))}
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-plum-50 text-xs font-bold text-plum-700 ring-2 ring-white">
-                    300+
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-coral-400 to-coral-600 text-[11px] font-bold text-white ring-2 ring-white">
+                    <CountUp end={465} suffix="+" />
                   </span>
                 </div>
                 <p className="mt-4 font-serif text-lg font-semibold text-plum-900">
