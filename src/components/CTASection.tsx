@@ -18,9 +18,9 @@ export default function CTASection({ title, text, primary, secondary }: CTASecti
   return (
     <section className="section">
       <div className="container-x">
-        <div className="relative overflow-hidden rounded-3xl bg-plum-800 px-6 py-14 text-center text-cream sm:px-12 sm:py-16">
-          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold-500/15 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-plum-500/40 blur-3xl" />
+        <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-plum-800 via-plum-700 to-plum-900 px-6 py-14 text-center text-cream sm:px-12 sm:py-16">
+          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-coral-400/30 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-coral-500/25 blur-3xl" />
           <div className="relative mx-auto max-w-2xl">
             <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">{title}</h2>
             <p className="mt-4 leading-relaxed text-cream/80">{text}</p>

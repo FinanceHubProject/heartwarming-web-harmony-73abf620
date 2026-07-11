@@ -13,6 +13,19 @@ import {
   Users,
 } from "lucide-react";
 import { Button, CheckList, FeatureCard, SectionHeading } from "@/components/ui";
+import CountUp from "@/components/CountUp";
+import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
+import agrajaAsset from "@/assets/agraja-mokashi.jpg.asset.json";
+import meghanaAsset from "@/assets/meghana-rao-rapelli.jpg.asset.json";
+import praveenaAsset from "@/assets/praveena-ramani.jpg.asset.json";
+import deeptiAsset from "@/assets/deepti.png.asset.json";
+import shipraAsset from "@/assets/shipra.png.asset.json";
+import img3600 from "@/assets/IMG_3600.jpeg.asset.json";
+import img3695 from "@/assets/IMG_3695.jpeg.asset.json";
+import img3718 from "@/assets/IMG_3718.jpeg.asset.json";
+import img4010 from "@/assets/IMG_4010.jpeg.asset.json";
+import img4413 from "@/assets/IMG_4413.jpeg.asset.json";
+import img4426 from "@/assets/IMG_4426.jpeg.asset.json";
 import CTASection from "@/components/CTASection";
 import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
@@ -28,8 +41,8 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { icon: Users, lead: "300+", label: "Women Entrepreneurs" },
-  { icon: MapPin, lead: "Multiple", label: "Seattle Area Chapters" },
+  { icon: Users, lead: 465, isCount: true, label: "Women Entrepreneurs" },
+  { icon: MapPin, lead: "5", label: "Seattle Area Chapters" },
   { icon: CalendarDays, lead: "Monthly", label: "Coffee Meets & Trainings" },
   {
     icon: Repeat2,
@@ -41,6 +54,24 @@ const stats = [
     lead: "Hands-on",
     label: "Skill Building + Business Visibility",
   },
+];
+
+const memberAvatars = [
+  { src: aparnaAsset.url, name: "Aparna" },
+  { src: meghanaAsset.url, name: "Meghana" },
+  { src: agrajaAsset.url, name: "Agraja" },
+  { src: praveenaAsset.url, name: "Praveena" },
+  { src: deeptiAsset.url, name: "Deepti" },
+  { src: shipraAsset.url, name: "Shipra" },
+];
+
+const collage = [
+  { src: img3600.url, span: "row-span-2" },
+  { src: img4010.url, span: "" },
+  { src: img4413.url, span: "" },
+  { src: img3718.url, span: "row-span-2" },
+  { src: img3695.url, span: "" },
+  { src: img4426.url, span: "" },
 ];
 
 const offerings = [
@@ -98,21 +129,17 @@ const testimonials = [
   },
 ];
 
-const heroAvatars = [
-  { initials: "AP", tone: "bg-plum-600" },
-  { initials: "SG", tone: "bg-gold-500" },
-  { initials: "LB", tone: "bg-plum-800" },
-  { initials: "CM", tone: "bg-plum-400" },
-  { initials: "RK", tone: "bg-gold-400" },
-];
+// Real member headshots that appear as the hero avatar stack.
+
 
 function HomePage() {
   return (
     <>
       {/* ============================ HERO ============================ */}
       <section className="relative overflow-hidden bg-linear-to-br from-plum-700 via-plum-800 to-plum-900 text-cream">
-        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-plum-500/40 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-gold-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-coral-400/30 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-coral-500/25 blur-3xl" />
+        <div className="pointer-events-none absolute top-1/3 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-plum-500/25 blur-3xl" />
 
         <div className="container-x relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
           <div className="animate-fade-up">
@@ -149,16 +176,16 @@ function HomePage() {
             <div className="relative z-10 -mt-16 sm:-mt-24 sm:-ml-12 rounded-3xl bg-linear-to-br from-plum-600/95 to-plum-900/95 p-5 ring-1 ring-cream/10 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
               <div className="rounded-2xl bg-white p-5 text-ink shadow-soft">
                 <div className="flex items-center -space-x-3">
-                  {heroAvatars.map((a) => (
-                    <span
-                      key={a.initials}
-                      className={`flex h-11 w-11 items-center justify-center rounded-full ${a.tone} text-sm font-semibold text-cream ring-2 ring-white`}
-                    >
-                      {a.initials}
-                    </span>
+                  {memberAvatars.map((a) => (
+                    <img
+                      key={a.name}
+                      src={a.src}
+                      alt={a.name}
+                      className="h-11 w-11 rounded-full object-cover ring-2 ring-white shadow-sm"
+                    />
                   ))}
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-plum-50 text-xs font-bold text-plum-700 ring-2 ring-white">
-                    300+
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-coral-400 to-coral-600 text-[11px] font-bold text-white ring-2 ring-white">
+                    <CountUp end={465} suffix="+" />
                   </span>
                 </div>
                 <p className="mt-4 font-serif text-lg font-semibold text-plum-900">
@@ -253,22 +280,55 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ======================= COMMUNITY STATS ====================== */}
-      <section className="bg-plum-800 py-14 text-cream">
+      {/* ======================= PHOTO COLLAGE ======================== */}
+      <section className="bg-white pt-16 sm:pt-20">
         <div className="container-x">
-          <p className="text-center font-serif text-2xl font-semibold sm:text-3xl">
+          <div className="grid auto-rows-[110px] grid-cols-3 gap-3 sm:auto-rows-[150px] sm:grid-cols-6 sm:gap-4">
+            {collage.map((c, i) => (
+              <div
+                key={i}
+                className={`group relative overflow-hidden rounded-2xl ring-1 ring-plum-100 shadow-card ${c.span}`}
+              >
+                <img
+                  src={c.src}
+                  alt="SAWE community moment"
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ======================= COMMUNITY STATS ====================== */}
+      <section className="relative overflow-hidden bg-linear-to-br from-cream via-coral-50 to-plum-50 py-16">
+        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-coral-200/50 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-plum-200/50 blur-3xl" />
+        <div className="container-x relative">
+          <p className="text-center font-serif text-3xl font-semibold text-plum-900 sm:text-4xl">
             Growing Together
           </p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <p className="mt-2 text-center text-sm text-ink/60">
+            A thriving ecosystem of South Asian women entrepreneurs across Greater Seattle.
+          </p>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {stats.map((s) => (
-              <div key={s.label} className="text-center">
-                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-cream/10 text-gold-300">
+              <div
+                key={s.label}
+                className="rounded-2xl bg-white/80 p-5 text-center shadow-card ring-1 ring-plum-100 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-soft"
+              >
+                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-coral-100 to-coral-200 text-coral-600">
                   <s.icon className="h-6 w-6" />
                 </span>
-                <p className="mt-3 font-serif text-4xl sm:text-5xl font-bold text-cream">
-                  {s.lead}
+                <p className="mt-3 font-serif text-4xl sm:text-5xl font-bold bg-linear-to-br from-plum-700 to-coral-500 bg-clip-text text-transparent">
+                  {s.isCount && typeof s.lead === "number" ? (
+                    <CountUp end={s.lead} suffix="+" />
+                  ) : (
+                    s.lead
+                  )}
                 </p>
-                <p className="mt-2 text-sm font-medium uppercase tracking-wider text-cream/70">
+                <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-plum-800/70">
                   {s.label}
                 </p>
               </div>
