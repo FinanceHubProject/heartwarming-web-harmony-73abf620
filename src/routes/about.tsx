@@ -1,17 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { Quote } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { SectionHeading } from "@/components/ui";
 import { seo } from "@/lib/seo";
 import { siteConfig } from "@/data/site";
-import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
-import meghanaAsset from "@/assets/meghana-rao-rapelli.jpg.asset.json";
-import praveenaAsset from "@/assets/praveena-ramani.jpg.asset.json";
-import agrajaAsset from "@/assets/agraja-mokashi.jpg.asset.json";
-import deeptiAsset from "@/assets/deepti.png.asset.json";
-import shipraAsset from "@/assets/shipra.png.asset.json";
 
 
 
@@ -39,7 +32,7 @@ const team = [
   {
     name: "Aparna Prabhakar",
     role: "Chief Operations Officer (COO)",
-    image: aparnaAsset.url,
+    image: "",
     bio: "Aparna leads operations and community systems at SAWE, ensuring smooth execution across events, member experience, backend coordination, and organizational processes. She plays a key role in helping the community scale with structure, consistency, and operational excellence.",
   },
 ];
@@ -48,35 +41,35 @@ const volunteers = [
   {
     name: "Meghana Rao Rapelli",
     role: "Social Media Manager — Instagram",
-    image: meghanaAsset.url,
+    image: "",
     imagePosition: "object-top",
     bio: "Meghana is SAWE's Social Media Manager for Instagram, where she creates content, develops marketing campaigns, coordinates events and workshops, and engages with members online and offline to grow a supportive, business-focused community. Outside of SAWE, she shares creative content on her Instagram page @Grande_desisoul, experimenting with formats, hooks, and storytelling styles to explore what helps content connect with audiences.",
   },
   {
     name: "Praveena Ramani",
     role: "Community Volunteer & Artist",
-    image: praveenaAsset.url,
+    image: "",
     imagePosition: "object-top",
     bio: "Praveena is a self-taught artist whose creative practice is driven by the rhythmic, meditative process of hand-drawn patterns. Working from her home studio, INKspirations By PR, she specializes in intricate mandalas and zentangle art across paper and natural wood. Her work blends structured geometry with organic movement, inspired by cultural motifs and the beauty of human interconnectedness. Follow her on Instagram @inkspirations.by.pr.",
   },
   {
     name: "Agraja Mokashi",
     role: "Community Volunteer & Founder, Warmhouse Creative",
-    image: agrajaAsset.url,
+    image: "",
     imagePosition: "object-top",
     bio: "Agraja is the founder of Warmhouse Creative, offering presentation design, virtual assistant support, content creation, and SOP/documentation writing for small businesses, nonprofits, and early-stage founders. Warmhouse Creative was born out of a SAWE coffee meetup. She stays closely involved with the SAWE community, supporting internal process work and helping fellow women entrepreneurs share their stories on LinkedIn. She is also a published children's book author (My Wonderful Words) and a certified Project Manager.",
   },
   {
     name: "Deepti (GetFitWithDeepti)",
     role: "Community Volunteer — Fitness-Based Dance, Wedding Choreography & Corporate Workshops",
-    image: deeptiAsset.url,
+    image: "",
     imagePosition: "object-top",
     bio: "Deepti is a Bollywood dancer at heart, guided by grace and deeply rooted in movement. Her sessions blend joy, rhythm, and strength — a love that evolved into fitness-based dance, where rhythm meets strength and joy meets results. Alongside fitness-based dancing, she offers personalized dance training as her side hustle for fitness, celebrations, workshops, and pure feel-good movement. Whether you want to dance for fitness, prepare for a celebration, energize your workplace, or simply move with more freedom and happiness, this space is for you. Come move, sweat, smile, and shine.",
   },
   {
     name: "Shipra Chandak",
     role: "Community Volunteer & Founder, Optimatrix Investments",
-    image: shipraAsset.url,
+    image: "",
     imagePosition: "object-center",
     bio: "Shipra Chandak is the founder of Optimatrix Investments, a practice built on the belief that sound financial knowledge shouldn't be reserved for Wall Street insiders. Working directly with individuals—from first-time investors to experienced traders—she works on demystifying equity and options markets, translating complex strategies into practical, accessible actions tailored to client's goals and experience level. Her approach spans a broad range of financial disciplines—moving fluidly from foundational financial literacy to advanced options trading strategies, blending rigorous analysis with genuine, individualized mentorship. Deeply committed to clarity over complexity, she transforms market signals and risk assessments into clear, actionable, long-term understanding grounded in her client's real financial picture. Through Optimatrix Investments, her practice serves as both an educational foundation and a launchpad for long-term financial confidence. Learn more at www.optimatrixinvestments.com.",
   },
@@ -89,14 +82,13 @@ interface PortraitProps {
 }
 
 function Portrait({ src, name, className }: PortraitProps) {
-  const [failed, setFailed] = useState(false);
   const initials = name
     .split(" ")
     .map((part) => part[0])
     .join("")
     .slice(0, 2);
 
-  if (failed) {
+  if (!src) {
     return (
       <div
         className={`${className} flex items-center justify-center bg-linear-to-br from-plum-100 via-cream to-gold-100 text-3xl font-semibold text-plum-700`}
@@ -108,7 +100,7 @@ function Portrait({ src, name, className }: PortraitProps) {
     );
   }
 
-  return <img src={src} alt={name} className={className} onError={() => setFailed(true)} />;
+  return <img src={src} alt={name} className={className} />;
 }
 
 

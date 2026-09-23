@@ -14,18 +14,6 @@ import {
 } from "lucide-react";
 import { Button, CheckList, FeatureCard, SectionHeading } from "@/components/ui";
 import CountUp from "@/components/CountUp";
-import aparnaAsset from "@/assets/aparna-prabhakar.png.asset.json";
-import agrajaAsset from "@/assets/agraja-mokashi.jpg.asset.json";
-import meghanaAsset from "@/assets/meghana-rao-rapelli.jpg.asset.json";
-import praveenaAsset from "@/assets/praveena-ramani.jpg.asset.json";
-import deeptiAsset from "@/assets/deepti.png.asset.json";
-import shipraAsset from "@/assets/shipra.png.asset.json";
-import img3600 from "@/assets/IMG_3600.jpeg.asset.json";
-import img3695 from "@/assets/IMG_3695.jpeg.asset.json";
-import img3718 from "@/assets/IMG_3718.jpeg.asset.json";
-import img4010 from "@/assets/IMG_4010.jpeg.asset.json";
-import img4413 from "@/assets/IMG_4413.jpeg.asset.json";
-import img4426 from "@/assets/IMG_4426.jpeg.asset.json";
 import CTASection from "@/components/CTASection";
 import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
@@ -57,21 +45,21 @@ const stats = [
 ];
 
 const memberAvatars = [
-  { src: aparnaAsset.url, name: "Aparna" },
-  { src: meghanaAsset.url, name: "Meghana" },
-  { src: agrajaAsset.url, name: "Agraja" },
-  { src: praveenaAsset.url, name: "Praveena" },
-  { src: deeptiAsset.url, name: "Deepti" },
-  { src: shipraAsset.url, name: "Shipra" },
+  "Aparna",
+  "Meghana",
+  "Agraja",
+  "Praveena",
+  "Deepti",
+  "Shipra",
 ];
 
 const collage = [
-  { src: img3600.url, span: "row-span-2" },
-  { src: img4010.url, span: "" },
-  { src: img4413.url, span: "" },
-  { src: img3718.url, span: "row-span-2" },
-  { src: img3695.url, span: "" },
-  { src: img4426.url, span: "" },
+  { src: "/hero_image_new.jpg", span: "row-span-2", position: "object-left" },
+  { src: "/coffee_meet_image.png", span: "", position: "object-left" },
+  { src: "/hero_image.png", span: "", position: "object-center" },
+  { src: "/hero_image_new.jpg", span: "row-span-2", position: "object-right" },
+  { src: "/coffee_meet_image.png", span: "", position: "object-right" },
+  { src: "/hero_image.png", span: "", position: "object-right" },
 ];
 
 const offerings = [
@@ -176,13 +164,14 @@ function HomePage() {
             <div className="relative z-10 -mt-16 sm:-mt-24 sm:-ml-12 rounded-3xl bg-linear-to-br from-plum-600/95 to-plum-900/95 p-5 ring-1 ring-cream/10 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
               <div className="rounded-2xl bg-white p-5 text-ink shadow-soft">
                 <div className="flex items-center -space-x-3">
-                  {memberAvatars.map((a) => (
-                    <img
-                      key={a.name}
-                      src={a.src}
-                      alt={a.name}
-                      className="h-11 w-11 rounded-full object-cover ring-2 ring-white shadow-sm"
-                    />
+                  {memberAvatars.map((name) => (
+                    <span
+                      key={name}
+                      className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-plum-100 to-gold-100 text-xs font-bold text-plum-700 ring-2 ring-white shadow-sm"
+                      aria-label={name}
+                    >
+                      {name.charAt(0)}
+                    </span>
                   ))}
                   <span className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-coral-400 to-coral-600 text-[11px] font-bold text-white ring-2 ring-white">
                     <CountUp end={465} suffix="+" />
@@ -293,7 +282,7 @@ function HomePage() {
                   src={c.src}
                   alt="SAWE community moment"
                   loading="lazy"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  className={`h-full w-full object-cover transition duration-700 group-hover:scale-110 ${c.position}`}
                 />
               </div>
             ))}
