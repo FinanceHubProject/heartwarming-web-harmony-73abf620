@@ -5,22 +5,14 @@ import CTASection from "@/components/CTASection";
 import { Button, SectionHeading } from "@/components/ui";
 import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
-import img4426 from "@/assets/IMG_4426.jpeg.asset.json";
-import img3379 from "@/assets/IMG_3379.jpeg.asset.json";
-import img3600 from "@/assets/IMG_3600.jpeg.asset.json";
-import img3718 from "@/assets/IMG_3718.jpeg.asset.json";
-import img4010 from "@/assets/IMG_4010.jpeg.asset.json";
-import img3695 from "@/assets/IMG_3695.jpeg.asset.json";
-import img4413 from "@/assets/IMG_4413.jpeg.asset.json";
-
 const coffeeMeetPhotos = [
-  { src: img4426.url, alt: "SAWE coffee meet gathering" },
-  { src: img3379.url, alt: "Women networking at SAWE coffee meet" },
-  { src: img3600.url, alt: "SAWE members connecting" },
-  { src: img3718.url, alt: "South Asian women entrepreneurs meeting" },
-  { src: img4010.url, alt: "SAWE community coffee meet" },
-  { src: img3695.url, alt: "SAWE members in conversation" },
-  { src: img4413.url, alt: "SAWE coffee meet moment" },
+  { src: "/hero_image_new.jpg", alt: "SAWE coffee meet gathering", position: "object-center" },
+  { src: "/coffee_meet_image.png", alt: "Women networking at a coffee meet", position: "object-left" },
+  { src: "/hero_image.png", alt: "Women entrepreneurs connecting", position: "object-center" },
+  { src: "/coffee_meet_image.png", alt: "South Asian women entrepreneurs meeting", position: "object-right" },
+  { src: "/hero_image_new.jpg", alt: "SAWE community coffee meet", position: "object-left" },
+  { src: "/hero_image.png", alt: "Members in conversation", position: "object-right" },
+  { src: "/hero_image_new.jpg", alt: "SAWE coffee meet moment", position: "object-right" },
 ];
 
 export const Route = createFileRoute("/coffee-meets")({
@@ -80,7 +72,7 @@ function CoffeeMeetsPage() {
           </div>
           <div className="relative">
             <img
-              src={img4426.url}
+              src="/hero_image_new.jpg"
               alt="SAWE coffee meet — women entrepreneurs gathering"
               className="rounded-3xl shadow-2xl ring-1 ring-plum-100 object-cover w-full aspect-[4/3] transition duration-700 hover:scale-105"
             />
@@ -116,7 +108,7 @@ function CoffeeMeetsPage() {
                   src={photo.src}
                   alt={photo.alt}
                   loading="lazy"
-                  className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  className={`h-full w-full object-cover transition duration-500 hover:scale-105 ${photo.position}`}
                 />
               </div>
             ))}
