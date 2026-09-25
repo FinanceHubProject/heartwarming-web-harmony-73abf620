@@ -6,8 +6,6 @@ import { SectionHeading } from "@/components/ui";
 import { seo } from "@/lib/seo";
 import { siteConfig } from "@/data/site";
 
-
-
 export const Route = createFileRoute("/about")({
   head: () =>
     seo({
@@ -32,7 +30,6 @@ const team = [
   {
     name: "Aparna Prabhakar",
     role: "Chief Operations Officer (COO)",
-    image: "",
     bio: "Aparna leads operations and community systems at SAWE, ensuring smooth execution across events, member experience, backend coordination, and organizational processes. She plays a key role in helping the community scale with structure, consistency, and operational excellence.",
   },
 ];
@@ -41,68 +38,29 @@ const volunteers = [
   {
     name: "Meghana Rao Rapelli",
     role: "Social Media Manager — Instagram",
-    image: "",
-    imagePosition: "object-top",
     bio: "Meghana is SAWE's Social Media Manager for Instagram, where she creates content, develops marketing campaigns, coordinates events and workshops, and engages with members online and offline to grow a supportive, business-focused community. Outside of SAWE, she shares creative content on her Instagram page @Grande_desisoul, experimenting with formats, hooks, and storytelling styles to explore what helps content connect with audiences.",
   },
   {
     name: "Praveena Ramani",
     role: "Community Volunteer & Artist",
-    image: "",
-    imagePosition: "object-top",
     bio: "Praveena is a self-taught artist whose creative practice is driven by the rhythmic, meditative process of hand-drawn patterns. Working from her home studio, INKspirations By PR, she specializes in intricate mandalas and zentangle art across paper and natural wood. Her work blends structured geometry with organic movement, inspired by cultural motifs and the beauty of human interconnectedness. Follow her on Instagram @inkspirations.by.pr.",
   },
   {
     name: "Agraja Mokashi",
     role: "Community Volunteer & Founder, Warmhouse Creative",
-    image: "",
-    imagePosition: "object-top",
     bio: "Agraja is the founder of Warmhouse Creative, offering presentation design, virtual assistant support, content creation, and SOP/documentation writing for small businesses, nonprofits, and early-stage founders. Warmhouse Creative was born out of a SAWE coffee meetup. She stays closely involved with the SAWE community, supporting internal process work and helping fellow women entrepreneurs share their stories on LinkedIn. She is also a published children's book author (My Wonderful Words) and a certified Project Manager.",
   },
   {
     name: "Deepti (GetFitWithDeepti)",
     role: "Community Volunteer — Fitness-Based Dance, Wedding Choreography & Corporate Workshops",
-    image: "",
-    imagePosition: "object-top",
     bio: "Deepti is a Bollywood dancer at heart, guided by grace and deeply rooted in movement. Her sessions blend joy, rhythm, and strength — a love that evolved into fitness-based dance, where rhythm meets strength and joy meets results. Alongside fitness-based dancing, she offers personalized dance training as her side hustle for fitness, celebrations, workshops, and pure feel-good movement. Whether you want to dance for fitness, prepare for a celebration, energize your workplace, or simply move with more freedom and happiness, this space is for you. Come move, sweat, smile, and shine.",
   },
   {
     name: "Shipra Chandak",
     role: "Community Volunteer & Founder, Optimatrix Investments",
-    image: "",
-    imagePosition: "object-center",
     bio: "Shipra Chandak is the founder of Optimatrix Investments, a practice built on the belief that sound financial knowledge shouldn't be reserved for Wall Street insiders. Working directly with individuals—from first-time investors to experienced traders—she works on demystifying equity and options markets, translating complex strategies into practical, accessible actions tailored to client's goals and experience level. Her approach spans a broad range of financial disciplines—moving fluidly from foundational financial literacy to advanced options trading strategies, blending rigorous analysis with genuine, individualized mentorship. Deeply committed to clarity over complexity, she transforms market signals and risk assessments into clear, actionable, long-term understanding grounded in her client's real financial picture. Through Optimatrix Investments, her practice serves as both an educational foundation and a launchpad for long-term financial confidence. Learn more at www.optimatrixinvestments.com.",
   },
 ];
-
-interface PortraitProps {
-  src: string;
-  name: string;
-  className: string;
-}
-
-function Portrait({ src, name, className }: PortraitProps) {
-  const initials = name
-    .split(" ")
-    .map((part) => part[0])
-    .join("")
-    .slice(0, 2);
-
-  if (!src) {
-    return (
-      <div
-        className={`${className} flex items-center justify-center bg-linear-to-br from-plum-100 via-cream to-gold-100 text-3xl font-semibold text-plum-700`}
-        role="img"
-        aria-label={name}
-      >
-        {initials}
-      </div>
-    );
-  }
-
-  return <img src={src} alt={name} className={className} />;
-}
-
 
 function AboutPage() {
   return (
@@ -115,42 +73,58 @@ function AboutPage() {
 
       {/* FOUNDER */}
       <section className="section bg-white">
-        <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <div>
-            <div className="overflow-hidden rounded-3xl bg-linear-to-br from-plum-600 to-plum-900 p-8 text-center shadow-soft">
-              <img
-                src="/founder_pic.jpg"
-                alt="Lopamudra Banerjee"
-                className="mx-auto h-60 w-60 rounded-full object-cover ring-4 ring-cream/20 shadow-md transition duration-500 hover:scale-105"
-              />
-              <p className="mt-5 font-serif text-2xl font-bold text-cream">Lopamudra Banerjee</p>
-              <p className="mt-1 text-sm font-medium uppercase tracking-wider text-gold-300">
-                Founder, SAWE
-              </p>
-              <p className="mt-3 text-sm text-cream/70">South Asian Women Entrepreneurs</p>
-            </div>
-          </div>
-
-          <div>
-            <span className="eyebrow text-plum-600">The Woman Behind SAWE</span>
-            <h2 className="mt-3 font-serif text-3xl font-semibold text-plum-900 sm:text-4xl">
-              A community born from her own journey
-            </h2>
-            <div className="mt-5 space-y-4 text-ink/75">
-              {founderBio.map((para, i) => (
-                <p key={i} className="leading-relaxed">
-                  {para}
+        <div className="container-x">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            <div>
+              <div className="overflow-hidden rounded-3xl bg-linear-to-br from-plum-600 to-plum-900 p-8 text-center shadow-soft">
+                <img
+                  src="/founder_pic.jpg"
+                  alt="Lopamudra Banerjee, founder of SAWE"
+                  className="mx-auto h-60 w-60 rounded-full object-cover ring-4 ring-cream/20 shadow-md transition duration-500 hover:scale-105"
+                />
+                <p className="mt-5 font-serif text-2xl font-bold text-cream">
+                  Lopamudra Banerjee
                 </p>
-              ))}
+                <p className="mt-1 text-sm font-medium uppercase tracking-wider text-gold-300">
+                  Founder, SAWE
+                </p>
+                <p className="mt-3 text-sm text-cream/70">South Asian Women Entrepreneurs</p>
+              </div>
             </div>
 
-            <figure className="mt-7 rounded-2xl bg-plum-50 p-6 ring-1 ring-plum-100">
-              <Quote className="h-7 w-7 text-coral-500" />
-              <blockquote className="mt-3 font-serif text-xl leading-relaxed text-plum-900">
-                She believes that belonging is not a soft outcome. It is a business advantage.
-              </blockquote>
-            </figure>
+            <div>
+              <span className="eyebrow text-plum-600">The Woman Behind SAWE</span>
+              <h2 className="mt-3 font-serif text-3xl font-semibold text-plum-900 sm:text-4xl">
+                A community born from her own journey
+              </h2>
+              <div className="mt-5 space-y-4 text-ink/75">
+                {founderBio.map((para, i) => (
+                  <p key={i} className="leading-relaxed">
+                    {para}
+                  </p>
+                ))}
+              </div>
+
+              <figure className="mt-7 rounded-2xl bg-plum-50 p-6 ring-1 ring-plum-100">
+                <Quote className="h-7 w-7 text-coral-500" />
+                <blockquote className="mt-3 font-serif text-xl leading-relaxed text-plum-900">
+                  She believes that belonging is not a soft outcome. It is a business advantage.
+                </blockquote>
+              </figure>
+            </div>
           </div>
+
+          <figure className="mx-auto mt-16 max-w-5xl overflow-hidden rounded-3xl bg-plum-900 shadow-soft ring-1 ring-plum-100">
+            <img
+              src="/hero_image_new.jpg"
+              alt="Women from the SAWE community gathered outside a coffee shop"
+              loading="lazy"
+              className="h-auto w-full"
+            />
+            <figcaption className="px-6 py-4 text-sm leading-relaxed text-cream/80">
+              A SAWE community coffee meet in Greater Seattle.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -166,22 +140,13 @@ function AboutPage() {
             {team.map((m) => (
               <article
                 key={m.name}
-                className="flex flex-col sm:flex-row items-start gap-6 rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100"
+                className="rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100 sm:p-8"
               >
-                <Portrait
-                  src={m.image}
-                  name={m.name}
-                  className="h-48 w-full sm:h-52 sm:w-40 rounded-2xl object-cover object-top ring-1 ring-plum-100"
-                />
-                <div>
-                  <h3 className="font-serif text-xl font-semibold text-plum-900">
-                    {m.name}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
-                    {m.role}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{m.bio}</p>
-                </div>
+                <h3 className="font-serif text-xl font-semibold text-plum-900">{m.name}</h3>
+                <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
+                  {m.role}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-ink/70">{m.bio}</p>
               </article>
             ))}
           </div>
@@ -203,17 +168,9 @@ function AboutPage() {
             {volunteers.map((v) => (
               <article
                 key={v.name}
-                className="flex flex-col rounded-2xl bg-cream/40 p-6 shadow-card ring-1 ring-plum-100"
+                className="flex h-full flex-col rounded-2xl bg-cream/40 p-6 shadow-card ring-1 ring-plum-100"
               >
-                <Portrait
-                  src={v.image}
-                  name={v.name}
-                  className={`mx-auto h-40 w-32 rounded-xl object-cover ring-1 ring-plum-100 ${v.imagePosition}`}
-                />
-
-                <h3 className="mt-5 font-serif text-xl font-semibold text-plum-900">
-                  {v.name}
-                </h3>
+                <h3 className="font-serif text-xl font-semibold text-plum-900">{v.name}</h3>
                 <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
                   {v.role}
                 </p>
