@@ -26,11 +26,30 @@ const founderBio = [
   "Lopa's work sits at the intersection of community, entrepreneurship, and reinvention. Her own story — from Ranchi to Kolkata to Bangalore to Singapore to Seattle, from employee to entrepreneur to ecosystem builder — is the foundation everything at SAWE stands on.",
 ];
 
-const team = [
+interface TeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
+}
+
+const team: TeamMember[] = [
   {
     name: "Aparna Prabhakar",
-    role: "Chief Operations Officer (COO)",
+    role: "Operations",
     bio: "Aparna leads operations and community systems at SAWE, ensuring smooth execution across events, member experience, backend coordination, and organizational processes. She plays a key role in helping the community scale with structure, consistency, and operational excellence.",
+  },
+  {
+    name: "Chetna Mahajan",
+    role: "Technology",
+    image: {
+      src: "/chetna-mahajan.jpg",
+      alt: "Chetna Mahajan, technology team member at SAWE",
+    },
+    bio: "Chetna supports SAWE's technology strategy and digital experience, turning community needs into practical tools and reliable systems. She brings a thoughtful, solutions-focused approach to helping members connect, strengthening team collaboration, and building a scalable foundation for SAWE's continued growth.",
   },
 ];
 
@@ -140,13 +159,23 @@ function AboutPage() {
             {team.map((m) => (
               <article
                 key={m.name}
-                className="rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100 sm:p-8"
+                className="flex flex-col gap-6 rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-8"
               >
-                <h3 className="font-serif text-xl font-semibold text-plum-900">{m.name}</h3>
-                <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
-                  {m.role}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">{m.bio}</p>
+                {m.image && (
+                  <img
+                    src={m.image.src}
+                    alt={m.image.alt}
+                    loading="lazy"
+                    className="mx-auto aspect-[4/5] w-full max-w-48 rounded-2xl object-cover object-center ring-1 ring-plum-100 sm:mx-0 sm:w-40 sm:shrink-0"
+                  />
+                )}
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-serif text-xl font-semibold text-plum-900">{m.name}</h3>
+                  <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
+                    {m.role}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{m.bio}</p>
+                </div>
               </article>
             ))}
           </div>
