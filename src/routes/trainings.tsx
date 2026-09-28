@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
-import { Button, SectionHeading } from "@/components/ui";
+import { SectionHeading } from "@/components/ui";
 import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
 
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/trainings")({
     seo({
       title: "Trainings & Workshops — Build Skills With SAWE",
       description:
-        "Practical business workshops on AI, marketing, branding, finance, content, and growth — designed for South Asian women entrepreneurs.",
+        "Practical business workshops on AI, marketing, branding, finance, content, and growth — designed for South Asian and Southeast Asian women entrepreneurs.",
     }),
   component: TrainingsPage,
 });
@@ -68,20 +68,10 @@ function TrainingsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Trainings / SAWE Academy"
+        eyebrow="SAWE Learning"
         title="Learning, Growth & Skill Building for Women Entrepreneurs"
-        subtitle="Trainings designed to help South Asian women entrepreneurs become more confident, visible, skilled, and business-ready."
+        subtitle="Practical, expert-led workshops that help South Asian and Southeast Asian women entrepreneurs become more confident, visible, skilled, and business-ready."
       />
-
-      {/* ============================ INTRO =========================== */}
-      <section className="section bg-white pb-0">
-        <div className="container-x max-w-3xl text-lg text-ink/75">
-          <p className="text-xl leading-relaxed text-center">
-            Grow faster with the right knowledge and practical skills. We provide targeted business
-            workshops designed to make you more confident, visible, and scale-ready.
-          </p>
-        </div>
-      </section>
 
       {/* ======================= TRAINING FORMATS ===================== */}
       <section className="section">
@@ -91,7 +81,7 @@ function TrainingsPage() {
             title="Two ways to learn and grow"
             align="center"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {formats.map((f) => (
               <div
                 key={f.title}
@@ -115,7 +105,7 @@ function TrainingsPage() {
 
       {/* =========================== TRAINERS ========================= */}
       <section className="section bg-white">
-        <div className="container-x grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+        <div className="container-x grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
           <SectionHeading
             eyebrow="Trainers"
             title="Learn from a diverse range of experts"
@@ -157,7 +147,7 @@ function TrainingsPage() {
             intro="SAWE trainings span business and personal growth — topics may include:"
             align="center"
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {topics.map((t) => (
               <div
                 key={t.label}
@@ -173,32 +163,11 @@ function TrainingsPage() {
         </div>
       </section>
 
-      {/* ============================ GOAL ============================ */}
-      <section className="pb-4">
-        <div className="container-x">
-          <div className="rounded-3xl bg-linear-to-br from-plum-700 to-plum-900 px-6 py-14 text-center text-cream sm:px-12">
-            <span className="eyebrow text-gold-300">Our Goal</span>
-            <p className="mx-auto mt-4 max-w-3xl font-serif text-2xl font-semibold leading-snug sm:text-3xl">
-              To create a learning ecosystem where South Asian women entrepreneurs can continuously
-              upskill, adapt, collaborate, and grow together — both personally and professionally.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button href={siteConfig.lumaUrl} variant="secondary" withArrow>
-                View Upcoming Trainings
-              </Button>
-              <Button href={siteConfig.lumaUrl} variant="light">
-                Register for a Workshop
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <CTASection
-        title="Grow Your Skills With the SAWE Academy"
-        text="Become a member to access trainings, workshops, and a learning ecosystem built for South Asian women entrepreneurs."
-        primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
-        secondary={{ label: "Talk to Us", href: siteConfig.lumaUrl }}
+        title="Grow Your Skills With SAWE"
+        text="Join a practical learning ecosystem where South Asian and Southeast Asian women entrepreneurs continuously upskill, adapt, collaborate, and grow."
+        primary={{ label: "View Upcoming Trainings", href: siteConfig.lumaUrl }}
+        secondary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
       />
     </>
   );

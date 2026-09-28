@@ -1,30 +1,60 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Camera } from "lucide-react";
-import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
-import { seo } from "@/lib/seo";
+import PageHeader from "@/components/PageHeader";
 import { siteConfig } from "@/data/site";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/gallery")({
   head: () =>
     seo({
       title: "Gallery — SAWE Events & Coffee Meets",
       description:
-        "Moments from SAWE coffee meets, trainings, and community events across the Greater Seattle area.",
+        "Real moments from SAWE Coffee Meets, workshops, and community events across Greater Seattle.",
     }),
   component: GalleryPage,
 });
 
-// Placeholder tiles until real event photography is added.
-// TODO: replace with real images from SAWE coffee meets, workshops,
-// and community events (drop files in /public and map them here).
-const tiles = [
-  { label: "Coffee Meets", tone: "from-plum-500 to-plum-800" },
-  { label: "Workshops", tone: "from-gold-400 to-gold-600" },
-  { label: "Founder Mixers", tone: "from-plum-600 to-plum-900" },
-  { label: "Trainings", tone: "from-plum-400 to-plum-700" },
-  { label: "Social Events", tone: "from-gold-300 to-gold-500" },
-  { label: "Community", tone: "from-plum-700 to-plum-900" },
+const photos = [
+  {
+    src: "/images/home/landing-group.jpg",
+    alt: "SAWE members gathered outside a Greater Seattle coffee shop",
+    span: "sm:col-span-2 lg:col-span-2 lg:row-span-2",
+  },
+  {
+    src: "/images/coffee-meets/member-conversation.jpg",
+    alt: "SAWE members connecting over coffee",
+    span: "",
+  },
+  {
+    src: "/images/home/outdoor-community.jpg",
+    alt: "SAWE members at an outdoor community gathering",
+    span: "",
+  },
+  {
+    src: "/images/coffee-meets/workshop-room.jpg",
+    alt: "A busy SAWE workshop and networking room",
+    span: "sm:col-span-2 lg:col-span-1",
+  },
+  {
+    src: "/images/home/indoor-community.jpg",
+    alt: "SAWE members smiling together at an indoor community gathering",
+    span: "",
+  },
+  {
+    src: "/images/coffee-meets/outdoor-group.jpg",
+    alt: "SAWE members at an outdoor Coffee Meet",
+    span: "",
+  },
+  {
+    src: "/images/home/park-gathering.jpg",
+    alt: "SAWE members gathered together in a park",
+    span: "sm:col-span-2 lg:col-span-2",
+  },
+  {
+    src: "/images/coffee-meets/presentation-group.jpg",
+    alt: "SAWE Coffee Meet attendees after a business presentation",
+    span: "",
+  },
 ];
 
 function GalleryPage() {
@@ -33,39 +63,32 @@ function GalleryPage() {
       <PageHeader
         eyebrow="Gallery"
         title="Moments From the SAWE Community"
-        subtitle="A look at the coffee meets, workshops, and celebrations that bring our community together."
+        subtitle="Real Coffee Meets, workshops, and celebrations that show what community looks like in the room."
       />
 
       <section className="section bg-white">
         <div className="container-x">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {tiles.map((t) => (
-              <div
-                key={t.label}
-                className={`flex aspect-[4/3] flex-col items-center justify-center rounded-2xl bg-linear-to-br ${t.tone} text-cream`}
+          <div className="grid auto-rows-[220px] gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {photos.map((photo) => (
+              <figure
+                key={photo.src}
+                className={`group overflow-hidden rounded-2xl shadow-card ring-1 ring-plum-100 ${photo.span}`}
               >
-                <Camera className="h-9 w-9 opacity-80" />
-                <p className="mt-3 font-serif text-lg font-semibold">{t.label}</p>
-                <p className="text-xs uppercase tracking-wider text-cream/70">Photos coming soon</p>
-              </div>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </figure>
             ))}
-          </div>
-
-          <div className="mx-auto mt-12 max-w-xl rounded-2xl bg-plum-50 p-8 text-center ring-1 ring-plum-100">
-            <h3 className="font-serif text-xl font-semibold text-plum-900">
-              Our gallery is growing
-            </h3>
-            <p className="mt-2 text-sm text-ink/70">
-              Photos from our coffee meets, trainings, and community events will be added here soon.
-              Come to an event and be part of the next set of memories.
-            </p>
           </div>
         </div>
       </section>
 
       <CTASection
         title="Be Part of the Next SAWE Moment"
-        text="Join the community and attend a coffee meet — the best memories are made in the room."
+        text="Join the community and attend a Coffee Meet—the best memories and collaborations begin in the room."
         primary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
         secondary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
       />

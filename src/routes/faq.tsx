@@ -13,7 +13,7 @@ import {
 export const Route = createFileRoute("/faq")({
   head: () =>
     seo({
-      title: "FAQ — SAWE Community Questions",
+      title: "Questions Before Joining SAWE",
       description:
         "Answers to common questions about joining SAWE, Coffee Meets, trainings, WhatsApp group, and community membership.",
     }),
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/faq")({
 const faqs = [
   {
     q: "Is SAWE free to join?",
-    a: "Yes. Joining SAWE is completely free. Attend a Coffee Meet and you will be welcomed into the community. The only paid options are table spots at COLLABORATE format Coffee Meets and enrollments in SAWE Academy trainings.",
+    a: "Yes. Joining SAWE is completely free. Attend a Coffee Meet and you will be welcomed into the community. The only paid options are table spots at COLLABORATE format Coffee Meets and selected SAWE Learning sessions.",
   },
   {
     q: "Do I need to have an established business to join?",
@@ -43,11 +43,11 @@ const faqs = [
   },
   {
     q: "Are trainings included if I become part of the community?",
-    a: "No. SAWE Academy trainings are paid separately and are priced per session or cohort. You get free access to the community, free Coffee Meets, and collaboration opportunities.",
+    a: "Some SAWE Learning sessions are paid separately and priced per session or cohort. You still get free access to the community, free Coffee Meets, and collaboration opportunities.",
   },
   {
-    q: "Can I bring a friend who is not South Asian?",
-    a: "SAWE is specifically built for South Asian and immigrant women entrepreneurs. If you have a friend who fits that description, absolutely bring her along.",
+    q: "Can I bring a friend who is not South Asian or Southeast Asian?",
+    a: "SAWE is built for South Asian and Southeast Asian women entrepreneurs in the US. If your friend fits that community, absolutely bring her along.",
   },
   {
     q: "What if I am not in Seattle?",
@@ -59,7 +59,7 @@ function FaqPage() {
   return (
     <>
       <PageHeader
-        eyebrow="FAQ"
+        eyebrow="Before You Join"
         title="Questions People Usually Ask Before Joining"
         subtitle="Everything you might want to know about SAWE, Coffee Meets, and community life."
       />

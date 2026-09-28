@@ -24,13 +24,13 @@ export const Route = createFileRoute("/join")({
     seo({
       title: "Join SAWE — Become a Member",
       description:
-        "Apply to join SAWE and access coffee meets, trainings, collaborations, referrals, and a supportive community of South Asian women entrepreneurs.",
+        "Apply to join SAWE and access coffee meets, trainings, collaborations, referrals, and a supportive community of South Asian and Southeast Asian women entrepreneurs.",
     }),
   component: MembershipPage,
 });
 
 const eligibility = [
-  "South Asian women entrepreneurs, founders, and creators.",
+  "South Asian and Southeast Asian women entrepreneurs, founders, and creators.",
   "You own a business, or are actively building one.",
   "You value collaboration, referrals, and community growth.",
   "You are rebuilding your network in the US.",
@@ -39,7 +39,7 @@ const eligibility = [
 const access = [
   { icon: Coffee, label: "Coffee Meets & Networking Events" },
   { icon: GraduationCap, label: "Business Trainings & Workshops" },
-  { icon: BookOpen, label: "SAWE Academy Learning Opportunities" },
+  { icon: BookOpen, label: "SAWE Learning Opportunities" },
   { icon: Repeat2, label: "Collaboration & Referral Ecosystem" },
   { icon: Megaphone, label: "Community Visibility" },
   { icon: Users, label: "Founder Support & Networking" },
@@ -69,19 +69,9 @@ function MembershipPage() {
     <>
       <PageHeader
         eyebrow="Member Sign-Up"
-        title="Join SAWE — South Asian Women Entrepreneurs"
-        subtitle="A growth-focused community for women who want to learn, connect, collaborate, and grow together."
+        title="Join SAWE — South Asian and Southeast Asian Women Entrepreneurs"
+        subtitle="Whether you are established or just starting, join a growth-focused community built for learning, visibility, collaboration, and real connection."
       />
-
-      {/* ============================ INTRO =========================== */}
-      <section className="section bg-white pb-0">
-        <div className="container-x max-w-3xl text-center text-lg font-medium text-ink/75">
-          <p>
-            Whether you already run an established business or are just starting out, SAWE gives you
-            the network, visibility, and tools to scale.
-          </p>
-        </div>
-      </section>
 
       {/* ========================= ELIGIBILITY ======================== */}
       <section className="section">
@@ -103,7 +93,7 @@ function MembershipPage() {
             title="What You'll Get Access To"
             align="center"
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {access.map((a) => (
               <div key={a.label} className="rounded-2xl bg-cream p-6 ring-1 ring-plum-100">
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-plum-700 text-cream">
@@ -147,7 +137,7 @@ function MembershipPage() {
               title="Apply for Membership"
               intro="Tell us a little about you and your business. We'll be in touch about next steps."
               align="center"
-              className="mb-10"
+              className="mb-8"
             />
             {submitted ? (
               <FormSuccess message="Your membership application has been received. The SAWE team will reach out to you soon." />
@@ -202,7 +192,7 @@ function MembershipPage() {
 
       <CTASection
         title="Become Part of a Growing Ecosystem"
-        text="Join South Asian women entrepreneurs building visibility, confidence, collaborations, and businesses together."
+        text="Join South Asian and Southeast Asian women entrepreneurs building visibility, confidence, collaborations, and businesses together."
         primary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
         secondary={{ label: "Join the Community", href: siteConfig.joinFormUrl }}
       />

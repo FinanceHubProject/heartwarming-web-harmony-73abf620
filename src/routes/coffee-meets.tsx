@@ -1,45 +1,73 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CalendarClock, Coffee, Handshake, MapPin, Megaphone, Users } from "lucide-react";
-import PageHeader from "@/components/PageHeader";
+import { ArrowUpRight, CalendarClock, Handshake, MapPin, Megaphone, Users } from "lucide-react";
 import CTASection from "@/components/CTASection";
+import ImageCarousel, { type CarouselImage } from "@/components/ImageCarousel";
+import PageHeader from "@/components/PageHeader";
 import { Button, SectionHeading } from "@/components/ui";
 import { siteConfig } from "@/data/site";
 import { seo } from "@/lib/seo";
-const coffeeMeetPhotos = [
-  { src: "/hero_image_new.jpg", alt: "SAWE coffee meet gathering", position: "object-center" },
-  { src: "/coffee_meet_image.png", alt: "Women networking at a coffee meet", position: "object-left" },
-  { src: "/hero_image.png", alt: "Women entrepreneurs connecting", position: "object-center" },
-  { src: "/coffee_meet_image.png", alt: "South Asian women entrepreneurs meeting", position: "object-right" },
-  { src: "/hero_image_new.jpg", alt: "SAWE community coffee meet", position: "object-left" },
-  { src: "/hero_image.png", alt: "Members in conversation", position: "object-right" },
-  { src: "/hero_image_new.jpg", alt: "SAWE coffee meet moment", position: "object-right" },
-];
 
 export const Route = createFileRoute("/coffee-meets")({
   head: () =>
     seo({
-      title: "Coffee Meets — Monthly Networking | SAWE",
+      title: "Coffee Meets — Monthly Business Networking | SAWE",
       description:
-        "Join SAWE's monthly coffee meets across Seattle, Bellevue, Redmond, Kirkland, and Bothell. Structured networking for South Asian women entrepreneurs.",
+        "Join SAWE Coffee Meets across Greater Seattle. Build genuine connections with South Asian and Southeast Asian women entrepreneurs through Empower, Connect, and Collaborate formats.",
     }),
   component: CoffeeMeetsPage,
 });
 
-const expect = [
+const coffeeMeetImages: CarouselImage[] = [
+  {
+    src: "/images/coffee-meets/group-gathering.jpg",
+    alt: "Women gathered for a SAWE Coffee Meet",
+  },
+  {
+    src: "/images/coffee-meets/presentation-group.jpg",
+    alt: "SAWE Coffee Meet attendees after a business presentation",
+  },
+  {
+    src: "/images/coffee-meets/coffee-community.jpg",
+    alt: "SAWE members at a Coffee Meet",
+  },
+  {
+    src: "/images/coffee-meets/workshop-room.jpg",
+    alt: "A busy SAWE workshop and networking room",
+  },
+  {
+    src: "/images/coffee-meets/outdoor-group.jpg",
+    alt: "SAWE members at an outdoor Coffee Meet",
+  },
+  {
+    src: "/images/coffee-meets/member-conversation.jpg",
+    alt: "SAWE members connecting over coffee",
+  },
+];
+
+const formats = [
+  {
+    icon: Megaphone,
+    title: "Empower",
+    schedule: "Evening format",
+    text: "Open networking followed by a one-minute business pitch from every attendee: who you are, what your business does, and your secret selling sauce.",
+    benefit: "Great for visibility, confidence, public speaking, and first-time attendees.",
+    href: "https://www.instagram.com/reel/DcWaWvqB9kk/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+  },
   {
     icon: Users,
-    title: "Meaningful Introductions",
-    text: "Structured to connect you with the right women, not just collect business cards.",
+    title: "Connect",
+    schedule: "Daytime format",
+    text: "Smaller, guided conversations around a shared theme or business challenge, with space for every attendee to introduce herself and her work.",
+    benefit: "Designed for depth over breadth so you leave knowing a few people well.",
+    href: "https://www.instagram.com/reel/Ddt6HXNBpuz/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
   },
   {
     icon: Handshake,
-    title: "Real Collaborations",
-    text: "Conversations designed to spark referrals and genuine working relationships.",
-  },
-  {
-    icon: Megaphone,
-    title: "Business Visibility",
-    text: "Share what you do and grow your presence in the community.",
+    title: "Collaborate",
+    schedule: "Showcase format",
+    text: "Open networking plus 15 to 16 curated display tables where entrepreneurs can showcase products, services, and offers.",
+    benefit: "Built for discovery, visibility, partnerships, and direct business opportunities.",
+    href: "https://www.instagram.com/reel/DZ-rFbnB8m6/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
   },
 ];
 
@@ -49,108 +77,108 @@ function CoffeeMeetsPage() {
       <PageHeader
         eyebrow="Coffee Meet Calendar"
         title="Attend a Coffee Meet"
-        subtitle="Ready to experience a networking space designed differently?"
+        subtitle="Build real relationships—not just a collection of business cards."
+        actions={
+          <>
+            <Button href={siteConfig.lumaUrl} variant="secondary" withArrow>
+              RSVP for the Next Meet
+            </Button>
+            <Button href={siteConfig.joinFormUrl} variant="light">
+              Become a Member
+            </Button>
+          </>
+        }
+        media={
+          <ImageCarousel
+            images={coffeeMeetImages}
+            label="Photos from SAWE Coffee Meets"
+            priority
+            className="aspect-[16/10] rounded-3xl shadow-2xl ring-1 ring-white/20"
+          />
+        }
       />
 
-      {/* ============================ INTRO =========================== */}
       <section className="section bg-white">
-        <div className="container-x grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <SectionHeading
-              eyebrow="Networking, Reimagined"
-              title="Come build alongside women who get it"
-              intro="Meet ambitious South Asian women entrepreneurs building together."
-            />
-            <div className="mt-7 flex flex-wrap gap-4">
-              <Button href={siteConfig.lumaUrl} variant="primary" withArrow>
-                RSVP for the Next Meet
-              </Button>
-              <Button href={siteConfig.joinFormUrl} variant="outline">
-                Become a Member
-              </Button>
-            </div>
-          </div>
-          <div className="relative">
-            <img
-              src="/hero_image_new.jpg"
-              alt="SAWE coffee meet — women entrepreneurs gathering"
-              className="rounded-3xl shadow-2xl ring-1 ring-plum-100 object-cover w-full aspect-[4/3] transition duration-700 hover:scale-105"
-            />
-            <div className="absolute -bottom-6 -left-6 rounded-3xl bg-plum-50 p-6 text-center ring-1 ring-plum-100 shadow-xl max-w-[200px]">
-              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-plum-700 text-cream">
-                <Coffee className="h-6 w-6" />
-              </span>
-              <p className="mt-4 font-serif text-sm font-semibold text-plum-900">Monthly Meets</p>
-              <p className="mt-1 text-xs text-ink/65">Across Greater Seattle</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================= PHOTO GALLERY ====================== */}
-      <section className="section bg-white">
-        <div className="container-x">
+        <div className="container-x grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-14">
           <SectionHeading
-            eyebrow="Moments from Our Coffee Meets"
-            title="A look inside the room"
-            intro="Real coffee meets, real conversations, real women building together."
-            align="center"
+            eyebrow="What Happens at a SAWE Coffee Meet"
+            title="Familiar faces, fresh energy, and room to grow"
+            intro="Coffee Meets are structured business gatherings where women connect repeatedly, build trust, and discover people they genuinely want to collaborate with."
           />
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-            {coffeeMeetPhotos.map((photo, i) => (
-              <div
-                key={i}
-                className={`overflow-hidden rounded-2xl ring-1 ring-plum-100 shadow-card ${
-                  i === 0 || i === 4 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"
-                }`}
-              >
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  loading="lazy"
-                  className={`h-full w-full object-cover transition duration-500 hover:scale-105 ${photo.position}`}
-                />
-              </div>
-            ))}
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div className="rounded-2xl bg-plum-50 p-6 ring-1 ring-plum-100">
+              <Users className="h-6 w-6 text-plum-600" />
+              <h3 className="mt-4 text-xl font-semibold text-plum-900">Build familiarity</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/70">
+                Meet women repeatedly, build trust over time, and move beyond surface-level
+                introductions.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-coral-50 p-6 ring-1 ring-coral-100">
+              <Handshake className="h-6 w-6 text-coral-600" />
+              <h3 className="mt-4 text-xl font-semibold text-plum-900">Discover fresh energy</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/70">
+                New attendees bring new businesses, perspectives, referrals, and opportunities to
+                every gathering.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ======================== WHAT TO EXPECT ====================== */}
       <section className="section">
         <div className="container-x">
           <SectionHeading
-            eyebrow="What to Expect"
-            title="More than coffee and small talk"
+            eyebrow="Three Formats"
+            title="Each Coffee Meet Has a Purpose"
+            intro="Choose the format that matches how you want to connect, practice, or showcase your business."
             align="center"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {expect.map((e) => (
-              <div
-                key={e.title}
-                className="rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100"
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {formats.map((format) => (
+              <article
+                key={format.title}
+                className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-card ring-1 ring-plum-100"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100 text-gold-600">
-                  <e.icon className="h-6 w-6" />
-                </div>
-                <h3 className="mt-5 text-lg font-semibold text-plum-900">{e.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink/70">{e.text}</p>
-              </div>
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-plum-50 text-plum-700">
+                  <format.icon className="h-6 w-6" />
+                </span>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-coral-600">
+                  {format.schedule}
+                </p>
+                <h3 className="mt-2 text-2xl font-semibold text-plum-900">{format.title}</h3>
+                <p className="mt-3 leading-relaxed text-ink/70">{format.text}</p>
+                <p className="mt-4 text-sm font-semibold leading-relaxed text-plum-700">
+                  {format.benefit}
+                </p>
+                <a
+                  href={format.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-plum-700 transition hover:text-coral-600"
+                >
+                  Watch this format
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </article>
             ))}
           </div>
+          <p className="mt-6 text-center text-sm text-ink/60">
+            Coffee Meets are free to attend. Collaborate display-table spots are ticketed and
+            require a separate application.
+          </p>
         </div>
       </section>
 
-      {/* ========================== CHAPTERS ========================== */}
       <section className="section bg-white">
         <div className="container-x">
           <SectionHeading
             eyebrow="Our Chapters"
-            title="Find a coffee meet near you"
-            intro="SAWE coffee meets and events run across the Greater Seattle area — and we're continuously growing."
+            title="Find a Coffee Meet Near You"
+            intro="SAWE Coffee Meets currently run across five Greater Seattle locations."
             align="center"
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-10 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {siteConfig.cities.map((city) => (
               <div
                 key={city}
@@ -164,37 +192,29 @@ function CoffeeMeetsPage() {
         </div>
       </section>
 
-      {/* ====================== UPCOMING / SCHEDULE =================== */}
       <section className="section">
         <div className="container-x">
-          <div className="mx-auto max-w-2xl rounded-3xl border-2 border-dashed border-plum-200 bg-plum-50/60 p-10 text-center">
+          <div className="mx-auto max-w-3xl rounded-3xl bg-plum-50 p-7 text-center ring-1 ring-plum-100 sm:p-9">
             <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-plum-600 shadow-card">
               <CalendarClock className="h-7 w-7" />
             </span>
-            <h3 className="mt-5 text-2xl font-semibold text-plum-900">
-              New coffee meets are announced every month
-            </h3>
-            <p className="mt-3 text-ink/70">
-              Our upcoming meet schedule is shared with members and across our social channels. RSVP
-              below and we'll make sure you don't miss the next one.
+            <h2 className="mt-5 text-3xl font-semibold text-plum-900">
+              New Coffee Meets are announced every month
+            </h2>
+            <p className="mt-3 leading-relaxed text-ink/70">
+              Check the live calendar to choose your city and reserve a spot. Event details and
+              exact locations are included with each listing.
             </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-4">
-              <Button href={siteConfig.lumaUrl} variant="primary" withArrow>
-                RSVP for the Next Meet
-              </Button>
-              <Button href={siteConfig.joinFormUrl} variant="outline">
-                Join to Get Updates
-              </Button>
-            </div>
-            {/* TODO: connect a live events calendar (Luma, Eventbrite, or
-                Google Calendar embed) once the meet schedule is finalized. */}
+            <Button href={siteConfig.lumaUrl} variant="primary" withArrow className="mt-7">
+              Open the Coffee Meet Calendar
+            </Button>
           </div>
         </div>
       </section>
 
       <CTASection
         title="Ready to Walk Into a Room of Women Building Together?"
-        text="Come to a coffee meet, make real connections, and see why SAWE networking turns into genuine business opportunities."
+        text="Meet South Asian and Southeast Asian women entrepreneurs, make real connections, and experience networking designed to become business."
         primary={{ label: "RSVP for the Next Meet", href: siteConfig.lumaUrl }}
         secondary={{ label: "Join the Community", href: siteConfig.joinFormUrl }}
       />

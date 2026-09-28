@@ -15,7 +15,7 @@ export const Route = createFileRoute("/blog/$slug")({
       title: post ? `${post.title} | SAWE Blog` : "Article not found | SAWE Blog",
       description:
         post?.excerpt ??
-        "Read insights and stories from SAWE — the community for South Asian women entrepreneurs.",
+        "Read insights and stories from SAWE — the community for South Asian and Southeast Asian women entrepreneurs.",
     });
   },
   component: BlogPostPage,
@@ -96,7 +96,7 @@ function BlogPostPage() {
 
       <CTASection
         title="Building a Business in Seattle? You Don't Have to Do It Alone."
-        text="Join SAWE and grow alongside South Asian women entrepreneurs through networking, trainings, and real collaborations."
+        text="Join SAWE and grow alongside South Asian and Southeast Asian women entrepreneurs through networking, trainings, and real collaborations."
         primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
         secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
       />
