@@ -39,7 +39,7 @@ const eligibility = [
 const access = [
   { icon: Coffee, label: "Coffee Meets & Networking Events" },
   { icon: GraduationCap, label: "Business Trainings & Workshops" },
-  { icon: BookOpen, label: "SAWE Academy Learning Opportunities" },
+  { icon: BookOpen, label: "SAWE Learning Opportunities" },
   { icon: Repeat2, label: "Collaboration & Referral Ecosystem" },
   { icon: Megaphone, label: "Community Visibility" },
   { icon: Users, label: "Founder Support & Networking" },

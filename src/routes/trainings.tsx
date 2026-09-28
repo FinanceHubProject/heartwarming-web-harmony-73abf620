@@ -68,7 +68,7 @@ function TrainingsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Trainings / SAWE Academy"
+        eyebrow="SAWE Learning"
         title="Learning, Growth & Skill Building for Women Entrepreneurs"
         subtitle="Practical, expert-led workshops that help South Asian and Southeast Asian women entrepreneurs become more confident, visible, skilled, and business-ready."
       />

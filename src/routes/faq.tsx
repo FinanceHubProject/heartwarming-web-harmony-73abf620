@@ -23,7 +23,7 @@ export const Route = createFileRoute("/faq")({
 const faqs = [
   {
     q: "Is SAWE free to join?",
-    a: "Yes. Joining SAWE is completely free. Attend a Coffee Meet and you will be welcomed into the community. The only paid options are table spots at COLLABORATE format Coffee Meets and enrollments in SAWE Academy trainings.",
+    a: "Yes. Joining SAWE is completely free. Attend a Coffee Meet and you will be welcomed into the community. The only paid options are table spots at COLLABORATE format Coffee Meets and selected SAWE Learning sessions.",
   },
   {
     q: "Do I need to have an established business to join?",
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Are trainings included if I become part of the community?",
-    a: "No. SAWE Academy trainings are paid separately and are priced per session or cohort. You get free access to the community, free Coffee Meets, and collaboration opportunities.",
+    a: "Some SAWE Learning sessions are paid separately and priced per session or cohort. You still get free access to the community, free Coffee Meets, and collaboration opportunities.",
   },
   {
     q: "Can I bring a friend who is not South Asian or Southeast Asian?",
