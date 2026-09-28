@@ -39,14 +39,14 @@ interface LeadershipMember {
 const leadership: LeadershipMember[] = [
   {
     name: "Aparna Prabhakar",
-    role: "Chief Operating Officer (COO)",
+    role: "Operations",
     image: {
       src: "/images/leadership/aparna-prabhakar.jpg",
-      alt: "Aparna Prabhakar, Chief Operating Officer at SAWE",
+      alt: "Aparna Prabhakar, Operations at SAWE",
     },
     bio: [
-      "Aparna brings more than 15 years of IT project and service management experience to SAWE. She oversees key operations, coordinates initiatives, and turns ideas into well-executed action with a structured, detail-oriented, and people-first approach.",
-      "She is also the founder of Sai Masala, a homemade spice brand inspired by family recipes and the flavors of India. Its preservative-free blends make everyday cooking healthy, flavorful, and easy while bringing a little piece of home to kitchens in the US and India.",
+      "Bringing 15+ years of IT Project and Service Management experience to the community. She oversees key operations, coordinates initiatives, and ensures ideas are translated into action and delivered effectively. Known for her structured approach and attention to detail, Aparna believes in getting things done while keeping people and purpose at the heart of every initiative. She is passionate about creating a supportive space where women entrepreneurs can connect, collaborate, learn, and grow together.",
+      "Sai Masala is Aparna’s homemade masala brand, inspired by age-old recipes, the flavors of India, and memories of her mother’s cooking. Its carefully prepared spice blends contain no artificial ingredients, preservatives, or added colors, making everyday cooking healthy, flavorful, and easy. Serving kitchens in the USA and India, Sai Masala is a little piece of home, made with love.",
     ],
   },
   {
@@ -173,40 +173,6 @@ function AboutPage() {
 
       <section className="pt-4 pb-6 sm:pt-6 sm:pb-8 lg:pt-6 lg:pb-8">
         <div className="container-x">
-          <SectionHeading title="The People Behind SAWE" align="center" />
-          <div className="mx-auto mt-8 grid max-w-6xl gap-6 lg:grid-cols-2">
-            {leadership.map((member) => (
-              <article
-                key={member.name}
-                className="flex h-full flex-col gap-6 rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-8"
-              >
-                {member.image && (
-                  <img
-                    src={member.image.src}
-                    alt={member.image.alt}
-                    loading="lazy"
-                    className="mx-auto aspect-[4/5] w-full max-w-48 rounded-2xl object-cover object-center ring-1 ring-plum-100 sm:mx-0 sm:w-36 sm:shrink-0"
-                  />
-                )}
-                <div className="min-w-0 flex-1">
-                  <h3 className="font-serif text-2xl font-semibold text-plum-900">{member.name}</h3>
-                  <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
-                    {member.role}
-                  </p>
-                  <div className="mt-3 space-y-3 leading-relaxed text-ink/70">
-                    {member.bio.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white pt-4 pb-6 sm:pt-6 sm:pb-8 lg:pt-6 lg:pb-8">
-        <div className="container-x">
           <SectionHeading eyebrow="Advisory Board" title="Strategic Guidance" align="center" />
           <article className="mx-auto mt-8 flex max-w-4xl flex-col gap-7 rounded-3xl bg-plum-50 p-7 ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-9">
             <img
@@ -241,6 +207,40 @@ function AboutPage() {
               </div>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section className="bg-white pt-4 pb-6 sm:pt-6 sm:pb-8 lg:pt-6 lg:pb-8">
+        <div className="container-x">
+          <SectionHeading title="The People Behind SAWE" align="center" />
+          <div className="mx-auto mt-8 grid max-w-6xl gap-6 lg:grid-cols-2">
+            {leadership.map((member) => (
+              <article
+                key={member.name}
+                className="flex h-full flex-col gap-6 rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-8"
+              >
+                {member.image && (
+                  <img
+                    src={member.image.src}
+                    alt={member.image.alt}
+                    loading="lazy"
+                    className="mx-auto aspect-[4/5] w-full max-w-48 rounded-2xl object-cover object-center ring-1 ring-plum-100 sm:mx-0 sm:w-36 sm:shrink-0"
+                  />
+                )}
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-serif text-2xl font-semibold text-plum-900">{member.name}</h3>
+                  <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
+                    {member.role}
+                  </p>
+                  <div className="mt-3 space-y-3 leading-relaxed text-ink/70">
+                    {member.bio.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
