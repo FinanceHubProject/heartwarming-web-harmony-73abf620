@@ -166,7 +166,7 @@ function AboutPage() {
 
       <section className="section">
         <div className="container-x">
-          <SectionHeading eyebrow="Founding Team" title="The Leadership Circle" align="center" />
+          <SectionHeading title="The Leadership Circle" align="center" />
           <div className="mx-auto mt-12 grid max-w-4xl gap-6">
             {leadership.map((member) => (
               <article

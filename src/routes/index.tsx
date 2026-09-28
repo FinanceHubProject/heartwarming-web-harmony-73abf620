@@ -22,7 +22,7 @@ import { seo } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () =>
     seo({
-      title: "SAWE — South Asian Women Entrepreneurs Community",
+      title: "SAWE — South Asian and Southeast Asian Women Entrepreneurs Community",
       description:
         "Join 600+ South Asian and Southeast Asian women entrepreneurs across Greater Seattle and the US for Coffee Meets, business learning, collaborations, and referrals.",
     }),

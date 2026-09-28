@@ -69,7 +69,7 @@ function MembershipPage() {
     <>
       <PageHeader
         eyebrow="Member Sign-Up"
-        title="Join SAWE — South Asian Women Entrepreneurs"
+        title="Join SAWE — South Asian and Southeast Asian Women Entrepreneurs"
         subtitle="A growth-focused community for women who want to learn, connect, collaborate, and grow together."
       />
 

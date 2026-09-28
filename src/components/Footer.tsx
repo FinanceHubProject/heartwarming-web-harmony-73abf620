@@ -111,8 +111,7 @@ export default function Footer() {
       <div className="border-t border-plum-800">
         <div className="container-x flex flex-col gap-2 py-6 text-xs text-cream/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} SAWE — South Asian Women Entrepreneurs. All rights
-            reserved.
+            © {new Date().getFullYear()} SAWE — {siteConfig.fullName}. All rights reserved.
           </p>
           <p>{siteConfig.tagline}</p>
         </div>

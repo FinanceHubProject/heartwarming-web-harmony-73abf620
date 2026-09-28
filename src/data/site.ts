@@ -4,7 +4,7 @@
 
 export const siteConfig = {
   name: "SAWE",
-  fullName: "South Asian Women Entrepreneurs",
+  fullName: "South Asian and Southeast Asian Women Entrepreneurs",
   tagline: "She Builds. We Back Her",
   memberCount: 600,
   audienceName: "South Asian and Southeast Asian women entrepreneurs",

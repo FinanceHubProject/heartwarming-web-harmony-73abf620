@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "That is where SAWE — South Asian Women Entrepreneurs — comes in.",
+        text: "That is where SAWE — South Asian and Southeast Asian Women Entrepreneurs — comes in.",
       },
       {
         type: "p",

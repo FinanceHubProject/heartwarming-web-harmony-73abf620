@@ -57,6 +57,7 @@ export default function ImageCarousel({
     <div
       className={cn("group relative overflow-hidden", className)}
       role="region"
+      aria-roledescription="carousel"
       aria-label={label}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}

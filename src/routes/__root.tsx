@@ -74,7 +74,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SAWE — South Asian Women Entrepreneurs Community" },
+      { title: "SAWE — South Asian and Southeast Asian Women Entrepreneurs Community" },
       {
         name: "description",
         content:
