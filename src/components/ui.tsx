@@ -94,7 +94,9 @@ export function SectionHeading({
   return (
     <div className={`${alignCls} max-w-2xl ${className}`}>
       {eyebrow && <span className={`eyebrow ${eyebrowColor}`}>{eyebrow}</span>}
-      <h2 className={`mt-3 text-3xl font-semibold leading-tight sm:text-4xl ${titleColor}`}>
+      <h2
+        className={`${eyebrow ? "mt-3" : ""} text-3xl font-semibold leading-tight sm:text-4xl ${titleColor}`}
+      >
         {title}
       </h2>
       {intro && (

@@ -14,7 +14,7 @@ const socialIcons: Record<string, LucideIcon> = {
 export default function Footer() {
   return (
     <footer className="bg-plum-900 text-cream/80">
-      <div className="container-x grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container-x grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
         <div className="sm:col-span-2 lg:col-span-1">
           <div className="flex items-center gap-3">

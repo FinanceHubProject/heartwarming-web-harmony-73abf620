@@ -194,7 +194,7 @@ function ContactPage() {
       {/* ========================= COLLABORATION ====================== */}
       <section className="section">
         <div className="container-x">
-          <div className="rounded-3xl bg-plum-50 p-8 ring-1 ring-plum-100 sm:p-12">
+          <div className="rounded-3xl bg-plum-50 p-8 ring-1 ring-plum-100 sm:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-center">
               <div>
                 <span className="eyebrow text-plum-600">Collaboration</span>
@@ -203,7 +203,7 @@ function ContactPage() {
                 </h2>
                 <p className="mt-3 text-ink/70">
                   We welcome collaborations with partners who share our mission of helping South
-                  Asian women entrepreneurs grow.
+                  Asian and Southeast Asian women entrepreneurs grow.
                 </p>
                 <a
                   href="#contact-form"
@@ -225,7 +225,7 @@ function ContactPage() {
             eyebrow="FAQ"
             title="Frequently Asked Questions"
             align="center"
-            className="mb-10"
+            className="mb-8"
           />
           <div className="space-y-3">
             {faqs.map((f) => (

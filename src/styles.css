@@ -233,7 +233,7 @@
   .container-x {
     margin-inline: auto;
     width: 100%;
-    max-width: 1180px;
+    max-width: 1240px;
     padding-inline: 1.25rem;
   }
 
@@ -257,21 +257,21 @@
 
   /* Section vertical rhythm */
   .section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   @media (min-width: 640px) {
     .section {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
+      padding-top: 2.75rem;
+      padding-bottom: 2.75rem;
     }
   }
 
   @media (min-width: 1024px) {
     .section {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      padding-top: 2.75rem;
+      padding-bottom: 2.75rem;
     }
   }
 

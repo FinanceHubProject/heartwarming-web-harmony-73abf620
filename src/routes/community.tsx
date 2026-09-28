@@ -115,19 +115,8 @@ function CommunityPage() {
       <PageHeader
         eyebrow="Community"
         title="A Community Built for Real Connections, Real Growth, and Real Business Support"
+        subtitle="Not just another networking group—SAWE is a high-intent ecosystem for South Asian and Southeast Asian women founders building collaborations, visibility, and trusted support."
       />
-
-      {/* =========================== INTRO ============================ */}
-      <section className="section bg-white pb-0">
-        <div className="container-x max-w-3xl text-lg text-ink/75">
-          <p className="text-xl leading-relaxed text-center">
-            <span className="font-semibold text-plum-700">Not just another networking group.</span>{" "}
-            SAWE is a high-intent ecosystem for South Asian and Southeast Asian women founders
-            building real connections, collaborations, and visibility. We understand the unique
-            journey of immigrant entrepreneurs rebuilding their networks from scratch.
-          </p>
-        </div>
-      </section>
 
       {/* ==================== WHAT MAKES US DIFFERENT ================== */}
       <section className="section">
@@ -137,7 +126,7 @@ function CommunityPage() {
             title="What Makes Our Community Different"
             align="center"
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {different.map((d) => (
               <FeatureCard key={d.title} icon={d.icon} title={d.title}>
                 {d.text}
@@ -155,7 +144,7 @@ function CommunityPage() {
             title="Inside the SAWE Community"
             align="center"
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {inside.map((i) => (
               <div key={i.title} className="rounded-2xl bg-cream p-6 ring-1 ring-plum-100">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-plum-700 text-cream">
@@ -178,7 +167,7 @@ function CommunityPage() {
             intro="Inside SAWE, you will meet entrepreneurs from a wide range of industries and stages."
             align="center"
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {whoYoullMeet.map((w) => (
               <div
                 key={w.label}
@@ -194,23 +183,9 @@ function CommunityPage() {
         </div>
       </section>
 
-      {/* ========================== VISION ============================ */}
-      <section className="pb-4">
-        <div className="container-x">
-          <div className="rounded-3xl bg-linear-to-br from-plum-700 to-plum-900 px-6 py-14 text-center text-cream sm:px-12">
-            <span className="eyebrow text-gold-300">Our Vision</span>
-            <p className="mx-auto mt-4 max-w-3xl font-serif text-2xl font-semibold leading-snug sm:text-3xl">
-              To build one of the most trusted ecosystems for South Asian and Southeast Asian women
-              entrepreneurs where women can grow their businesses, confidence, visibility, and
-              support systems together — without feeling alone in the journey.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <CTASection
-        title="Join the Community"
-        text="Whether you are in your idea stage or already running an established business, SAWE welcomes women who believe in growth, collaboration, and community."
+        title="Grow With a Community You Can Trust"
+        text="Join South Asian and Southeast Asian women entrepreneurs building businesses, confidence, visibility, and support systems together—without feeling alone in the journey."
         primary={{ label: "Join SAWE", href: siteConfig.joinFormUrl }}
         secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
       />

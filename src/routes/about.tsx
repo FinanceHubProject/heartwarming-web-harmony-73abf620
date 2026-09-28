@@ -29,7 +29,7 @@ const founderBio = [
 interface LeadershipMember {
   name: string;
   role: string;
-  bio: string;
+  bio: string[];
   image?: {
     src: string;
     alt: string;
@@ -39,21 +39,28 @@ interface LeadershipMember {
 const leadership: LeadershipMember[] = [
   {
     name: "Aparna Prabhakar",
-    role: "Operations",
+    role: "Chief Operating Officer (COO)",
     image: {
       src: "/images/leadership/aparna-prabhakar.jpg",
-      alt: "Aparna Prabhakar, operations team member at SAWE",
+      alt: "Aparna Prabhakar, Chief Operating Officer at SAWE",
     },
-    bio: "Aparna leads operations and community systems at SAWE, supporting events, member experience, backend coordination, and the processes that help the organization scale with consistency.",
+    bio: [
+      "Aparna brings more than 15 years of IT project and service management experience to SAWE. She oversees key operations, coordinates initiatives, and turns ideas into well-executed action with a structured, detail-oriented, and people-first approach.",
+      "She is also the founder of Sai Masala, a homemade spice brand inspired by family recipes and the flavors of India. Its preservative-free blends make everyday cooking healthy, flavorful, and easy while bringing a little piece of home to kitchens in the US and India.",
+    ],
   },
   {
     name: "Chetna Mahajan",
-    role: "Technology",
+    role: "Technology & AI Advisor",
     image: {
       src: "/chetna-mahajan.jpg",
-      alt: "Chetna Mahajan, technology team member at SAWE",
+      alt: "Chetna Mahajan, Technology and AI Advisor at SAWE",
     },
-    bio: "Chetna supports SAWE's technology strategy and digital experience, turning community needs into practical tools and reliable systems. She brings a thoughtful, solutions-focused approach to helping members connect and building a scalable foundation for SAWE's growth.",
+    bio: [
+      "Chetna is a Senior Software Engineer at Microsoft, building platform capabilities for AI agents and intelligent workplace experiences across Microsoft Teams. Her work spans agentic workflows, proactive intelligence, and scalable AI-powered solutions that strengthen productivity and collaboration.",
+      "Beyond Microsoft, she advises startups and emerging founders on AI strategy, product vision, and technology roadmaps, and supports SAWE on leadership, innovation, and community impact. She is also a TEDx organizer, speaker, mentor, and AI event lead with Rooftop for AI Women.",
+      "Through AI Mantra Studio, Chetna contributes to hands-on AI camps and learning programs that make artificial intelligence practical and inspiring for youth. She is passionate about responsible AI, education, and creating opportunities for people of every background to learn, innovate, and thrive.",
+    ],
   },
 ];
 
@@ -125,8 +132,8 @@ function AboutPage() {
         subtitle="The women building a trusted ecosystem where South Asian and Southeast Asian women entrepreneurs do not grow alone."
       />
 
-      <section className="section bg-white">
-        <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+      <section className="bg-white pt-12 pb-4 sm:pt-14 sm:pb-6 lg:pt-16 lg:pb-6">
+        <div className="container-x grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
           <div>
             <div className="overflow-hidden rounded-3xl bg-linear-to-br from-plum-600 to-plum-900 p-8 text-center shadow-soft">
               <img
@@ -164,21 +171,21 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="pt-4 pb-6 sm:pt-6 sm:pb-8 lg:pt-6 lg:pb-8">
         <div className="container-x">
-          <SectionHeading title="The Leadership Circle" align="center" />
-          <div className="mx-auto mt-12 grid max-w-4xl gap-6">
+          <SectionHeading title="The People Behind SAWE" align="center" />
+          <div className="mx-auto mt-8 grid max-w-6xl gap-6 lg:grid-cols-2">
             {leadership.map((member) => (
               <article
                 key={member.name}
-                className="flex flex-col gap-6 rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-8"
+                className="flex h-full flex-col gap-6 rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-8"
               >
                 {member.image && (
                   <img
                     src={member.image.src}
                     alt={member.image.alt}
                     loading="lazy"
-                    className="mx-auto aspect-[4/5] w-full max-w-48 rounded-2xl object-cover object-center ring-1 ring-plum-100 sm:mx-0 sm:w-40 sm:shrink-0"
+                    className="mx-auto aspect-[4/5] w-full max-w-48 rounded-2xl object-cover object-center ring-1 ring-plum-100 sm:mx-0 sm:w-36 sm:shrink-0"
                   />
                 )}
                 <div className="min-w-0 flex-1">
@@ -186,7 +193,11 @@ function AboutPage() {
                   <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
                     {member.role}
                   </p>
-                  <p className="mt-3 leading-relaxed text-ink/70">{member.bio}</p>
+                  <div className="mt-3 space-y-3 leading-relaxed text-ink/70">
+                    {member.bio.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
@@ -194,10 +205,10 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="section bg-white">
+      <section className="bg-white pt-4 pb-6 sm:pt-6 sm:pb-8 lg:pt-6 lg:pb-8">
         <div className="container-x">
           <SectionHeading eyebrow="Advisory Board" title="Strategic Guidance" align="center" />
-          <article className="mx-auto mt-10 flex max-w-4xl flex-col gap-7 rounded-3xl bg-plum-50 p-7 ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-9">
+          <article className="mx-auto mt-8 flex max-w-4xl flex-col gap-7 rounded-3xl bg-plum-50 p-7 ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-9">
             <img
               src="/images/advisory/salma-moosa.jpg"
               alt="Salma Moosa, SAWE Advisory Board member"
@@ -233,7 +244,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="pt-4 pb-6 sm:pt-6 sm:pb-8 lg:pt-6 lg:pb-8">
         <div className="container-x">
           <SectionHeading
             eyebrow="Our Volunteers"
@@ -241,7 +252,7 @@ function AboutPage() {
             intro="SAWE thrives because women share their time, creativity, expertise, and care with the community."
             align="center"
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
             {volunteers.map((volunteer) => (
               <article
                 key={volunteer.name}

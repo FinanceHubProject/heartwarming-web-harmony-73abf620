@@ -70,18 +70,8 @@ function MembershipPage() {
       <PageHeader
         eyebrow="Member Sign-Up"
         title="Join SAWE — South Asian and Southeast Asian Women Entrepreneurs"
-        subtitle="A growth-focused community for women who want to learn, connect, collaborate, and grow together."
+        subtitle="Whether you are established or just starting, join a growth-focused community built for learning, visibility, collaboration, and real connection."
       />
-
-      {/* ============================ INTRO =========================== */}
-      <section className="section bg-white pb-0">
-        <div className="container-x max-w-3xl text-center text-lg font-medium text-ink/75">
-          <p>
-            Whether you already run an established business or are just starting out, SAWE gives you
-            the network, visibility, and tools to scale.
-          </p>
-        </div>
-      </section>
 
       {/* ========================= ELIGIBILITY ======================== */}
       <section className="section">
@@ -103,7 +93,7 @@ function MembershipPage() {
             title="What You'll Get Access To"
             align="center"
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {access.map((a) => (
               <div key={a.label} className="rounded-2xl bg-cream p-6 ring-1 ring-plum-100">
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-plum-700 text-cream">
@@ -147,7 +137,7 @@ function MembershipPage() {
               title="Apply for Membership"
               intro="Tell us a little about you and your business. We'll be in touch about next steps."
               align="center"
-              className="mb-10"
+              className="mb-8"
             />
             {submitted ? (
               <FormSuccess message="Your membership application has been received. The SAWE team will reach out to you soon." />

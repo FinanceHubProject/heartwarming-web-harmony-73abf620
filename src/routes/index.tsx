@@ -196,7 +196,7 @@ function HomePage() {
       <section className="relative overflow-hidden bg-linear-to-br from-plum-700 via-plum-800 to-plum-900 text-cream">
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-coral-400/30 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-coral-500/25 blur-3xl" />
-        <div className="container-x relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+        <div className="container-x relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
           <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-gold-300 ring-1 ring-cream/15">
               <Sparkles className="h-3.5 w-3.5" />
@@ -247,7 +247,7 @@ function HomePage() {
       </section>
 
       <section className="section bg-white">
-        <div className="container-x grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+        <div className="container-x grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
           <SectionHeading
             eyebrow="What Is SAWE?"
             title="More Than Networking. This Is Your Business Community."
@@ -274,7 +274,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-linear-to-br from-cream via-coral-50 to-plum-50 py-16 sm:py-20">
+      <section className="section relative overflow-hidden bg-linear-to-br from-cream via-coral-50 to-plum-50">
         <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-coral-200/50 blur-3xl" />
         <div className="container-x relative">
           <SectionHeading
@@ -283,7 +283,7 @@ function HomePage() {
             intro="Connection, practical learning, and daily support—working together."
             align="center"
           />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {stats.map((stat) => (
               <div
                 key={stat.label}
@@ -310,7 +310,7 @@ function HomePage() {
             intro="SAWE runs on three connected pillars: Connection, Coaching, and Community."
             align="center"
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {pillars.map((pillar) => (
               <article
                 key={pillar.title}
@@ -352,7 +352,7 @@ function HomePage() {
       </section>
 
       <section className="section">
-        <div className="container-x grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+        <div className="container-x grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
           <SectionHeading
             eyebrow="Who Is This For?"
             title="SAWE Is for You If…"
@@ -365,7 +365,7 @@ function HomePage() {
       <section className="section bg-white">
         <div className="container-x">
           <div className="overflow-hidden rounded-3xl bg-blue-deep text-cream shadow-soft">
-            <div className="grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:p-12">
+            <div className="grid items-center gap-8 p-6 sm:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-10">
               <div>
                 <span className="eyebrow text-coral-200">Attend a Coffee Meet</span>
                 <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
@@ -401,7 +401,7 @@ function HomePage() {
               <ImageCarousel
                 images={coffeeMeetImages}
                 label="SAWE Coffee Meet photos"
-                className="aspect-[4/3] rounded-2xl ring-1 ring-white/20"
+                className="aspect-[16/10] rounded-2xl ring-1 ring-white/20"
               />
             </div>
           </div>
@@ -416,7 +416,7 @@ function HomePage() {
             intro="Representative member perspectives on what it feels like to grow inside SAWE."
             align="center"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.slice(0, 6).map((testimonial) => (
               <figure
                 key={testimonial.id}

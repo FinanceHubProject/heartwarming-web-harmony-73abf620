@@ -78,36 +78,51 @@ function CoffeeMeetsPage() {
         eyebrow="Coffee Meet Calendar"
         title="Attend a Coffee Meet"
         subtitle="Build real relationships—not just a collection of business cards."
-      />
-
-      <section className="section bg-white">
-        <div className="container-x grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-          <div>
-            <SectionHeading
-              eyebrow="What Happens at a SAWE Coffee Meet"
-              title="Familiar faces, fresh energy, and room to grow"
-              intro="Coffee Meets are structured business gatherings where women connect repeatedly, build trust, and discover people they genuinely want to collaborate with."
-            />
-            <p className="mt-5 leading-relaxed text-ink/70">
-              You will see women you already know and meet new entrepreneurs each time. That balance
-              creates the familiarity needed for real relationships and the fresh energy that keeps
-              new ideas and opportunities moving.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-4">
-              <Button href={siteConfig.lumaUrl} variant="primary" withArrow>
-                RSVP for the Next Meet
-              </Button>
-              <Button href={siteConfig.joinFormUrl} variant="outline">
-                Become a Member
-              </Button>
-            </div>
-          </div>
+        actions={
+          <>
+            <Button href={siteConfig.lumaUrl} variant="secondary" withArrow>
+              RSVP for the Next Meet
+            </Button>
+            <Button href={siteConfig.joinFormUrl} variant="light">
+              Become a Member
+            </Button>
+          </>
+        }
+        media={
           <ImageCarousel
             images={coffeeMeetImages}
             label="Photos from SAWE Coffee Meets"
             priority
-            className="aspect-[4/3] rounded-3xl shadow-2xl ring-1 ring-plum-100"
+            className="aspect-[16/10] rounded-3xl shadow-2xl ring-1 ring-white/20"
           />
+        }
+      />
+
+      <section className="section bg-white">
+        <div className="container-x grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-14">
+          <SectionHeading
+            eyebrow="What Happens at a SAWE Coffee Meet"
+            title="Familiar faces, fresh energy, and room to grow"
+            intro="Coffee Meets are structured business gatherings where women connect repeatedly, build trust, and discover people they genuinely want to collaborate with."
+          />
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div className="rounded-2xl bg-plum-50 p-6 ring-1 ring-plum-100">
+              <Users className="h-6 w-6 text-plum-600" />
+              <h3 className="mt-4 text-xl font-semibold text-plum-900">Build familiarity</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/70">
+                Meet women repeatedly, build trust over time, and move beyond surface-level
+                introductions.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-coral-50 p-6 ring-1 ring-coral-100">
+              <Handshake className="h-6 w-6 text-coral-600" />
+              <h3 className="mt-4 text-xl font-semibold text-plum-900">Discover fresh energy</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/70">
+                New attendees bring new businesses, perspectives, referrals, and opportunities to
+                every gathering.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -119,7 +134,7 @@ function CoffeeMeetsPage() {
             intro="Choose the format that matches how you want to connect, practice, or showcase your business."
             align="center"
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {formats.map((format) => (
               <article
                 key={format.title}
@@ -163,7 +178,7 @@ function CoffeeMeetsPage() {
             intro="SAWE Coffee Meets currently run across five Greater Seattle locations."
             align="center"
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-10 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {siteConfig.cities.map((city) => (
               <div
                 key={city}
@@ -179,7 +194,7 @@ function CoffeeMeetsPage() {
 
       <section className="section">
         <div className="container-x">
-          <div className="mx-auto max-w-3xl rounded-3xl bg-plum-50 p-8 text-center ring-1 ring-plum-100 sm:p-10">
+          <div className="mx-auto max-w-3xl rounded-3xl bg-plum-50 p-7 text-center ring-1 ring-plum-100 sm:p-9">
             <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-plum-600 shadow-card">
               <CalendarClock className="h-7 w-7" />
             </span>
