@@ -197,15 +197,38 @@ function AboutPage() {
       <section className="section bg-white">
         <div className="container-x">
           <SectionHeading eyebrow="Advisory Board" title="Strategic Guidance" align="center" />
-          <article className="mx-auto mt-10 max-w-2xl rounded-3xl bg-plum-50 p-8 text-center ring-1 ring-plum-100">
-            <h3 className="font-serif text-3xl font-semibold text-plum-900">Salma Moosa</h3>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-plum-600">
-              Advisory Board Member
-            </p>
-            <p className="mx-auto mt-4 max-w-xl leading-relaxed text-ink/70">
-              Salma supports SAWE with strategic guidance as the community expands its programs,
-              partnerships, and national reach.
-            </p>
+          <article className="mx-auto mt-10 flex max-w-4xl flex-col gap-7 rounded-3xl bg-plum-50 p-7 ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-9">
+            <img
+              src="/images/advisory/salma-moosa.jpg"
+              alt="Salma Moosa, SAWE Advisory Board member"
+              loading="lazy"
+              className="mx-auto aspect-square w-full max-w-56 rounded-2xl object-cover shadow-card ring-1 ring-plum-100 sm:mx-0 sm:w-48 sm:shrink-0"
+            />
+            <div className="min-w-0 flex-1">
+              <h3 className="font-serif text-3xl font-semibold text-plum-900">Salma Moosa</h3>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-plum-600">
+                Advisory Board Member
+              </p>
+              <div className="mt-4 space-y-3 leading-relaxed text-ink/70">
+                <p>
+                  Salma has spent more than three decades helping founders turn ideas into
+                  businesses that grow. In 2013, she co-founded Startups Club in Bengaluru, growing
+                  it from a small coffee meetup into a founder community of 25,000+ members across
+                  20 cities.
+                </p>
+                <p>
+                  Today, she works as a Fractional CMO and Growth Execution Mentor, helping
+                  leadership teams with market positioning, revenue growth, and execution. She built
+                  EyeROV&apos;s marketing function from the ground up and has mentored thousands of
+                  entrepreneurs across startups, family businesses, and technology companies.
+                </p>
+                <p>
+                  At SAWE, Salma works closely with the founder and community leaders to shape the
+                  organization&apos;s growth. She also mentors members one-to-one on growth strategy
+                  and building their individual businesses.
+                </p>
+              </div>
+            </div>
           </article>
         </div>
       </section>
