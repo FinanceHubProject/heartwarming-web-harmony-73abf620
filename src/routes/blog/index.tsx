@@ -12,7 +12,7 @@ export const Route = createFileRoute("/blog/")({
     seo({
       title: "Blog — Insights for Women Entrepreneurs | SAWE",
       description:
-        "Articles, lessons, and stories on building, marketing, and scaling a business as a South Asian woman entrepreneur.",
+        "Articles, lessons, and stories on building, marketing, and scaling a business as a South Asian or Southeast Asian woman entrepreneur.",
     }),
   component: BlogIndexPage,
 });

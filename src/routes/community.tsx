@@ -31,7 +31,7 @@ export const Route = createFileRoute("/community")({
     seo({
       title: "Our Community — Who Belongs at SAWE",
       description:
-        "Discover the industries, founders, creators, and consultants inside SAWE — a trusted ecosystem of South Asian women entrepreneurs growing together.",
+        "Discover the industries, founders, creators, and consultants inside SAWE — a trusted ecosystem of South Asian and Southeast Asian women entrepreneurs growing together.",
     }),
   component: CommunityPage,
 });
@@ -122,9 +122,9 @@ function CommunityPage() {
         <div className="container-x max-w-3xl text-lg text-ink/75">
           <p className="text-xl leading-relaxed text-center">
             <span className="font-semibold text-plum-700">Not just another networking group.</span>{" "}
-            SAWE is a high-intent ecosystem for South Asian women founders building real
-            connections, collaborations, and visibility. We understand the unique journey of
-            immigrant entrepreneurs rebuilding their networks from scratch.
+            SAWE is a high-intent ecosystem for South Asian and Southeast Asian women founders
+            building real connections, collaborations, and visibility. We understand the unique
+            journey of immigrant entrepreneurs rebuilding their networks from scratch.
           </p>
         </div>
       </section>
@@ -200,9 +200,9 @@ function CommunityPage() {
           <div className="rounded-3xl bg-linear-to-br from-plum-700 to-plum-900 px-6 py-14 text-center text-cream sm:px-12">
             <span className="eyebrow text-gold-300">Our Vision</span>
             <p className="mx-auto mt-4 max-w-3xl font-serif text-2xl font-semibold leading-snug sm:text-3xl">
-              To build one of the most trusted ecosystems for South Asian women entrepreneurs where
-              women can grow their businesses, confidence, visibility, and support systems together
-              — without feeling alone in the journey.
+              To build one of the most trusted ecosystems for South Asian and Southeast Asian women
+              entrepreneurs where women can grow their businesses, confidence, visibility, and
+              support systems together — without feeling alone in the journey.
             </p>
           </div>
         </div>

@@ -1,435 +1,449 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
+  ArrowUpRight,
   CalendarDays,
   Coffee,
   GraduationCap,
   Handshake,
   MapPin,
-  Megaphone,
   Quote,
   Repeat2,
   Sparkles,
   TrendingUp,
   Users,
 } from "lucide-react";
-import { Button, CheckList, FeatureCard, SectionHeading } from "@/components/ui";
-import CountUp from "@/components/CountUp";
 import CTASection from "@/components/CTASection";
+import ImageCarousel, { type CarouselImage } from "@/components/ImageCarousel";
+import { Button, CheckList, SectionHeading } from "@/components/ui";
 import { siteConfig } from "@/data/site";
+import { testimonials } from "@/data/testimonials";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () =>
     seo({
-      title: "SAWE — South Asian Women Entrepreneurs Community (Seattle)",
+      title: "SAWE — South Asian Women Entrepreneurs Community",
       description:
-        "Join 300+ South Asian women entrepreneurs across Greater Seattle. Coffee meets, trainings, collaborations, and referrals — a true business ecosystem.",
+        "Join 600+ South Asian and Southeast Asian women entrepreneurs across Greater Seattle and the US for Coffee Meets, business learning, collaborations, and referrals.",
     }),
   component: HomePage,
 });
 
-const stats = [
-  { icon: Users, lead: 465, isCount: true, label: "Women Entrepreneurs" },
-  { icon: MapPin, lead: "5", label: "Seattle Area Chapters" },
-  { icon: CalendarDays, lead: "Monthly", label: "Coffee Meets & Trainings" },
+const heroImages: CarouselImage[] = [
   {
-    icon: Repeat2,
-    lead: "Built-in",
-    label: "Collaborations, Referrals & Earning Loops",
+    src: "/images/home/landing-group.jpg",
+    alt: "SAWE members gathered outside a Greater Seattle coffee shop",
+  },
+  {
+    src: "/images/home/indoor-community.jpg",
+    alt: "SAWE members smiling together at an indoor community gathering",
+  },
+  {
+    src: "/images/home/table-connections.jpg",
+    alt: "SAWE entrepreneurs connecting around a table",
+  },
+  {
+    src: "/images/home/outdoor-community.jpg",
+    alt: "SAWE members at an outdoor community gathering",
+  },
+  {
+    src: "/images/home/park-gathering.jpg",
+    alt: "SAWE members gathered together in a park",
+  },
+  {
+    src: "/images/home/community-event.jpg",
+    alt: "Women from the SAWE community at an indoor event",
+  },
+];
+
+const coffeeMeetImages: CarouselImage[] = [
+  {
+    src: "/images/coffee-meets/group-gathering.jpg",
+    alt: "Women gathered for a SAWE Coffee Meet",
+  },
+  {
+    src: "/images/coffee-meets/presentation-group.jpg",
+    alt: "SAWE Coffee Meet attendees after a business presentation",
+  },
+  {
+    src: "/images/coffee-meets/coffee-community.jpg",
+    alt: "SAWE members at a Coffee Meet",
+  },
+  {
+    src: "/images/coffee-meets/workshop-room.jpg",
+    alt: "A busy SAWE workshop and networking room",
+  },
+  {
+    src: "/images/coffee-meets/outdoor-group.jpg",
+    alt: "SAWE members at an outdoor Coffee Meet",
+  },
+  {
+    src: "/images/coffee-meets/member-conversation.jpg",
+    alt: "SAWE members connecting over coffee",
+  },
+];
+
+const coffeeFormats = [
+  {
+    label: "Empower",
+    href: "https://www.instagram.com/reel/DcWaWvqB9kk/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+  },
+  {
+    label: "Connect",
+    href: "https://www.instagram.com/reel/Ddt6HXNBpuz/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+  },
+  {
+    label: "Collaborate",
+    href: "https://www.instagram.com/reel/DZ-rFbnB8m6/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+  },
+];
+
+const stats = [
+  {
+    icon: Users,
+    lead: siteConfig.memberCount,
+    suffix: "+",
+    label: "Women entrepreneurs",
+  },
+  {
+    icon: MapPin,
+    lead: "5",
+    label: "Greater Seattle chapters",
   },
   {
     icon: Sparkles,
-    lead: "Hands-on",
-    label: "Skill Building + Business Visibility",
-  },
-];
-
-const memberAvatars = [
-  "Aparna",
-  "Meghana",
-  "Agraja",
-  "Praveena",
-  "Deepti",
-  "Shipra",
-];
-
-const collage = [
-  { src: "/hero_image_new.jpg", span: "row-span-2", position: "object-left" },
-  { src: "/coffee_meet_image.png", span: "", position: "object-left" },
-  { src: "/hero_image.png", span: "", position: "object-center" },
-  { src: "/hero_image_new.jpg", span: "row-span-2", position: "object-right" },
-  { src: "/coffee_meet_image.png", span: "", position: "object-right" },
-  { src: "/hero_image.png", span: "", position: "object-right" },
-];
-
-const offerings = [
-  {
-    icon: Coffee,
-    title: "Coffee Meets",
-    text: "Structured networking events designed for meaningful introductions, collaborations, and visibility.",
+    lead: "National",
+    label: "Community growing across the US",
   },
   {
-    icon: GraduationCap,
-    title: "Trainings & Workshops",
-    text: "Practical business trainings on AI, marketing, branding, finance, content creation, growth, and more.",
+    icon: CalendarDays,
+    lead: "Monthly",
+    label: "Coffee Meets and Business Clinic",
+  },
+  {
+    icon: Repeat2,
+    lead: "1:1",
+    label: "Brew Buddy peer connections",
   },
   {
     icon: Handshake,
-    title: "Collaboration & Earning Loops",
-    text: "A trusted ecosystem where members support, hire, refer, and collaborate with each other.",
+    lead: "Built-in",
+    label: "Collaborations, referrals, and visibility",
+  },
+];
+
+const pillars = [
+  {
+    icon: Users,
+    title: "Connection",
+    intro: "Meet consistently, build trust, and turn introductions into real relationships.",
+    items: [
+      {
+        title: "Coffee Meets",
+        text: "Friendly, structured networking through Empower, Connect, and Collaborate formats.",
+        links: coffeeFormats,
+      },
+      {
+        title: "Brew Buddy",
+        text: "A four-week one-to-one peer connection that helps every member build one relationship deeply.",
+      },
+    ],
   },
   {
-    icon: Megaphone,
-    title: "Visibility & Promotion",
-    text: "Get featured through social media spotlights, community events, member showcases, and partnerships.",
+    icon: GraduationCap,
+    title: "Coaching",
+    intro: "Learn practical skills and get unstuck with focused support you can use immediately.",
+    items: [
+      {
+        title: "Trainings and Workshops",
+        text: "Hands-on sessions covering AI, SEO, marketing, finance, social media, sales, pricing, and growth.",
+      },
+      {
+        title: "Business Clinic",
+        text: "Bring your biggest business question to a focused monthly session and continue the support afterward.",
+      },
+    ],
   },
   {
-    icon: TrendingUp,
-    title: "Accountability & Growth",
-    text: "Build consistency, confidence, and momentum alongside women who understand your journey.",
+    icon: Handshake,
+    title: "Community",
+    intro: "Grow inside an ecosystem where members actively back one another.",
+    items: [
+      {
+        title: "Collaboration and Earning",
+        text: "Members hire, refer, recommend, and build opportunities with one another.",
+      },
+      {
+        title: "Visibility",
+        text: "Member spotlights, showcases, events, and partnerships help more people discover your work.",
+      },
+    ],
   },
 ];
 
 const audience = [
-  "You are a South Asian woman entrepreneur in the US",
-  "You recently moved and are rebuilding your network",
-  "You run a small business, side hustle, or service-based business",
-  "You are looking for visibility, referrals, and collaborations",
-  "You want to learn, grow, and scale in a supportive ecosystem",
-  "You are tired of superficial networking and want genuine connections",
+  "You are a woman of South Asian or Southeast Asian heritage running a business in the US",
+  "You recently moved and are building your network from scratch",
+  "You have a small business, a side hustle, or offer a service",
+  "You want more visibility, referrals, and collaborations",
+  "You want to keep learning and growing",
+  "You are done with surface-level networking and want something real",
 ];
-
-const testimonials = [
-  {
-    quote: "SAWE helped me find my first collaborations in Seattle.",
-    name: "Priya Sharma",
-    role: "Marketing Consultant",
-  },
-  {
-    quote: "I walked into one coffee meet alone and walked out with a community.",
-    name: "Anjali Gupta",
-    role: "Creative Director",
-  },
-  {
-    quote: "This is one of the few communities where networking actually turns into business.",
-    name: "Neha Patel",
-    role: "Founder & CEO",
-  },
-];
-
-// Real member headshots that appear as the hero avatar stack.
-
 
 function HomePage() {
   return (
     <>
-      {/* ============================ HERO ============================ */}
       <section className="relative overflow-hidden bg-linear-to-br from-plum-700 via-plum-800 to-plum-900 text-cream">
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-coral-400/30 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-coral-500/25 blur-3xl" />
-        <div className="pointer-events-none absolute top-1/3 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-plum-500/25 blur-3xl" />
-
-        <div className="container-x relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
+        <div className="container-x relative grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div className="animate-fade-up">
             <span className="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-gold-300 ring-1 ring-cream/15">
               <Sparkles className="h-3.5 w-3.5" />
-              Greater Seattle Area
+              Greater Seattle + SAWE National
             </span>
-            <h1 className="mt-5 text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
-              Build Your Business with Seattle's Premier South Asian Sisterhood
+            <h1 className="mt-5 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
+              A Community Built for South Asian and Southeast Asian Women Entrepreneurs in the US
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80">
-              Join a high-intent community of founders and creators building genuine connections,
-              generating referrals, and accelerating growth together.
+            <p className="mt-5 font-serif text-2xl font-semibold text-gold-300 sm:text-3xl">
+              {siteConfig.tagline}
+            </p>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-cream/82">
+              SAWE is for women running businesses in the US who want genuine friendships, practical
+              support, meaningful collaborations, and a community that understands the journey.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href={siteConfig.joinFormUrl} variant="secondary" withArrow>
                 Join the Community
               </Button>
               <Button href={siteConfig.lumaUrl} variant="light">
-                Explore Upcoming Events
+                See Upcoming Coffee Meets
               </Button>
             </div>
           </div>
 
-          {/* Decorative community panel */}
-          <div className="animate-fade-up relative lg:justify-self-end w-full max-w-md">
-            <div className="relative z-0 overflow-hidden rounded-3xl ring-1 ring-cream/20 shadow-2xl aspect-[4/3] bg-plum-800">
-              <img
-                src="/hero_image_new.jpg"
-                alt="SAWE Community"
-                className="w-full h-full object-cover opacity-90 transition duration-700 hover:opacity-100 hover:scale-105"
-              />
-            </div>
-            <div className="relative z-10 -mt-16 sm:-mt-24 sm:-ml-12 rounded-3xl bg-linear-to-br from-plum-600/95 to-plum-900/95 p-5 ring-1 ring-cream/10 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-              <div className="rounded-2xl bg-white p-5 text-ink shadow-soft">
-                <div className="flex items-center -space-x-3">
-                  {memberAvatars.map((name) => (
-                    <span
-                      key={name}
-                      className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-plum-100 to-gold-100 text-xs font-bold text-plum-700 ring-2 ring-white shadow-sm"
-                      aria-label={name}
-                    >
-                      {name.charAt(0)}
-                    </span>
-                  ))}
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-coral-400 to-coral-600 text-[11px] font-bold text-white ring-2 ring-white">
-                    <CountUp end={465} suffix="+" />
-                  </span>
+          <div className="relative mx-auto w-full max-w-xl lg:justify-self-end">
+            <ImageCarousel
+              images={heroImages}
+              label="SAWE community highlights"
+              priority
+              className="aspect-[4/3] rounded-3xl shadow-2xl ring-1 ring-cream/20"
+            />
+            <div className="relative z-10 mx-4 -mt-10 rounded-2xl bg-white p-5 text-ink shadow-soft sm:mx-8">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="font-serif text-3xl font-bold text-plum-900">
+                    {siteConfig.memberCount}+
+                  </p>
+                  <p className="text-sm font-semibold text-plum-700">Women entrepreneurs</p>
                 </div>
-                <p className="mt-4 font-serif text-lg font-semibold text-plum-900">
-                  You are in good company
-                </p>
-                <p className="mt-1 text-sm text-ink/60">
-                  South Asian women founders, creators, consultants, and small business owners —
-                  growing together.
+                <p className="max-w-52 text-right text-sm leading-relaxed text-ink/65">
+                  A strong Seattle chapter and a growing national community.
                 </p>
               </div>
-
-              <div className="mt-4 grid gap-3">
-                <div className="flex items-center gap-3 rounded-2xl bg-white/95 p-4 text-ink shadow-card">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-plum-50 text-plum-700">
-                    <Coffee className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-plum-900">Monthly Coffee Meets</p>
-                    <p className="text-xs text-ink/60">
-                      Seattle · Bellevue · Redmond · Kirkland · Bothell
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 rounded-2xl bg-white/95 p-4 text-ink shadow-card">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gold-100 text-gold-600">
-                    <Handshake className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-plum-900">Earning Loops</p>
-                    <p className="text-xs text-ink/60">
-                      Members refer, hire & collaborate with each other.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* =========================== ABOUT ============================ */}
-      <section className="section bg-white">
-        <div className="container-x grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <SectionHeading
-            eyebrow="About SAWE"
-            title="More Than Networking. This Is Your Business Ecosystem."
-          />
-          <div className="space-y-5 text-ink/75 lg:hidden">
-            <p className="leading-relaxed">
-              Starting or rebuilding a business in a new country can feel lonely. SAWE gives you a
-              space where business conversations turn into real opportunities.
-            </p>
-            <Button to="/about" variant="outline" withArrow className="mt-2">
-              Meet the Team
-            </Button>
-          </div>
-          <div className="hidden lg:grid gap-8 sm:grid-cols-3 text-ink/75">
-            <div className="space-y-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-plum-50 text-plum-700">
-                <Users className="h-6 w-6" />
-              </div>
-              <p className="font-semibold text-plum-900">Immigrant Support</p>
-              <p className="text-sm leading-relaxed">
-                Starting a business in a new country is tough. Find women who understand your exact
-                journey.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100 text-gold-600">
-                <Handshake className="h-6 w-6" />
-              </div>
-              <p className="font-semibold text-plum-900">Real Collaboration</p>
-              <p className="text-sm leading-relaxed">
-                Move past superficial networking. Our members actively refer, hire, and collaborate.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-plum-50 text-plum-700">
-                <TrendingUp className="h-6 w-6" />
-              </div>
-              <p className="font-semibold text-plum-900">Skill Building</p>
-              <p className="text-sm leading-relaxed">
-                Practical workshops on marketing, finance, and growth to help you scale confidently.
-              </p>
-            </div>
-            <div className="col-span-3 mt-4">
-              <Button to="/about" variant="outline" withArrow>
-                Meet the Team
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ======================= PHOTO COLLAGE ======================== */}
-      <section className="bg-white pt-16 sm:pt-20">
-        <div className="container-x">
-          <div className="grid auto-rows-[110px] grid-cols-3 gap-3 sm:auto-rows-[150px] sm:grid-cols-6 sm:gap-4">
-            {collage.map((c, i) => (
-              <div
-                key={i}
-                className={`group relative overflow-hidden rounded-2xl ring-1 ring-plum-100 shadow-card ${c.span}`}
-              >
-                <img
-                  src={c.src}
-                  alt="SAWE community moment"
-                  loading="lazy"
-                  className={`h-full w-full object-cover transition duration-700 group-hover:scale-110 ${c.position}`}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ======================= COMMUNITY STATS ====================== */}
-      <section className="relative overflow-hidden bg-linear-to-br from-cream via-coral-50 to-plum-50 py-16">
-        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-coral-200/50 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-plum-200/50 blur-3xl" />
-        <div className="container-x relative">
-          <p className="text-center font-serif text-3xl font-semibold text-plum-900 sm:text-4xl">
-            Growing Together
-          </p>
-          <p className="mt-2 text-center text-sm text-ink/60">
-            A thriving ecosystem of South Asian women entrepreneurs across Greater Seattle.
-          </p>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-2xl bg-white/80 p-5 text-center shadow-card ring-1 ring-plum-100 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-soft"
-              >
-                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-linear-to-br from-coral-100 to-coral-200 text-coral-600">
-                  <s.icon className="h-6 w-6" />
-                </span>
-                <p className="mt-3 font-serif text-4xl sm:text-5xl font-bold bg-linear-to-br from-plum-700 to-coral-500 bg-clip-text text-transparent">
-                  {s.isCount && typeof s.lead === "number" ? (
-                    <CountUp end={s.lead} suffix="+" />
-                  ) : (
-                    s.lead
-                  )}
-                </p>
-                <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-plum-800/70">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================= WHAT WE DO ========================= */}
-      <section className="section">
-        <div className="container-x">
-          <SectionHeading
-            eyebrow="What We Do"
-            title="What You'll Find Inside SAWE"
-            intro="Five pillars that turn a network into a true business ecosystem."
-            align="center"
-          />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {offerings.map((o) => (
-              <FeatureCard key={o.title} icon={o.icon} title={o.title}>
-                {o.text}
-              </FeatureCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ======================= WHO IS THIS FOR ====================== */}
       <section className="section bg-white">
         <div className="container-x grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <SectionHeading
-            eyebrow="Who Is This For"
-            title="SAWE Is For You If…"
-            intro="If any of these sound like you, you'll feel right at home."
+            eyebrow="What Is SAWE?"
+            title="More Than Networking. This Is Your Business Community."
+            intro="Starting or rebuilding a business in a new country is hard. It can also feel lonely when you do not yet have the right people around you."
+          />
+          <div className="space-y-5 text-base leading-relaxed text-ink/75 sm:text-lg">
+            <p>
+              SAWE was built to change that. Women from India, Pakistan, Bangladesh, Sri Lanka,
+              Nepal, the Philippines, Vietnam, Malaysia, Singapore, and across Asia are building
+              alongside one another here.
+            </p>
+            <p>
+              Some members sell products, some offer services, some have side hustles, and some are
+              just getting started. What everyone shares is the wish to grow with people who get it.
+            </p>
+            <p>
+              What began in Greater Seattle is now expanding through SAWE National, bringing women
+              entrepreneurs together across US cities.
+            </p>
+            <Button to="/about" variant="outline" withArrow>
+              Meet the Team
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-linear-to-br from-cream via-coral-50 to-plum-50 py-16 sm:py-20">
+        <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-coral-200/50 blur-3xl" />
+        <div className="container-x relative">
+          <SectionHeading
+            eyebrow="Growing Together"
+            title="A community designed to keep business moving"
+            intro="Connection, practical learning, and daily support—working together."
+            align="center"
+          />
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-2xl bg-white/85 p-6 text-center shadow-card ring-1 ring-plum-100 backdrop-blur-sm"
+              >
+                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-plum-50 text-plum-700">
+                  <stat.icon className="h-6 w-6" />
+                </span>
+                <p className="mt-4 font-serif text-3xl font-bold text-plum-900 sm:text-4xl">
+                  {typeof stat.lead === "number" ? `${stat.lead}${stat.suffix ?? ""}` : stat.lead}
+                </p>
+                <p className="mt-2 text-sm font-semibold text-ink/65">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-white">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="The 3 C's"
+            title="What You Will Find Inside SAWE"
+            intro="SAWE runs on three connected pillars: Connection, Coaching, and Community."
+            align="center"
+          />
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {pillars.map((pillar) => (
+              <article
+                key={pillar.title}
+                className="flex h-full flex-col rounded-3xl bg-cream/70 p-7 shadow-card ring-1 ring-plum-100"
+              >
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-plum-700 text-cream">
+                  <pillar.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-2xl font-semibold text-plum-900">{pillar.title}</h3>
+                <p className="mt-2 leading-relaxed text-ink/65">{pillar.intro}</p>
+                <div className="mt-6 space-y-5">
+                  {pillar.items.map((item) => (
+                    <div key={item.title} className="border-t border-plum-100 pt-5">
+                      <h4 className="text-lg font-semibold text-plum-900">{item.title}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-ink/70">{item.text}</p>
+                      {item.links && (
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          {item.links.map((link) => (
+                            <a
+                              key={link.label}
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-2 text-xs font-semibold text-plum-700 ring-1 ring-plum-100 transition hover:bg-plum-700 hover:text-cream"
+                            >
+                              {link.label}
+                              <ArrowUpRight className="h-3.5 w-3.5" />
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container-x grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <SectionHeading
+            eyebrow="Who Is This For?"
+            title="SAWE Is for You If…"
+            intro="If these sound like you, you will feel right at home."
           />
           <CheckList items={audience} columns={1} className="lg:mt-2" />
         </div>
       </section>
 
-      {/* ======================= UPCOMING EVENTS ====================== */}
-      <section className="section">
+      <section className="section bg-white">
         <div className="container-x">
-          <div className="relative overflow-hidden rounded-3xl bg-plum-50 px-6 py-12 ring-1 ring-plum-100 sm:px-12">
-            <div className="grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="overflow-hidden rounded-3xl bg-blue-deep text-cream shadow-soft">
+            <div className="grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:p-12">
               <div>
-                <span className="eyebrow text-plum-600">Upcoming Events</span>
-                <h2 className="mt-3 text-3xl font-semibold text-plum-900 sm:text-4xl">
-                  Learn. Network. Grow.
+                <span className="eyebrow text-coral-200">Attend a Coffee Meet</span>
+                <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
+                  Walk into a room built for real connection
                 </h2>
-                <p className="mt-4 max-w-xl leading-relaxed text-ink/70">
-                  From coffee meets and founder mixers to business workshops and social events, SAWE
-                  creates consistent opportunities for women entrepreneurs to connect and grow
-                  together.
+                <p className="mt-4 max-w-xl leading-relaxed text-cream/80">
+                  Meet women repeatedly, build familiarity, and still discover new businesses and
+                  ideas every time. Each Coffee Meet format has a different purpose.
                 </p>
-                <Button href={siteConfig.lumaUrl} variant="primary" withArrow className="mt-6">
-                  View Upcoming Events
-                </Button>
-              </div>
-              <div className="flex justify-center">
-                <div className="flex h-40 w-40 flex-col items-center justify-center rounded-3xl bg-white shadow-soft ring-1 ring-plum-100">
-                  <CalendarDays className="h-12 w-12 text-plum-600" />
-                  <p className="mt-2 text-sm font-semibold text-plum-900">Every Month</p>
-                  <p className="text-xs text-ink/60">Across 5 cities</p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {coffeeFormats.map((format) => (
+                    <a
+                      key={format.label}
+                      href={format.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-cream ring-1 ring-white/20 transition hover:bg-white hover:text-blue-deep"
+                    >
+                      Watch {format.label}
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  ))}
+                </div>
+                <div className="mt-7 flex flex-wrap gap-4">
+                  <Button href={siteConfig.lumaUrl} variant="secondary" withArrow>
+                    View Upcoming Coffee Meets
+                  </Button>
+                  <Button to="/coffee-meets" variant="light">
+                    Explore the Formats
+                  </Button>
                 </div>
               </div>
+              <ImageCarousel
+                images={coffeeMeetImages}
+                label="SAWE Coffee Meet photos"
+                className="aspect-[4/3] rounded-2xl ring-1 ring-white/20"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ========================= TESTIMONIALS ======================= */}
-      <section className="section bg-white">
+      <section className="section">
         <div className="container-x">
           <SectionHeading
-            eyebrow="Social Proof"
-            title="Real Women. Real Businesses. Real Connections."
+            eyebrow="Community Voices"
+            title="Real Businesses. Real Connections."
+            intro="Representative member perspectives on what it feels like to grow inside SAWE."
             align="center"
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {testimonials.map((t) => (
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {testimonials.slice(0, 6).map((testimonial) => (
               <figure
-                key={t.name}
-                className="rounded-2xl bg-cream p-6 shadow-card ring-1 ring-plum-100 flex flex-col"
+                key={testimonial.id}
+                className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-card ring-1 ring-plum-100"
               >
-                <Quote className="h-8 w-8 text-gold-400" />
+                <Quote className="h-8 w-8 text-coral-500" />
                 <blockquote className="mt-4 flex-1 font-serif text-lg leading-relaxed text-plum-900">
-                  “{t.quote}”
+                  “{testimonial.quote}”
                 </blockquote>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-plum-100 font-bold text-plum-700">
-                    {t.name.charAt(0)}
-                  </div>
-                  <figcaption className="flex flex-col">
-                    <span className="text-sm font-bold text-plum-900">{t.name}</span>
-                    <span className="text-xs font-medium text-ink/55">{t.role}</span>
-                  </figcaption>
-                </div>
+                <figcaption className="mt-6">
+                  <span className="block text-sm font-bold text-plum-900">{testimonial.name}</span>
+                  <span className="text-xs font-medium text-ink/55">{testimonial.role}</span>
+                </figcaption>
               </figure>
             ))}
           </div>
           <div className="mt-10 text-center">
             <Button to="/testimonials" variant="outline" withArrow>
-              Read More Stories
+              Read All Member Perspectives
             </Button>
           </div>
         </div>
       </section>
 
-      {/* ========================= FINAL CTA ========================== */}
       <CTASection
-        title="Ready to Grow With a Community That Truly Understands Your Journey?"
-        text="Join a growing ecosystem of South Asian women entrepreneurs building businesses, visibility, confidence, and meaningful collaborations together."
+        title="Ready to Grow With People Who Get It?"
+        text="Join South Asian and Southeast Asian women entrepreneurs building businesses, visibility, confidence, and meaningful collaborations together."
         primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
         secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
       />

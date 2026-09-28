@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contact")({
     seo({
       title: "Contact SAWE — Get in Touch",
       description:
-        "Questions, partnerships, or press? Reach the SAWE team — we'd love to hear from South Asian women entrepreneurs and supporters across the US.",
+        "Questions, partnerships, or press? Reach the SAWE team — we'd love to hear from South Asian and Southeast Asian women entrepreneurs and supporters across the US.",
     }),
   component: ContactPage,
 });
@@ -52,7 +52,7 @@ const collaborators = [
 const faqs = [
   {
     q: "Who can join SAWE?",
-    a: "South Asian women entrepreneurs, founders, creators, consultants, and aspiring business owners.",
+    a: "South Asian and Southeast Asian women entrepreneurs, founders, creators, consultants, and aspiring business owners.",
   },
   {
     q: "Is SAWE only for established businesses?",
@@ -247,7 +247,7 @@ function ContactPage() {
       </section>
 
       <CTASection
-        title="Ready to Join a Growing Community of South Asian Women Entrepreneurs?"
+        title="Ready to Join a Growing Community of South Asian and Southeast Asian Women Entrepreneurs?"
         text="Build meaningful connections, learn practical business skills, and grow alongside ambitious women entrepreneurs in the Greater Seattle area."
         primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
         secondary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}

@@ -24,13 +24,13 @@ export const Route = createFileRoute("/join")({
     seo({
       title: "Join SAWE — Become a Member",
       description:
-        "Apply to join SAWE and access coffee meets, trainings, collaborations, referrals, and a supportive community of South Asian women entrepreneurs.",
+        "Apply to join SAWE and access coffee meets, trainings, collaborations, referrals, and a supportive community of South Asian and Southeast Asian women entrepreneurs.",
     }),
   component: MembershipPage,
 });
 
 const eligibility = [
-  "South Asian women entrepreneurs, founders, and creators.",
+  "South Asian and Southeast Asian women entrepreneurs, founders, and creators.",
   "You own a business, or are actively building one.",
   "You value collaboration, referrals, and community growth.",
   "You are rebuilding your network in the US.",
@@ -202,7 +202,7 @@ function MembershipPage() {
 
       <CTASection
         title="Become Part of a Growing Ecosystem"
-        text="Join South Asian women entrepreneurs building visibility, confidence, collaborations, and businesses together."
+        text="Join South Asian and Southeast Asian women entrepreneurs building visibility, confidence, collaborations, and businesses together."
         primary={{ label: "Attend a Coffee Meet", href: siteConfig.lumaUrl }}
         secondary={{ label: "Join the Community", href: siteConfig.joinFormUrl }}
       />

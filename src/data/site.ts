@@ -5,12 +5,14 @@
 export const siteConfig = {
   name: "SAWE",
   fullName: "South Asian Women Entrepreneurs",
-  tagline: "South Asian Women Entrepreneurs",
+  tagline: "She Builds. We Back Her",
+  memberCount: 600,
+  audienceName: "South Asian and Southeast Asian women entrepreneurs",
   email: "southasianwomenentrepreneurs@gmail.com",
   location: "Greater Seattle Area, Washington",
   cities: ["Kirkland", "Bellevue", "Redmond", "Bothell", "Downtown Seattle"],
-  joinFormUrl: "https://forms.gle/4EEGGKCftFKA5np78",
-  memberFormUrl: "https://forms.gle/4EEGGKCftFKA5np78",
+  joinFormUrl: "https://forms.gle/uDwXrtzXdnvMdNPq9",
+  memberFormUrl: "https://forms.gle/B2nwQc4xdMoh6xdZ8",
   lumaUrl: "https://luma.com/saweglobal",
 };
 
@@ -44,6 +46,14 @@ export interface SocialLink {
 }
 
 export const socialLinks: SocialLink[] = [
-  { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/sawe_womenentrepreneurs/" },
-  { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/company/sawe-south-asian-women-entrepreneurs/" },
+  {
+    label: "Instagram",
+    icon: "instagram",
+    href: "https://www.instagram.com/sawe_womenentrepreneurs/",
+  },
+  {
+    label: "LinkedIn",
+    icon: "linkedin",
+    href: "https://www.linkedin.com/company/sawe-south-asian-women-entrepreneurs/",
+  },
 ];

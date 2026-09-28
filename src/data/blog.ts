@@ -4,9 +4,7 @@
  */
 
 export type BlogBlock =
-  | { type: "p"; text: string }
-  | { type: "h2"; text: string }
-  | { type: "list"; items: string[] };
+  { type: "p"; text: string } | { type: "h2"; text: string } | { type: "list"; items: string[] };
 
 export interface BlogPost {
   slug: string;
@@ -21,20 +19,21 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "south-asian-women-entrepreneurs-seattle",
-    title: "South Asian Women Entrepreneurs in Seattle: Building Businesses Through Community",
+    title:
+      "South Asian and Southeast Asian Women Entrepreneurs in Seattle: Building Businesses Through Community",
     excerpt:
-      "Across Seattle, Bellevue, Redmond, Kirkland, and Bothell, more South Asian women are starting businesses — and looking for the right community to grow with.",
+      "Across Seattle, Bellevue, Redmond, Kirkland, and Bothell, more South Asian and Southeast Asian women are starting businesses — and looking for the right community to grow with.",
     date: "2026-05-17",
     readMinutes: 4,
     category: "Community",
     content: [
       {
         type: "p",
-        text: "If you are searching for women entrepreneur events in Seattle, Indian business networking groups, or South Asian entrepreneur communities in Washington, you are not alone.",
+        text: "If you are searching for women entrepreneur events in Seattle or South Asian and Southeast Asian entrepreneur communities in Washington, you are not alone.",
       },
       {
         type: "p",
-        text: "Across Seattle, Bellevue, Redmond, Kirkland, and Bothell, more South Asian women are starting businesses, building side hustles, launching consulting brands, and restarting careers after moving to the US. But finding the right business community can still feel difficult.",
+        text: "Across Seattle, Bellevue, Redmond, Kirkland, and Bothell, more South Asian and Southeast Asian women are starting businesses, building side hustles, launching consulting brands, and restarting careers after moving to the US. But finding the right business community can still feel difficult.",
       },
       {
         type: "p",
@@ -42,7 +41,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "SAWE is a Seattle-based community created for South Asian women entrepreneurs, founders, solopreneurs, creators, coaches, and small business owners looking for networking, visibility, collaborations, and business growth opportunities.",
+        text: "SAWE is a Seattle-based community created for South Asian and Southeast Asian women entrepreneurs, founders, solopreneurs, creators, coaches, and small business owners looking for networking, visibility, collaborations, and business growth opportunities.",
       },
       {
         type: "p",
@@ -59,7 +58,7 @@ export const blogPosts: BlogPost[] = [
           "Build collaborations and referral partnerships",
           "Learn marketing, AI, branding, and business skills",
           "Promote their businesses",
-          "Connect with other South Asian women founders",
+          "Connect with other South Asian and Southeast Asian women founders",
           "Gain visibility and confidence as entrepreneurs",
         ],
       },
@@ -77,7 +76,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "If you are a South Asian woman entrepreneur in Seattle looking for business networking events, founder communities, entrepreneur meetups, or women-led business support groups, SAWE is building a space for exactly that.",
+        text: "If you are a South Asian or Southeast Asian woman entrepreneur in Seattle looking for business networking events, founder communities, entrepreneur meetups, or women-led business support groups, SAWE is building a space for exactly that.",
       },
       {
         type: "p",

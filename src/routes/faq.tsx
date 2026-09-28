@@ -13,7 +13,7 @@ import {
 export const Route = createFileRoute("/faq")({
   head: () =>
     seo({
-      title: "FAQ — SAWE Community Questions",
+      title: "Questions Before Joining SAWE",
       description:
         "Answers to common questions about joining SAWE, Coffee Meets, trainings, WhatsApp group, and community membership.",
     }),
@@ -46,8 +46,8 @@ const faqs = [
     a: "No. SAWE Academy trainings are paid separately and are priced per session or cohort. You get free access to the community, free Coffee Meets, and collaboration opportunities.",
   },
   {
-    q: "Can I bring a friend who is not South Asian?",
-    a: "SAWE is specifically built for South Asian and immigrant women entrepreneurs. If you have a friend who fits that description, absolutely bring her along.",
+    q: "Can I bring a friend who is not South Asian or Southeast Asian?",
+    a: "SAWE is built for South Asian and Southeast Asian women entrepreneurs in the US. If your friend fits that community, absolutely bring her along.",
   },
   {
     q: "What if I am not in Seattle?",
@@ -59,7 +59,7 @@ function FaqPage() {
   return (
     <>
       <PageHeader
-        eyebrow="FAQ"
+        eyebrow="Before You Join"
         title="Questions People Usually Ask Before Joining"
         subtitle="Everything you might want to know about SAWE, Coffee Meets, and community life."
       />

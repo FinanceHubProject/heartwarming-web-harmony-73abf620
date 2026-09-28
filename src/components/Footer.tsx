@@ -20,14 +20,19 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <img
               src="/logo.jpg"
-              alt="SAWE Logo"
-              className="h-11 w-11 rounded-xl object-cover shadow-sm ring-1 ring-plum-800"
+              alt="SAWE logo"
+              className="h-14 w-14 rounded-2xl object-cover shadow-sm ring-1 ring-plum-800"
             />
-            <span className="font-serif text-xl font-bold text-cream">SAWE</span>
+            <div>
+              <span className="block font-serif text-2xl font-bold text-cream">SAWE</span>
+              <span className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-300">
+                {siteConfig.tagline}
+              </span>
+            </div>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
-            A high-intent community for South Asian women entrepreneurs in the Greater Seattle area
-            — connect, collaborate, learn, and grow.
+            A high-intent community for South Asian and Southeast Asian women entrepreneurs —
+            connect, collaborate, learn, and grow.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {socialLinks.map((s) => {
@@ -36,6 +41,8 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={s.label}
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-plum-800 text-cream/80 transition-colors hover:bg-gold-400 hover:text-plum-900"
                 >
@@ -107,7 +114,7 @@ export default function Footer() {
             © {new Date().getFullYear()} SAWE — South Asian Women Entrepreneurs. All rights
             reserved.
           </p>
-          <p>Businesses grow faster when women grow together.</p>
+          <p>{siteConfig.tagline}</p>
         </div>
       </div>
     </footer>

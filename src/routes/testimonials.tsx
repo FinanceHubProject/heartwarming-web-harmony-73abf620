@@ -4,6 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { SectionHeading } from "@/components/ui";
 import { siteConfig } from "@/data/site";
+import { testimonials } from "@/data/testimonials";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/testimonials")({
@@ -11,41 +12,18 @@ export const Route = createFileRoute("/testimonials")({
     seo({
       title: "Testimonials — Member Stories | SAWE",
       description:
-        "Hear from South Asian women entrepreneurs about how SAWE turned coffee meets into collaborations, referrals, and real business growth.",
+        "Read representative perspectives from South Asian and Southeast Asian women entrepreneurs growing through SAWE.",
     }),
   component: TestimonialsPage,
 });
-
-// Testimonials sourced from the SAWE website content.
-// TODO: add member names, businesses, and photos as permissions allow.
-const testimonials = [
-  {
-    quote: "SAWE helped me find my first collaborations in Seattle.",
-    tone: "from-plum-500 to-plum-800",
-    name: "Priya Sharma",
-    role: "Marketing Consultant",
-  },
-  {
-    quote: "I walked into one coffee meet alone and walked out with a community.",
-    tone: "from-gold-400 to-gold-600",
-    name: "Anjali Gupta",
-    role: "Creative Director",
-  },
-  {
-    quote: "This is one of the few communities where networking actually turns into business.",
-    tone: "from-plum-600 to-plum-900",
-    name: "Neha Patel",
-    role: "Founder & CEO",
-  },
-];
 
 function TestimonialsPage() {
   return (
     <>
       <PageHeader
         eyebrow="Testimonials"
-        title="Real Women. Real Businesses. Real Connections."
-        subtitle="What members say about growing their businesses inside the SAWE community."
+        title="Community Voices"
+        subtitle="Representative member perspectives on connection, confidence, collaboration, and business growth inside SAWE."
       />
 
       <section className="section bg-white">
@@ -53,7 +31,7 @@ function TestimonialsPage() {
           <div className="grid gap-6 lg:grid-cols-3">
             {testimonials.map((t) => (
               <figure
-                key={t.quote}
+                key={t.id}
                 className="flex flex-col rounded-2xl bg-cream p-7 shadow-card ring-1 ring-plum-100"
               >
                 <Quote className="h-9 w-9 text-gold-400" />
@@ -84,7 +62,7 @@ function TestimonialsPage() {
             <SectionHeading
               eyebrow="Your Story Matters"
               title="Grew with SAWE? We'd love to hear it."
-              intro="Member stories help other South Asian women entrepreneurs see what's possible. Share yours and you may be featured here."
+              intro="Member stories help other South Asian and Southeast Asian women entrepreneurs see what's possible. Share yours and you may be featured here."
               align="center"
               className="mx-auto"
             />

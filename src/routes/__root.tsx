@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "SAWE is a Greater Seattle community helping South Asian women entrepreneurs connect, collaborate, learn, and grow through coffee meets, trainings, and real business opportunities.",
+          "SAWE is a Greater Seattle and national community helping South Asian and Southeast Asian women entrepreneurs connect, collaborate, learn, and grow.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "SAWE" },

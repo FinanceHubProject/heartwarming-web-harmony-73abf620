@@ -28,7 +28,7 @@ export const Route = createFileRoute("/trainings")({
     seo({
       title: "Trainings & Workshops — Build Skills With SAWE",
       description:
-        "Practical business workshops on AI, marketing, branding, finance, content, and growth — designed for South Asian women entrepreneurs.",
+        "Practical business workshops on AI, marketing, branding, finance, content, and growth — designed for South Asian and Southeast Asian women entrepreneurs.",
     }),
   component: TrainingsPage,
 });
@@ -70,7 +70,7 @@ function TrainingsPage() {
       <PageHeader
         eyebrow="Trainings / SAWE Academy"
         title="Learning, Growth & Skill Building for Women Entrepreneurs"
-        subtitle="Trainings designed to help South Asian women entrepreneurs become more confident, visible, skilled, and business-ready."
+        subtitle="Trainings designed to help South Asian and Southeast Asian women entrepreneurs become more confident, visible, skilled, and business-ready."
       />
 
       {/* ============================ INTRO =========================== */}
@@ -179,8 +179,9 @@ function TrainingsPage() {
           <div className="rounded-3xl bg-linear-to-br from-plum-700 to-plum-900 px-6 py-14 text-center text-cream sm:px-12">
             <span className="eyebrow text-gold-300">Our Goal</span>
             <p className="mx-auto mt-4 max-w-3xl font-serif text-2xl font-semibold leading-snug sm:text-3xl">
-              To create a learning ecosystem where South Asian women entrepreneurs can continuously
-              upskill, adapt, collaborate, and grow together — both personally and professionally.
+              To create a learning ecosystem where South Asian and Southeast Asian women
+              entrepreneurs can continuously upskill, adapt, collaborate, and grow together — both
+              personally and professionally.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button href={siteConfig.lumaUrl} variant="secondary" withArrow>
@@ -196,7 +197,7 @@ function TrainingsPage() {
 
       <CTASection
         title="Grow Your Skills With the SAWE Academy"
-        text="Become a member to access trainings, workshops, and a learning ecosystem built for South Asian women entrepreneurs."
+        text="Become a member to access trainings, workshops, and a learning ecosystem built for South Asian and Southeast Asian women entrepreneurs."
         primary={{ label: "Become a Member", href: siteConfig.joinFormUrl }}
         secondary={{ label: "Talk to Us", href: siteConfig.lumaUrl }}
       />
