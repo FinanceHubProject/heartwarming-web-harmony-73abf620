@@ -313,30 +313,41 @@ function AboutPage() {
             {volunteers.map((volunteer) => (
               <article
                 key={volunteer.name}
-                className="flex h-full flex-col gap-6 rounded-2xl bg-white p-6 shadow-card ring-1 ring-plum-100 sm:flex-row"
+                className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-plum-100 sm:p-7"
               >
-                <img
-                  src={volunteer.image}
-                  alt={volunteer.alt}
-                  loading="lazy"
-                  className="mx-auto aspect-[4/5] w-full max-w-48 rounded-2xl object-cover ring-1 ring-plum-100 sm:mx-0 sm:w-36 sm:shrink-0"
-                />
-                <div className="min-w-0 flex-1">
-                  <h3 className="font-serif text-xl font-semibold text-plum-900">
-                    {volunteer.name}
-                  </h3>
-                  <p className="mt-1 text-sm font-semibold leading-relaxed text-plum-600">
-                    {volunteer.focus}
-                  </p>
-                  <div className="mt-3 space-y-3 text-sm leading-relaxed text-ink/70">
-                    {volunteer.bio.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
+                <div className="flex items-center gap-5">
+                  <img
+                    src={volunteer.image}
+                    alt={volunteer.alt}
+                    loading="lazy"
+                    width={720}
+                    height={900}
+                    className="aspect-[4/5] h-auto w-36 shrink-0 rounded-2xl bg-plum-50 object-cover ring-1 ring-plum-100 sm:w-40"
+                  />
+                  <div className="min-w-0">
+                    <h3 className="font-serif text-2xl font-semibold text-plum-900">
+                      {volunteer.name}
+                    </h3>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {volunteer.focus.split(" | ").map((focus) => (
+                        <span
+                          key={focus}
+                          className="rounded-full bg-plum-50 px-3 py-1.5 text-xs font-semibold leading-tight text-plum-700 ring-1 ring-plum-100"
+                        >
+                          {focus}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  {volunteer.social && (
-                    <p className="mt-3 text-xs font-semibold text-plum-600">{volunteer.social}</p>
-                  )}
                 </div>
+                <div className="mt-5 space-y-3 border-t border-plum-100 pt-5 text-sm leading-relaxed text-ink/70">
+                  {volunteer.bio.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+                {volunteer.social && (
+                  <p className="mt-4 text-xs font-semibold text-plum-600">{volunteer.social}</p>
+                )}
               </article>
             ))}
           </div>
