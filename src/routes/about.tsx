@@ -274,26 +274,32 @@ function AboutPage() {
             {leadership.map((member) => (
               <article
                 key={member.name}
-                className="flex h-full flex-col gap-6 rounded-2xl bg-white p-7 shadow-card ring-1 ring-plum-100 sm:flex-row sm:items-start sm:p-8"
+                className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-plum-100 sm:p-7"
               >
-                {member.image && (
-                  <img
-                    src={member.image.src}
-                    alt={member.image.alt}
-                    loading="lazy"
-                    className="mx-auto aspect-[4/5] w-full max-w-48 rounded-2xl object-cover object-center ring-1 ring-plum-100 sm:mx-0 sm:w-36 sm:shrink-0"
-                  />
-                )}
-                <div className="min-w-0 flex-1">
-                  <h3 className="font-serif text-2xl font-semibold text-plum-900">{member.name}</h3>
-                  <p className="mt-1 text-sm font-medium uppercase tracking-wide text-plum-600">
-                    {member.role}
-                  </p>
-                  <div className="mt-3 space-y-3 leading-relaxed text-ink/70">
-                    {member.bio.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
+                <div className="flex items-center gap-5">
+                  {member.image && (
+                    <img
+                      src={member.image.src}
+                      alt={member.image.alt}
+                      loading="lazy"
+                      width={720}
+                      height={900}
+                      className="aspect-[4/5] h-auto w-36 shrink-0 rounded-2xl bg-plum-50 object-cover ring-1 ring-plum-100 sm:w-40"
+                    />
+                  )}
+                  <div className="min-w-0">
+                    <h3 className="font-serif text-2xl font-semibold text-plum-900">
+                      {member.name}
+                    </h3>
+                    <span className="mt-3 inline-flex rounded-full bg-plum-50 px-3 py-1.5 text-xs font-semibold leading-tight text-plum-700 ring-1 ring-plum-100">
+                      {member.role}
+                    </span>
                   </div>
+                </div>
+                <div className="mt-5 space-y-3 border-t border-plum-100 pt-5 leading-relaxed text-ink/70">
+                  {member.bio.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
                 </div>
               </article>
             ))}
