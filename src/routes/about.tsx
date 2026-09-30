@@ -143,7 +143,7 @@ const volunteers: VolunteerProfile[] = [
       "Outside SAWE, Praveena is a self taught artist and the creator behind INKspirations by PR. Working from her home studio, she creates intricate mandalas and fine line art on paper, canvas, fabric, clay and wood, bringing together fine art and everyday functional pieces. Her work is mostly black and white, with layered touches of watercolor and acrylic that bring each design to life.",
       "She draws inspiration from cultural motifs, small everyday moments, and the ways people are connected to one another. For Praveena, drawing is a meditative process. Every line is intentional, yet it flows from intuition, and each finished piece is meant to invite people to slow down, breathe, and find a quiet moment for themselves.",
     ],
-    social: "Instagram: @inkspirations.by.pr",
+    social: "Explore her collection and process on Instagram at @inkspirations.by.pr",
   },
   {
     name: "Shilpi Jain",
