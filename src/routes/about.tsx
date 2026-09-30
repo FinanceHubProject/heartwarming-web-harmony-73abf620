@@ -61,10 +61,10 @@ const leadership: LeadershipMember[] = [
   },
   {
     name: "Chetna Mahajan",
-    role: "Technology & AI Advisor",
+    role: "Technology Advisor",
     image: {
       src: "/chetna-mahajan.jpg",
-      alt: "Chetna Mahajan, Technology and AI Advisor at SAWE",
+      alt: "Chetna Mahajan, Technology Advisor at SAWE",
     },
     bio: [
       "Chetna is a Senior Software Engineer at Microsoft, building platform capabilities for AI agents and intelligent workplace experiences across Microsoft Teams. Her work spans agentic workflows, proactive intelligence, and scalable AI-powered solutions that strengthen productivity and collaboration.",
