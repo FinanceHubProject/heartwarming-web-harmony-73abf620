@@ -36,6 +36,15 @@ interface LeadershipMember {
   };
 }
 
+interface VolunteerProfile {
+  name: string;
+  focus: string;
+  image: string;
+  alt: string;
+  bio: string[];
+  social?: string;
+}
+
 const leadership: LeadershipMember[] = [
   {
     name: "Aparna Prabhakar",
@@ -45,8 +54,9 @@ const leadership: LeadershipMember[] = [
       alt: "Aparna Prabhakar, Operations at SAWE",
     },
     bio: [
-      "Bringing 15+ years of IT Project and Service Management experience to the community. She oversees key operations, coordinates initiatives, and ensures ideas are translated into action and delivered effectively. Known for her structured approach and attention to detail, Aparna believes in getting things done while keeping people and purpose at the heart of every initiative. She is passionate about creating a supportive space where women entrepreneurs can connect, collaborate, learn, and grow together.",
-      "Sai Masala is Aparna’s homemade masala brand, inspired by age-old recipes, the flavors of India, and memories of her mother’s cooking. Its carefully prepared spice blends contain no artificial ingredients, preservatives, or added colors, making everyday cooking healthy, flavorful, and easy. Serving kitchens in the USA and India, Sai Masala is a little piece of home, made with love.",
+      "As SAWE's Chief Operating Officer, Aparna brings more than 15 years of IT project and service management experience to the community.",
+      "She oversees key operations, coordinates initiatives, and makes sure ideas turn into action. Structured and detail oriented, she believes in getting things done while keeping people and purpose at the center of every initiative.",
+      "Outside SAWE, Aparna runs Sai Masala, her homemade masala brand inspired by age old recipes and her mother's cooking. Made without artificial ingredients, preservatives, or added colors, her spice blends make everyday Indian cooking healthy, flavorful, and easy for kitchens in the USA and India. For Aparna, every pack is a small piece of home, shared with each customer.",
     ],
   },
   {
@@ -64,62 +74,99 @@ const leadership: LeadershipMember[] = [
   },
 ];
 
-const volunteers = [
+const volunteers: VolunteerProfile[] = [
   {
     name: "Agraja Mokashi",
-    role: "Community Volunteer & Founder, Warmhouse Creative",
+    focus:
+      "Presentation design | Virtual assistance | Content creation | SOP and documentation writing",
     image: "/images/volunteers/agraja-mokashi.jpg",
     alt: "Agraja Mokashi",
-    bio: "Agraja founded Warmhouse Creative after a conversation at a SAWE Coffee Meet led to her first clients. She supports SAWE's internal process work and helps fellow entrepreneurs share their stories, drawing on experience across project management, sustainability, content, and documentation.",
+    bio: [
+      "At SAWE, Agraja leads LinkedIn marketing and storytelling. She helps fellow women entrepreneurs share their journeys on LinkedIn and also supports SAWE's internal process work behind the scenes.",
+      "Outside SAWE, Agraja is the founder of Warmhouse Creative, a freelance service offering presentation design, virtual assistant support, content creation, and SOP and documentation writing for small businesses, nonprofits, and early stage founders. Warmhouse Creative began at a SAWE coffee meetup, where a casual conversation turned into her first two clients.",
+      "Her path to entrepreneurship brought together a career in project management and sustainability, with experience in tech at Avalara, corporate CSR at Mercedes Benz India, and environmental NGO work. Becoming a mother opened a new chapter and pushed her to build something of her own.",
+      "Agraja is also a published children's book author (My Wonderful Words) and a certified Project Manager. She believes in building businesses, stories, and communities that are grounded in purpose and made to grow.",
+    ],
   },
   {
     name: "Amena Begum",
-    role: "SAWE National Community Group Admin",
+    focus: "Custom travel planning | Family and group trips | Community building",
     image: "/images/volunteers/amena-begum.jpg",
     alt: "Amena Begum",
-    bio: "Amena helps build and promote SAWE National through virtual networking, community initiatives, and engaging content for women entrepreneurs across the United States. She is also the founder of Wonders Your Way Travel.",
+    bio: [
+      "At SAWE, Amena is the National Community Group Admin. She plays a key role in growing the SAWE National community across the United States through virtual networking events, community initiatives, and engaging content. Her work helps women entrepreneurs find a supportive space to learn from each other, connect, and grow together.",
+      "Outside SAWE, Amena is a passionate traveler and the founder of Wonders Your Way Travel. She helps individuals, families, and groups turn their travel plans into experiences they remember for years. Every journey she designs is thoughtful and seamless, built to bring people closer to the world around them.",
+      "For Amena, community building and meaningful travel come from the same place. She loves helping people expand their horizons, whether that's through entrepreneurship, new connections, or a destination they've always wanted to see.",
+    ],
   },
   {
-    name: "Deepti",
-    role: "Community Volunteer — Fitness-Based Dance & Choreography",
+    name: "Deepti Munjal",
+    focus: "Fitness based dancing | Wedding choreography | Corporate workshops",
     image: "/images/volunteers/deepti.jpg",
-    alt: "Deepti, SAWE community volunteer",
-    bio: "Deepti brings joy, rhythm, and strength together through fitness-based dance, personalized choreography, celebrations, and corporate workshops. Her work creates welcoming spaces where people can move, build confidence, and feel energized.",
+    alt: "Deepti Munjal",
+    bio: [
+      "At SAWE, Deepti leads our quarterly social events, from large community gatherings to picnics and high teas. She brings real warmth to every event, making sure each member feels welcomed and part of the celebration.",
+      "Outside SAWE, Deepti is a Bollywood dancer at heart, and her sessions bring together joy, rhythm and strength. Over the years, her love for dance grew into fitness based dance, where every class feels like a celebration and still delivers real results. She also offers personalized dance training for fitness goals, weddings and celebrations, corporate workshops, and anyone who simply wants to move and feel good.",
+      "Whether someone wants to dance for fitness, prepare for a big day, bring energy to their workplace, or just move with more freedom and happiness, Deepti creates a space that feels welcoming and fun.",
+    ],
+    social: "Instagram: @getfitwithdeepti",
   },
   {
     name: "Meghana Rao Rapelli",
-    role: "Social Media Manager — Instagram",
+    focus: "Instagram content | Marketing campaigns | Storytelling",
     image: "/images/volunteers/meghana-rao-rapelli.jpg",
     alt: "Meghana Rao Rapelli",
-    bio: "Meghana creates Instagram content, develops marketing campaigns, coordinates events and workshops, and engages with members online and offline. She also explores storytelling formats and audience engagement through her creative page, @Grande_desisoul.",
+    bio: [
+      "At SAWE, Meghana is the Social Media Manager for Instagram. She creates content, builds marketing campaigns, helps coordinate events and workshops, and stays connected with members both online and in person. Her work plays a big part in growing a supportive, business focused community.",
+      "Outside SAWE, Meghana shares creative content on her Instagram page, @Grande_desisoul. She treats it as her own creative lab, trying out different formats, hooks, and storytelling styles, then studying what actually works. She's curious about why some content connects with people more than others, and how creative choices shape engagement and community.",
+    ],
   },
   {
     name: "Nithya Ramadas",
-    role: "Facebook Group Admin & Photographer",
+    focus:
+      "Newborn and maternity | Family and milestone portraits | Celebrations and intimate weddings",
     image: "/images/volunteers/nithya-ramadas.jpg",
     alt: "Nithya Ramadas",
-    bio: "Nithya supports community engagement by sharing content, promoting SAWE events, and encouraging member participation in the Facebook group. She is the founder and photographer behind Nithya Ramadas Photography.",
+    bio: [
+      "At SAWE, Nithya is a Facebook Group Admin. She creates and shares content, promotes networking opportunities and SAWE events, and encourages members to get involved. Building a business on her own taught her how much the right support system matters, and she sees SAWE as a place where women can learn from each other, celebrate wins, work through challenges, and grow together.",
+      "Outside SAWE, Nithya is the founder and photographer behind Nithya Ramadas Photography. She captures newborn, maternity, family and milestone portraits, along with celebrations and intimate weddings. Self taught, with nine years behind the camera, she turned her love for capturing meaningful moments into a business built on creativity, connection, and making every client feel at ease.",
+      "Whether behind the lens or within the community, Nithya loves bringing people together and helping relationships grow.",
+    ],
   },
   {
     name: "Praveena Ramani",
-    role: "Training & Development Coordinator",
+    focus: "Mandala and fine line ink artist | INKspirations by PR",
     image: "/images/volunteers/praveena-ramani.jpg",
     alt: "Praveena Ramani",
-    bio: "Praveena designs and coordinates monthly learning sessions that help members sharpen their expertise, visibility, and business skills. She is also the self-taught mandala and fine-line artist behind INKspirations by PR.",
+    bio: [
+      "At SAWE, Praveena is the Training and Development Coordinator. She designs and runs our monthly learning sessions, making sure each one gives members something practical they can use. Her focus is on helping women build new skills, become more visible, and grow their businesses with confidence.",
+      "Outside SAWE, Praveena is a self taught artist and the creator behind INKspirations by PR. Working from her home studio, she creates intricate mandalas and fine line art on paper, canvas, fabric, clay and wood, bringing together fine art and everyday functional pieces. Her work is mostly black and white, with layered touches of watercolor and acrylic that bring each design to life.",
+      "She draws inspiration from cultural motifs, small everyday moments, and the ways people are connected to one another. For Praveena, drawing is a meditative process. Every line is intentional, yet it flows from intuition, and each finished piece is meant to invite people to slow down, breathe, and find a quiet moment for themselves.",
+    ],
+    social: "Instagram: @inkspirations.by.pr",
   },
   {
     name: "Shilpi Jain",
-    role: "Coffee Meet Promotions & Community Outreach",
+    focus: "Empowerment and conscious relationship coaching | Joyful Relationship Coaching",
     image: "/images/volunteers/shilpi-jain.jpg",
     alt: "Shilpi Jain",
-    bio: "Shilpi promotes SAWE Coffee Meets across Facebook communities and helps micro-entrepreneurs discover SAWE through meaningful one-to-one conversations. She is also the founder of Joyful Relationship Coaching.",
+    bio: [
+      "At SAWE, Shilpi leads promotions and marketing for our Coffee Meets across Facebook groups, helping micro entrepreneurs in Greater Seattle find their way to SAWE. She also builds bridges between women in the community through personal, meaningful conversations, and makes sure members feel supported by one another.",
+      "Outside SAWE, Shilpi is the founder of Joyful Relationship Coaching, a practice that helps women build a deeper relationship with themselves and create healthier, more connected marriages. With eight years of experience across 1:1, group, and hybrid coaching, she helps women understand their emotional patterns, grow their self awareness, and find the confidence to speak their truth and share what they feel and need.",
+      "Her approach is practical. She gives women tools to take charge of their relationships and build strategies that fit their own lives. Rather than simply fixing problems, she helps couples close the gaps in emotional, physical, and intellectual connection, so their marriages grow in trust, confidence, and closeness.",
+    ],
   },
   {
     name: "Shipra Chandak",
-    role: "Training & Development & WhatsApp Community Coordinator",
+    focus: "Investment education | Equity and options markets | Financial literacy",
     image: "/images/volunteers/shipra-chandak.jpg",
     alt: "Shipra Chandak",
-    bio: "Shipra helps connect members with expert-led business learning and encourages participation through structured WhatsApp conversations. She is the founder of Optimatrix Investments, where she makes financial education and market strategy more accessible.",
+    bio: [
+      "At SAWE, Shipra is part of the Training and Development team, helping members build expertise across different areas of business through sessions with industry experts. She is also the WhatsApp community admin and coordinator, where she keeps conversations active through structured discussions and encourages members to participate and support one another.",
+      "Outside SAWE, Shipra is the founder of Optimatrix Investments, a practice built on the belief that good financial knowledge should be available to everyone, not just Wall Street insiders. She works directly with individuals, from first time investors to experienced traders, breaking down equity and options markets into practical education that fits each person's goals and experience.",
+      "Her work covers everything from basic financial literacy to advanced options strategies, combining careful analysis with genuine mentorship. She helps clients think through the balance between growth and protecting against losses, and understand strategies that aim to generate income over time. For Shipra, clarity always comes before complexity. Her goal is for every client to walk away feeling informed, confident, and in control of their financial future.",
+    ],
+    social: "Instagram: @optimatrix.investments",
   },
 ];
 
@@ -186,23 +233,33 @@ function AboutPage() {
               <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-plum-600">
                 Advisory Board Member
               </p>
+              <p className="mt-2 text-sm font-semibold leading-relaxed text-plum-800">
+                Fractional CMO | Growth execution mentor | Co-founder, Startups Club
+              </p>
               <div className="mt-4 space-y-3 leading-relaxed text-ink/70">
                 <p>
-                  Salma has spent more than three decades helping founders turn ideas into
-                  businesses that grow. In 2013, she co-founded Startups Club in Bengaluru, growing
-                  it from a small coffee meetup into a founder community of 25,000+ members across
-                  20 cities.
+                  At SAWE, Salma serves on the Advisory Board, working closely with SAWE&apos;s
+                  founder and community leaders to shape the direction of SAWE and help it grow. She
+                  also mentors members one on one, guiding them on growth strategy and the practical
+                  steps of building their businesses.
                 </p>
                 <p>
-                  Today, she works as a Fractional CMO and Growth Execution Mentor, helping
-                  leadership teams with market positioning, revenue growth, and execution. She built
-                  EyeROV&apos;s marketing function from the ground up and has mentored thousands of
-                  entrepreneurs across startups, family businesses, and technology companies.
+                  For more than three decades, Salma has helped founders turn ideas into businesses
+                  that grow. In 2013 she co-founded Startups Club in Bengaluru. What started as a
+                  small coffee meetup of entrepreneurs grew into one of India&apos;s largest founder
+                  communities, with more than 25,000 members across 20 cities.
                 </p>
                 <p>
-                  At SAWE, Salma works closely with the founder and community leaders to shape the
-                  organization&apos;s growth. She also mentors members one-to-one on growth strategy
-                  and building their individual businesses.
+                  Today she works as a Fractional CMO and Growth Execution Mentor, supporting
+                  founders and leadership teams with market positioning, revenue growth, and the
+                  part most people find hardest, which is execution. She built EyeROV&apos;s
+                  marketing function from scratch and has mentored thousands of entrepreneurs across
+                  startups, family businesses, and tech companies. Those who work with her often
+                  mention the structure, honesty, and warmth she brings.
+                </p>
+                <p>
+                  Salma is also the author of <em>Fat2Fit</em>, a book about her own five year
+                  health journey.
                 </p>
               </div>
             </div>
@@ -268,10 +325,17 @@ function AboutPage() {
                   <h3 className="font-serif text-xl font-semibold text-plum-900">
                     {volunteer.name}
                   </h3>
-                  <p className="mt-1 text-xs font-semibold uppercase leading-relaxed tracking-wide text-plum-600">
-                    {volunteer.role}
+                  <p className="mt-1 text-sm font-semibold leading-relaxed text-plum-600">
+                    {volunteer.focus}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{volunteer.bio}</p>
+                  <div className="mt-3 space-y-3 text-sm leading-relaxed text-ink/70">
+                    {volunteer.bio.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                  {volunteer.social && (
+                    <p className="mt-3 text-xs font-semibold text-plum-600">{volunteer.social}</p>
+                  )}
                 </div>
               </article>
             ))}

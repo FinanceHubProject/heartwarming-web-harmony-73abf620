@@ -24,7 +24,7 @@ export interface NavLink {
 /** Primary navigation — only the pages we're launching with. */
 export const navLinks: NavLink[] = [
   { label: "Home", to: "/" },
-  { label: "About Us", to: "/about" },
+  { label: "Meet the Team", to: "/about" },
   { label: "Coffee Meets", to: "/coffee-meets" },
   { label: "FAQ", to: "/faq" },
 ];

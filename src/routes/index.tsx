@@ -135,7 +135,7 @@ const stats = [
 const pillars = [
   {
     icon: Users,
-    title: "Connection",
+    title: "CONNECTION",
     intro: "Meet consistently, build trust, and turn introductions into real relationships.",
     items: [
       {
@@ -151,7 +151,7 @@ const pillars = [
   },
   {
     icon: GraduationCap,
-    title: "Coaching",
+    title: "COACHING",
     intro: "Learn practical skills and get unstuck with focused support you can use immediately.",
     items: [
       {
@@ -166,7 +166,7 @@ const pillars = [
   },
   {
     icon: Handshake,
-    title: "Community",
+    title: "COMMUNITY",
     intro: "Grow inside an ecosystem where members actively back one another.",
     items: [
       {
@@ -237,7 +237,7 @@ function HomePage() {
                   </p>
                   <p className="text-sm font-semibold text-plum-700">Women entrepreneurs</p>
                 </div>
-                <p className="max-w-52 text-right text-sm leading-relaxed text-ink/65">
+                <p className="max-w-52 text-center text-sm leading-relaxed text-ink/65">
                   A strong Seattle chapter and a growing national community.
                 </p>
               </div>
@@ -307,7 +307,7 @@ function HomePage() {
           <SectionHeading
             eyebrow="The 3 C's"
             title="What You Will Find Inside SAWE"
-            intro="SAWE runs on three connected pillars: Connection, Coaching, and Community."
+            intro="SAWE runs on three connected pillars: CONNECTION, COACHING, and COMMUNITY."
             align="center"
           />
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -375,14 +375,14 @@ function HomePage() {
                   Meet women repeatedly, build familiarity, and still discover new businesses and
                   ideas every time. Each Coffee Meet format has a different purpose.
                 </p>
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-nowrap gap-2 overflow-x-auto pb-1">
                   {coffeeFormats.map((format) => (
                     <a
                       key={format.label}
                       href={format.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-cream ring-1 ring-white/20 transition hover:bg-white hover:text-blue-deep"
+                      className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-cream ring-1 ring-white/20 transition hover:bg-white hover:text-blue-deep"
                     >
                       Watch {format.label}
                       <ArrowUpRight className="h-4 w-4" />
