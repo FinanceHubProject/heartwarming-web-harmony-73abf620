@@ -7,7 +7,7 @@ import { CheckCircle2 } from "lucide-react";
  */
 
 const baseControl =
-  "w-full rounded-xl border border-plum-200 bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink/40 transition focus:border-plum-500 focus:outline-none focus:ring-2 focus:ring-plum-200";
+  "min-h-11 w-full rounded-xl border border-plum-200 bg-white px-4 py-2.5 text-base text-ink placeholder:text-ink/40 transition focus:border-plum-500 focus:outline-none focus:ring-2 focus:ring-plum-200";
 
 interface FieldShellProps {
   label: string;

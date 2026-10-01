@@ -186,7 +186,9 @@ function AboutPage() {
               <img
                 src="/founder_pic.jpg"
                 alt="Lopamudra Banerjee, founder of SAWE"
-                className="mx-auto h-60 w-60 rounded-full object-cover ring-4 ring-cream/20 shadow-md"
+                width={240}
+                height={240}
+                className="mx-auto aspect-square h-auto w-full max-w-60 rounded-full object-cover ring-4 ring-cream/20 shadow-md"
               />
               <p className="mt-5 font-serif text-2xl font-bold text-cream">Lopamudra Banerjee</p>
               <p className="mt-1 text-sm font-medium uppercase tracking-wider text-gold-300">
@@ -276,7 +278,7 @@ function AboutPage() {
                 key={member.name}
                 className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-plum-100 sm:p-7"
               >
-                <div className="flex items-center gap-5">
+                <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:gap-5 sm:text-left">
                   {member.image && (
                     <img
                       src={member.image.src}
@@ -321,7 +323,7 @@ function AboutPage() {
                 key={volunteer.name}
                 className="flex h-full flex-col rounded-3xl bg-white p-6 shadow-card ring-1 ring-plum-100 sm:p-7"
               >
-                <div className="flex items-center gap-5">
+                <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:gap-5 sm:text-left">
                   <img
                     src={volunteer.image}
                     alt={volunteer.alt}

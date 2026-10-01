@@ -8,15 +8,15 @@ import { siteConfig } from "@/data/site";
 
 function Brand() {
   return (
-    <AppLink to="/" className="flex items-center gap-3" aria-label="SAWE home">
+    <AppLink to="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3" aria-label="SAWE home">
       <img
         src="/logo.jpg"
         alt="SAWE logo"
-        className="h-14 w-14 rounded-2xl object-cover shadow-sm ring-1 ring-plum-100"
+        className="h-11 w-11 shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-plum-100 sm:h-14 sm:w-14 sm:rounded-2xl"
       />
-      <span className="leading-none">
+      <span className="min-w-0 leading-none">
         <span className="block font-serif text-2xl font-bold text-plum-900 sm:text-3xl">SAWE</span>
-        <span className="mt-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-plum-500">
+        <span className="mt-1 block whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.1em] text-plum-500 sm:text-[11px] sm:tracking-[0.14em]">
           {siteConfig.tagline}
         </span>
       </span>
@@ -46,11 +46,11 @@ export default function Navbar() {
         scrolled ? "bg-cream/95 shadow-sm backdrop-blur-sm" : "bg-cream"
       }`}
     >
-      <nav className="container-x flex h-24 items-center justify-between">
+      <nav className="container-x flex h-20 items-center justify-between sm:h-24">
         <Brand />
 
         {/* Desktop navigation */}
-        <div className="hidden items-center gap-6 xl:flex">
+        <div className="hidden items-center gap-5 lg:flex xl:gap-6">
           {navLinks.map((link) => (
             <AppLink
               key={link.to}
@@ -62,7 +62,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-2 xl:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           {socialLinks.map((link) => {
             const Icon = link.icon === "instagram" ? Instagram : Linkedin;
             return (
@@ -87,7 +87,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 items-center justify-center rounded-lg text-plum-800 ring-1 ring-plum-100 xl:hidden"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-plum-800 ring-1 ring-plum-100 lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -97,7 +97,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-plum-100 bg-cream xl:hidden">
+        <div className="border-t border-plum-100 bg-cream lg:hidden">
           <div className="container-x flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
               <AppLink
@@ -108,7 +108,7 @@ export default function Navbar() {
                 {link.label}
               </AppLink>
             ))}
-            <div className="mt-3 flex gap-3 border-t border-plum-100 pt-4">
+            <div className="mt-3 flex flex-wrap gap-3 border-t border-plum-100 pt-4">
               {socialLinks.map((link) => {
                 const Icon = link.icon === "instagram" ? Instagram : Linkedin;
                 return (
