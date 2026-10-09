@@ -366,7 +366,7 @@ function HomePage() {
         <div className="container-x">
           <div className="overflow-hidden rounded-3xl bg-blue-deep text-cream shadow-soft">
             <div className="grid items-center gap-8 p-6 sm:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-10">
-              <div>
+              <div className="min-w-0">
                 <span className="eyebrow text-coral-200">Attend a Coffee Meet</span>
                 <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
                   Walk into a room built for real connection
@@ -389,11 +389,16 @@ function HomePage() {
                     </a>
                   ))}
                 </div>
-                <div className="mt-7 flex flex-wrap gap-4">
-                  <Button href={siteConfig.lumaUrl} variant="secondary" withArrow>
+                <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+                  <Button
+                    href={siteConfig.lumaUrl}
+                    variant="secondary"
+                    withArrow
+                    className="w-full sm:w-auto"
+                  >
                     View Upcoming Coffee Meets
                   </Button>
-                  <Button to="/coffee-meets" variant="light">
+                  <Button to="/coffee-meets" variant="light" className="w-full sm:w-auto">
                     Explore the Formats
                   </Button>
                 </div>
@@ -401,7 +406,8 @@ function HomePage() {
               <ImageCarousel
                 images={coffeeMeetImages}
                 label="SAWE Coffee Meet photos"
-                className="aspect-[16/10] rounded-2xl ring-1 ring-white/20"
+                className="min-w-0 aspect-[4/3] w-full rounded-2xl bg-plum-900/25 ring-1 ring-white/20 md:aspect-[16/10]"
+                imageClassName="object-contain md:object-cover"
               />
             </div>
           </div>

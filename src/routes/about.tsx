@@ -236,7 +236,8 @@ function AboutPage() {
                 Advisory Board Member
               </p>
               <p className="mt-2 text-sm font-semibold leading-relaxed text-plum-800">
-                Fractional CMO | Growth execution mentor | Co-founder, Startups Club
+                Growth Execution Mentoring | Fractional CMO | Building Next-Line Leadership |
+                Founder at Deep Tech Horizon | Author at Fat2Fit
               </p>
               <div className="mt-4 space-y-3 leading-relaxed text-ink/70">
                 <p>
@@ -247,9 +248,9 @@ function AboutPage() {
                 </p>
                 <p>
                   For more than three decades, Salma has helped founders turn ideas into businesses
-                  that grow. In 2013 she co-founded Startups Club in Bengaluru. What started as a
-                  small coffee meetup of entrepreneurs grew into one of India&apos;s largest founder
-                  communities, with more than 25,000 members across 20 cities.
+                  that grow. What started as a small coffee meetup of entrepreneurs grew into one of
+                  India&apos;s largest founder communities, with more than 25,000 members across 20
+                  cities.
                 </p>
                 <p>
                   Today she works as a Fractional CMO and Growth Execution Mentor, supporting
@@ -257,7 +258,7 @@ function AboutPage() {
                   part most people find hardest, which is execution. She built EyeROV&apos;s
                   marketing function from scratch and has mentored thousands of entrepreneurs across
                   startups, family businesses, and tech companies. Those who work with her often
-                  mention the structure, honesty, and warmth she brings.
+                  mention the structure, honesty and warmth she brings.
                 </p>
                 <p>
                   Salma is also the author of <em>Fat2Fit</em>, a book about her own five year
